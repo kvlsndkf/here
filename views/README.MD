@@ -1,0 +1,45 @@
+## Pasta views
+
+Nesta pasta ficarão todo o código referente estilizaão da parte do cliente (front-end), como: estilos, páginas e componentes.
+
+##
+
+### 🗂 Estruturação de pastas e arquivos
+
+### Styles
+📄 *Arquivo:* style.css
+*Aqui ficará somente o estilo global*
+
+### Pages
+📁 *Pasta:* name-page <br/>
+📄 *Arquivo:* name-page.page.php
+📄 *Arquivo:* name-page.page.css
+*A página de estilo deverá ficar na mesma pasta do aquivo*
+
+### Components
+📁 *Pasta:* name-page <br/>
+📄 *Arquivo:* name-page.component.php
+📄 *Arquivo:* name-page.component.css
+*A página de estilo deverá ficar na mesma pasta do aquivo*
+
+<br/>
+
+Exemplo:
+<details>
+ 
+  <summary>
+    <b> 📁 pages </b> 
+  </summary>
+
+  <details>
+ 
+  <summary>
+    <b> 📁 chat </b> 
+  </summary>
+
+   * 📄 chat.page.php
+   * 📄 chat.page.css
+  
+  </details>
+  
+</details>
