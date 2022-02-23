@@ -1,0 +1,130 @@
+body{
+    background-color: var(--purple-light);
+}
+
+/* VARIABLES */
+:root {
+    /* FONT VARIABLES */
+        --font:'Manrope', sans-serif;
+        /* SIZE */
+        --display: 64px;
+        --h1: 56px;
+        --h2: 48px;
+        --h3: 40px;
+        --h4: 32px;
+        --h5: 24px;
+        --h6: 20px;
+        --p: 16px;
+        --label: 14px;
+        --tiny: 12px;
+        --here: 35px;
+        /* WEIGHT */
+        --medium: 500;
+        --semi-bold: 600;
+        --bold: 700;
+        --extra-bold: 800;
+    /* COLOR VARIABLES */
+        --black: #000000;
+        --white: #ffffff;
+        --light: #F4F4F4;
+        --light-medium: #D8D8D8;
+        --medium: #969696;
+        --medium-dark: #646464;
+        --dark: #323232;
+        --purple-light: #F7ECFD;
+        --magenta-light: #F9DAFB;
+        --magenta-dark: #9710A1;
+        --purple: #6E10A1;
+        --medium-violet: #240046;
+        --darker-violet: #10002B;
+        --yellow: #fbc324;
+        --orange: #fb5607;
+        --red: #c60e08;
+        --pink: #f22c57;
+        --blue: #1c54f5;
+        --medium-blue: #1BA2E8;
+        --sea-green: #1FAFA9;
+        --spring-green: #01EAA0;
+}
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 200px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+    color: var(--medium-violet);
+    font-family: var(--font);
+    font-weight: var(--extra-bold);
+    font-size: var(--h6);
+    margin: 0px 0px 0px 80px;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+header.sticky {
+    background-color: white;
+    padding: 30px 200px;
+    box-shadow: 0 8px 32px 0 var(--magenta-light);
+}
+
+/* GLASS EFFECT 
+
+background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);*/
+
+.logo {
+    height: 40px;
+}
+
+.logo-name {
+    font-family: var(--font);
+    position: relative;
+    font-size: var(--here);
+    font-weight: var(--extra-bold);
+    color: var(--purple);
+    left: 8px;
+}
+
+.box {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #3b7eac;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: linear-gradient(rgba(218, 39, 122, 0.658), var(--purple));
+}
