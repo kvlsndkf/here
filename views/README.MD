@@ -7,19 +7,13 @@ Nesta pasta ficarão todo o código referente estilizaão da parte do cliente (f
 ### 🗂 Estruturação de pastas e arquivos
 
 ### Styles
-📄 *Arquivo:* style.css
+📄 *Arquivo:* style.css <br/>
 *Aqui ficará somente o estilo global*
 
 ### Pages
 📁 *Pasta:* name-page <br/>
-📄 *Arquivo:* name-page.page.php
-📄 *Arquivo:* name-page.page.css
-*A página de estilo deverá ficar na mesma pasta do aquivo*
-
-### Components
-📁 *Pasta:* name-page <br/>
-📄 *Arquivo:* name-page.component.php
-📄 *Arquivo:* name-page.component.css
+📄 *Arquivo:* name-page.page.php <br/>
+📄 *Arquivo:* name-page.page.css <br/>
 *A página de estilo deverá ficar na mesma pasta do aquivo*
 
 <br/>

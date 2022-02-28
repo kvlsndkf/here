@@ -29,6 +29,7 @@
   [Skills necessárias](#-skills-necessárias) <br>
   [Criando pull request](-criando-pull-request) <br>
   [Aprovando uma PR](-aprovando-uma-pr) <br>
+  [Critérios de aprovação](-aprovando-uma-pr) <br>
   [Merge](#%EF%B8%8F-merge) <br>
   [Mantenha o seu repositório local sempre atualizado](#-mantenha-o-seu-repositório-local-sempre-atualizado) 
 
@@ -56,7 +57,7 @@
   
 ### <div><img src="https://user-images.githubusercontent.com/79329906/154810593-7a01d842-efc2-4e3a-868c-05fdd8283386.svg" align="center">  Sobre o Here</div>
 
-Here é uma plataforma intitucional com o foco de criar um canal que facilite a comunicação entre professores e seus alunos, assim, melhorando a autonomia do professor em compartilhar conteúdo e enviar tarefas, contando com o auxílio da comunidade que influencia os alunos ajudarem uns aos outros com dúvidas nas matérias.
+Here é uma plataforma institucional com o foco de criar um canal que facilite a comunicação entre professores e seus alunos, assim, melhorando a autonomia do professor em compartilhar conteúdo e enviar tarefas, contando com o auxílio da comunidade que influencia os alunos ajudarem uns aos outros com dúvidas nas matérias.
   
 
 
@@ -98,18 +99,26 @@ Para você fazer o seu deploy, deverá abrir uma `branch` referente a sua task e
 
 <br/>
 
-1. Crie a sua branch `git checkout -B <número-task/nome-task>`;
-2. `git add --all && git commit -m "descricao-do-que-vc-fez"`;
+>
+> 🚨 Atenção: para nomear a sua **branch** existem duas formas:
+> - `feat/nome-da-tarefa` : Para novas tarefas;
+> - `fix/nome-da-tarefa-de-correcao` : Para corrigir BUGs de problemas que são existentes em QA (BRANCHS QUE JÁ FORAM MERGIADAS).
+>
+
+1. Crie a sua branch `git checkout -B <feat ou fix/nome-da-task>`;
+2. `git add --all`
+3. `git commit -m "descricao-do-que-vc-fez"`;
 3. Suba as alterações feitas para a sua branch `git push origin <número-task/nome-task>`;
 4. Crie sua pull request, apertando no botão `Compare & pull request`;
 5. Coloque a descrição do que você fez na sua task;
-6. Adicione o seu perfil como autor da PR,
-7. Cloque a label `code review`;
-8. Coloque o link da sua PR no seu cartão do Trello e envie no grupo do WhatsApp.
+6. Adicione o seu perfil como autor da PR em `Assigners`;
+7. Coloque as pessoas para que elas lembrem-se de revisar em `Reviwers`;
+8. Coloque a label `code review`;
+9. Coloque o link da sua PR no seu cartão do Trello e envie no grupo do WhatsApp.
 
 <br/>
 
-✅ Agora é só aguardar o approve da squad!  🎉
+✅ Agora é só aguardar o approve da squad! 🎉
 
 <a href="https://www.youtube.com/watch?v=pImysNHjSoQ&list=PL4e74ugWhB0p-_wA4dbHORz7fODHuD8nZ&index=5" target="_blank"><img src="https://img.shields.io/badge/Criando uma PR-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
 
@@ -118,8 +127,13 @@ Para você fazer o seu deploy, deverá abrir uma `branch` referente a sua task e
 ###  🔍 Aprovando uma PR
 1. Entre no link do Trello;
 2. Ao entrar no link da pr, procure pela aba `Files changed`;
-3. Aparecerá todo o código, em vermelho foram as linhas deletedas e em verde, são as linhas adicionadas;
+3. Aparecerá todo o código, em vermelho: foram as linhas deletedas, e em verde: são as linhas adicionadas;
 4. **Analise com atenção;**
+
+>
+> 📌 Nota: para que a revisão fique ainda melhor podemos ver o que a pessoa fez direto no nosso navegador! <br/>
+> Rápido, prático e fácil! Basta no seu terminal dar um `git checkout <nome-branch-colega>` e você acessará diretamente!
+>
 
 <br/>
 
@@ -128,18 +142,44 @@ Para você fazer o seu deploy, deverá abrir uma `branch` referente a sua task e
 6. Ao clicar irá aparecer o espaço para o comentário;
 7. Depois que fizer o comentário, coloque um artigo sobre a sua observação. Além de dar credibilidade ao seu ponto, também dará a possibilidade da pessoa entender o que houve e conseguir arrumar;
 8. Após colocar os comentários, procure pelo botão `Finish your review`;
-9. Envie comentario apertando em `submit review`;
-10. Comente na task do trello **"revisado/solicitação de alteração"**.
+9. Escolha a opção `Request changes`;
+10. Envie comentario apertando em `submit review`;
+11. Comente na task do trello **"revisado/solicitação de alteração"**.
+
+>
+> **Se encontraram algo de errado na sua PR, não entre em desespero!** 🤪 <br/> <br/>
+> 😎 É muito fácil corrigir, certifique-se de que esteja na sua branch que precisa de correção, para isso dê o comando no terminal `git branch`, a partir dele você irá conseguir ver todas as branchs que você já acessou, e também irá ver a branch que você está... sendo mostrada na cor verde! <br/> 
+> ✏️ Agora estando na sua branch, faça as alterações necessárias! <br/>
+> 💻 Por fim, depois de ter corrigido todos os pontos dê um `git add --all`, `git commit -m "descricao-do-que-vc-fez"` e por fim um `git push`. <br/> 
+> 🔉 Todas as alterações serão enviadas para a branch, não se esqueça de avisar os seus colegas e adicionar a label `WAITING`. <br/>
+> ✅ PR prontinha para ser corrigida! ✅
+>
 
 <br/>
 
 ### ✅ Caso não encontre nenhum erro
 5. Na aba `Files changed`, procure pelo botão `Finish your review`;
+6. Escolha a opção `Approve`;
 7. Aparecerá um campo, comente **"revisado/aprovado"**; 
 8. Envie comentario apertando em `submit review`;
 9. Comenta na task do trello também **"revisado/aprovado"**.
 
 <a href="https://www.youtube.com/watch?v=TUurYyjgJCg&list=PL4e74ugWhB0p-_wA4dbHORz7fODHuD8nZ&index=6" target="_blank"><img src="https://img.shields.io/badge/Corrigindo uma PR-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
+
+<div>
+<a href="https://www.youtube.com/watch?v=osO8nkjTGVw" target="_blank"><img src="https://img.shields.io/badge/Corrigindo uma PR |Parte 2-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
+
+
+</div>
+
+##
+
+### 🚦 Critérios de aprovação
+Para que uma `PR` seja aprovada e fique disponível para `merge`, ela pecisa ter o approve de `5 integrantes` do grupo 🧔🏾 👩🏻‍🦰 🧑🏻 👩🏼‍🦳 👦🏽 
+
+>
+> **FAÇA REVISÕES SEMPRE QUE POSSÍVEL!** O caminhar do próximo depende de você. Seja responsável, mantenha o seu trabalho e o do próximo camihando de forma fluída.
+>
 
 ##
 
@@ -151,6 +191,7 @@ Para você fazer o seu deploy, deverá abrir uma `branch` referente a sua task e
 
 Regra para o merge das tasks:
 * Só serão as tasks que estão **revisadas** e **sem bugs**;
+* Tarefas que tem o total de approves necessários;
 * E só poderá ser feita de Segunda à Sexta.
 
 <br/>
