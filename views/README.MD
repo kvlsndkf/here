@@ -1,6 +1,6 @@
 ## Pasta views
 
-Nesta pasta ficarão todo o código referente estilizaão da parte do cliente (front-end), como: estilos, páginas e componentes.
+Nesta pasta ficarão todo o código referente estilização da parte do cliente (front-end), como: estilos, páginas e componentes.
 
 ##
 
