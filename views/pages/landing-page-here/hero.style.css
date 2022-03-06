@@ -64,14 +64,14 @@ header {
     padding: 40px 200px;
 }
 
-header ul {
+header .ul {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header ul li {
+header .ul .li {
     position: relative;
     list-style: none;
     color: var(--medium-violet);
@@ -81,7 +81,7 @@ header ul li {
     margin: 0px 0px 0px 80px;
 }
 
-header ul li a {
+header .ul .li .a {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
@@ -94,7 +94,7 @@ header.sticky {
     box-shadow: 0 8px 32px 0 var(--magenta-light);
 }
 
-header.sticky ul li,
+header.sticky .ul .li,
 header.sticky .logo-name {
     color: var(--purple-light);
 }
@@ -175,4 +175,16 @@ header.sticky .logo-name {
     align-items: flex-start;
     flex-direction: column;
     margin: auto;
+}
+
+/* FOOTER */
+
+ul {
+    list-style: none;
+}
+
+.footer-container {
+    background-image: linear-gradient(transparent, #10002B);
+    border-radius: 0 0 100% 100%;
+    height: 200px;
 }
