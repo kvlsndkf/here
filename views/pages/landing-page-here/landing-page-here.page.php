@@ -12,7 +12,6 @@
     <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./recursos.style.css">
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@200;300;400;500;600;700;800&family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <script type="text/javascript" src="/views/js/index.scripts.js"></script>
     <title>HERE!</title>
@@ -48,15 +47,14 @@
     </div>
 
     <!-- Parte da Paloma -->
+
     <div class="body">
-        <div>
-            <h6 class="title1"> APROVEITE O MAXIMO</h6>
-        </div>
+        <h6 class="title1"> APROVEITE O MAXIMO</h6>
         <div>
             <h1 class="title2">EXPLORE OS RECURSOS </h1>
         </div>
 
-        <div class="container">
+        <div class="container-card">
             <!-- Inicio do primeiro Card, o da agenda-->
             <div class="card">
                 <div class="content">
@@ -64,10 +62,8 @@
                     <p class="titleG">Agenda</p>
 
                     <h4 class="textG">Tenha uma agenda sempre
-                        <br>a sua disposição e não perca
-                        <br>mais o dia da
-                        entrega de atividades!
-                    </h4>
+                        a sua disposição <br>e não perca
+                        mais o dia da entrega de atividades!</h4>
 
                 </div>
             </div>
@@ -90,9 +86,8 @@
                     <p class="titleG">Materiais da aula</p>
 
                     <h4 class="textG"> Todos os materiais ultilizados
-                        em aula <br> disponíveis para
-                        cunsulta <br> a qualquer hora do <br>
-                        dia! </h4>
+                        em aula <br> disponíveis para cunsulta
+                        a qualquer <br>hora do dia! </h4>
 
 
                 </div>
@@ -104,25 +99,30 @@
                     <p class="titleG">Chat</p>
 
                     <h4 class="textG">Converse com professores
-                        <br>para tirar suas dúvidas!<br>
-                    </h4>
+                        para tirar suas dúvidas!<br></h4>
 
                 </div>
             </div>
             <!-- Final do Quarto card-->
 
         </div>
-        <!-- Finalização da div principal -->
     </div>
-    <!-- Animação dos cards -->
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
+
+
+    <!-- Animação da Emillie -->
+    <script type="text/javascript" src="../../js/index.scripts.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Animação dos cards da Paloma -->
+    <script type="text/javascript" src="../../js/vanilla-tilt.js"></script>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".card"), {
+        VanillaTilt.init(document.querySelectorAll("div.card"), {
             max: 25,
             speed: 400
         });
     </script>
-    <!-- Finalização da animação -->
 </body>
 
 </html>
