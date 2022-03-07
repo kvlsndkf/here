@@ -19,92 +19,127 @@
 
 <body>
     <!-- NAVBAR -->
-    <div class="container">
-        <header>
-            <div class="logo-box">
-                <img src="../../images/logo.svg" class="logo" alt="Logo HERE!">
-                <p class="logo-name">Here!</p>
+
+    <div id="background-hero">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container py-4">
+                <!-- Foto -->
+                <a class="navbar-brand logo-box" href="./index.php">
+                    <img src="../../images/logo.svg" class="logo" alt="Logo HERE!">
+                    <span class="logo-name">Here!</span>
+                </a>
+                <!-- Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menus -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav animate-menu">
+                        <a class="nav-link active font-header-hero" href="#resources">Recursos</a>
+                        <a class="nav-link active font-header-hero" href="#">Comunidade</a>
+                    </div>
+                </div>
             </div>
-            <ul>
-                <li><a href="#" class="a"></a>Recursos</li>
-                <li><a href="#" class="a"></a>Comunidade</li>
-            </ul>
-        </header>
-    </div>
-    <!-- CONTEÚDO PARTE 1 -->
-    <div class="container">
-        <div class="part-1">
-            <div class="left-1">
-                <p class="title-1">Aprenda melhor juntos</p>
-                <p class="text-1">Uma plataforma que facilitará a comunicação <br /> entre aluno e professor.</p>
-                <input type="button" value="Entrar" class="btnEntrar-1">
-            </div>
-            <div class="right-1">
-                <img src="../../images/img1.svg" class="image-1">
+        </nav>
+
+        <!-- CONTEÚDO PARTE 1 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12 d-flex align-items-center">
+                    <div>
+                        <p class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left">Aprenda melhor juntos</p>
+                        <p class="text-1 text-center text-sm-center text-md-left text-lg-left text-xl-left">Uma plataforma que facilitará a comunicação <br /> entre aluno e professor.</p>
+
+                        <div class="d-flex justify-content-lg-start justify-content-md-start justify-content-sm-center justify-content-center">
+                            <a href="#">
+                                <div class="btnEntrar-1 d-flex align-items-center">
+                                    <div class="label-entrar-hero">
+                                        Entrar
+                                    </div>
+                                    <div class="arrow-hero">
+                                        <img src="../../images/arrow-bt.svg" alt="Seta indicando a entrada no HERE!">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="arrow-down-hero d-flex justify-content-lg-start justify-content-md-start justify-content-sm-center justify-content-center">
+                            <img src="../../images/arrows-down.svg" alt="Seta indicando o scroll da página">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none d-sm-flex d-md-flex d-lg-flex col-md-6 col-sm-12 col-xs-12">
+                    <div class="right-picture">
+                        <img src="../../images/img1.svg" class="image-1">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </div>
 
     <!-- Parte da Paloma -->
-
-    <div class="body">
-        <h6 class="title1"> APROVEITE O MAXIMO</h6>
+    <div class="body" id="resources">
+        <h6 class="title1"> APROVEITE AO MÁXIMO</h6>
         <div>
-            <h1 class="title2">EXPLORE OS RECURSOS </h1>
+            <h1 class="title2">Explore os recursos</h1>
         </div>
 
         <div class="container-card">
             <!-- Inicio do primeiro Card, o da agenda-->
             <div class="card">
                 <div class="content">
-                    <img src="../../images/agenda.png" class="img">
-                    <p class="titleG">Agenda</p>
+                    <img src="../../images/agenda.svg" class="img">
+                    <span class="titleG">Agenda</span>
 
-                    <h4 class="textG">Tenha uma agenda sempre
-                        a sua disposição <br>e não perca
-                        mais o dia da entrega de atividades!</h4>
-
+                    <div class="textG">
+                        Tenha uma agenda sempre a sua disposição e não perca
+                        mais o dia da entrega de atividades!
+                    </div>
                 </div>
             </div>
+
             <!-- Inicio do segundo Card, o da Tarefa-->
             <div class="card">
                 <div class="content">
-                    <img src="../../images/tarefas.png" class="img">
-                    <p class="titleG">Tarefa</p>
+                    <img src="../../images/tarefas.svg" class="img">
+                    <span class="titleG">Tarefa</span>
 
-                    <h4 class="textG"> Um lugar fácil, prático<br>
+                    <div class="textG">
+                        Um lugar fácil, prático<br>
                         e rápido para a entrega
-                        e<br> correção de atividades!</h4>
-
+                        e correção de atividades!
+                    </div>
                 </div>
             </div>
+
             <!-- Inicio do terceiro Card, o do Material da aula-->
             <div class="card">
                 <div class="content">
-                    <img src="../../images/aula.png" class="img">
-                    <p class="titleG">Materiais da aula</p>
+                    <img src="../../images/aula.svg" class="img">
+                    <span class="titleG">Materiais da aula</span>
 
-                    <h4 class="textG"> Todos os materiais ultilizados
-                        em aula <br> disponíveis para cunsulta
-                        a qualquer <br>hora do dia! </h4>
-
-
+                    <div class="textG">
+                        Todos os materiais ultilizados
+                        em aula disponíveis para cunsulta
+                        a qualquer hora do dia!
+                    </div>
                 </div>
             </div>
+
             <!-- Inicio do Quarto card, o do Chat -->
             <div class="card">
                 <div class="content">
-                    <img src="../../images/chat.png" class="img">
-                    <p class="titleG">Chat</p>
+                    <img src="../../images/chat.svg" class="img">
+                    <span class="titleG">Chat</span>
 
-                    <h4 class="textG">Converse com professores
-                        para tirar suas dúvidas!<br></h4>
-
+                    <div class="textG">
+                        Converse com professores
+                        para tirar suas dúvidas!
+                    </div>
                 </div>
             </div>
             <!-- Final do Quarto card-->
-
         </div>
     </div>
 
