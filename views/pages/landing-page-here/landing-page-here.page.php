@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="description" content="Here é uma plataforma institucional com o foco de criar um canal que facilite a comunicação entre professores e seus alunos.">
-    <link rel="stylesheet" href="./views/styles/style.css">
+    <link rel="stylesheet" href="../../styles/style.css">
     <link rel="stylesheet" href="./hero.style.css">
     <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,6 @@
 
 <body>
     <!-- NAVBAR -->
-
     <div id="background-hero">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container py-4">
@@ -51,7 +50,7 @@
                         <p class="text-1 text-center text-sm-center text-md-left text-lg-left text-xl-left">Uma plataforma que facilitará a comunicação <br /> entre aluno e professor.</p>
 
                         <div class="d-flex justify-content-lg-start justify-content-md-start justify-content-sm-center justify-content-center">
-                            <a href="#">
+                            <a href="../login/login.page.php">
                                 <div class="btnEntrar-1 d-flex align-items-center">
                                     <div class="label-entrar-hero">
                                         Entrar

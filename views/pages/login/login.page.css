@@ -1,0 +1,130 @@
+.navbarlogin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding: 8px;
+  background: var(--medium-violet);
+  z-index: 1;
+}
+
+.botaonavvoltar {
+  width: 30px;
+  height: 30px;
+}
+
+.back-login {
+  height: 100%;
+  background: url(../../images/background-login.svg);
+  background-size: cover;
+  position: relative;
+  background-color: var(--purple-light);
+}
+
+.logo-escrita-login{
+    width: 221px;
+    height: 66px;
+    margin-bottom: 30px;
+    margin-top: 70px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.input::placeholder {
+  font-weight: normal;
+  color: var(--medium-dark);
+}
+
+.entrar {
+  color: var(--medium-violet);
+  font-size: 56px;
+  font-family: var(--font);
+  font-weight: var(--extra-bold);
+}
+
+.here-align-login {
+  color: var(--pink);
+}
+
+.recomendamos {
+  color: var(--darker-violet);
+  font-size: 21px;
+  text-align: center;
+  font-family: var(--font);
+  font-weight: var(--bold);
+  margin-top: 9px;
+  max-width: 779px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding-top: 15px; */
+  /* height: 384px; */
+  margin-top: 50px;
+  width: 100%;
+  max-width: 423px;
+}
+
+section form {
+  font-family: var(--font);
+  font-weight: var(--extra-bold);
+  width: 100%;
+}
+
+section form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+section form input,
+section form textarea {
+  outline: unset;
+  padding: 20px;
+  /* width: 350px; */
+  height: 56px;
+  border: 1px solid var(--medium);
+  border-radius: 50px;
+  background-color: var(--light);
+  font-weight: var(--bold);
+  width: 100%;
+}
+
+section form button {
+  background-color: var(--medium-violet);
+  color: var(--white);
+  cursor: pointer;
+  height: 56px;
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  font-weight: var(--extra-bold);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+
+section form label {
+  margin-left: 5px;
+  color: var(--medium-violet);
+  margin-bottom: 6px;
+  font-size: var(--h6);
+}
+
+.faleConosco {
+  color: var(--darker-violet);
+  font-size: 20px;
+  width: 160px;
+  font-family: var(--font);
+  margin-top: 30px;
+  font-weight: var(--extra-bold);
+}
