@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Mar-2022 às 03:09
+-- Tempo de geração: 08-Mar-2022 às 03:24
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `schools` (
   `idSchool` int(11) NOT NULL,
-  `nameSchool` varchar(100) DEFAULT NULL,
+  `nameSchool` varchar(100) NOT NULL,
   `idUser` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -41,9 +41,10 @@ CREATE TABLE `schools` (
 
 CREATE TABLE `users` (
   `idUser` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `passwordUser` varchar(100) NOT NULL
+  `nameUser` varchar(100) NOT NULL,
+  `emailUser` varchar(100) NOT NULL,
+  `passwordUser` varchar(100) NOT NULL,
+  `typeUser` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
