@@ -6,7 +6,7 @@ class Connection
 
         $connection = new PDO(
             "mysql:host=localhost;
-            dbname=dbpw3",
+            dbname=database_here",
             "root",
             ""
         );
