@@ -24,6 +24,19 @@ try {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituição | HERE!</title>
+
+    <style>
+        table,
+        tr,
+        th {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,7 +46,7 @@ try {
     </a>
 
     <hr>
-    
+
     <h3>Cadastro Secretaria</h3>
     <a href="./register-secretary.page.php">
         <input type="button" value="Cadastrar secretaria">
@@ -41,16 +54,25 @@ try {
 
     <hr>
     <h3>Lista de ETEC's</h3>
-    
-    <?php
-    $indice = 1;
-    
-    while ($row = $listSchools->fetch(PDO::FETCH_BOTH)) {
-        echo $indice . ' - ' . $row[2]. '<br>';
-        echo $row[1] . '<br>';
-        $indice ++;
-    }
-    ?>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome ETEC</th>
+                <th>Secreário responsável</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <?php while ($row = $listSchools->fetch(PDO::FETCH_BOTH)) { ?>
+                <tr>
+                    <th><?php echo $row[2]; ?></th>
+                    <th><?php echo $row[1]; ?></th>
+                </tr>
+            <?php } ?>
+
+        </tbody>
+    </table>
 </body>
 
 </html>
