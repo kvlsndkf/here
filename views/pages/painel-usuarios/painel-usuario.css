@@ -1,0 +1,84 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    background: var(--medium-violet);
+    z-index: 1;
+  }
+  
+  .botaovoltar {
+    width: 30px;
+    height: 30px;
+  }
+
+  body{
+    background-color: var(--purple-light);
+    background-image:url(../../images/fundo-painel.svg);
+    background-repeat: no-repeat;
+    background-size: auto; 
+    background-position: center;
+    position: relative;
+   
+  }
+  .img1 {
+    padding: 80px 0 0 0;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .name{
+    color: var(--medium-violet);
+    padding: auto;
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--bold);
+    margin-top: 26px;
+    text-align: center;
+  }
+  .titleG{
+    font-family: var(--font);
+    text-align: center;
+    color: var(--medium-violet);
+    font-weight: var(--bold);
+    font-size: var(--h6);
+}
+.container-card{
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap ;
+  
+}
+.container-card .card{
+  width: 220px;
+  height: 250px;
+  margin: 10px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+.container-card .card .content{
+  text-align: center;
+  transform: translateY(10px);
+}
+
+.img{
+  margin-top: 35px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h6{
+  padding-top: 60px;
+  color: var(--medium-violet);
+  text-align: center;
+}
