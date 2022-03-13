@@ -77,13 +77,12 @@
         </div>
     </div>
 
-    <!-- Parte da Paloma -->
+    <!-- CONTEÚDO PARTE 2 -->
     <div class="body" id="resources">
         <h6 class="title1"> APROVEITE AO MÁXIMO</h6>
         <div>
             <h1 class="title2">Explore os recursos</h1>
         </div>
-
         <div class="container-card">
             <!-- Inicio do primeiro Card, o da agenda-->
             <div class="card">
@@ -141,8 +140,52 @@
             <!-- Final do Quarto card-->
         </div>
     </div>
-
-
+    <footer>
+        <div class="footer-background">
+            <div class="container">
+                <div class="footer-head-content">
+                    <p class="poupe-tempo">
+                        POUPE TEMPO E SIMPLIFIQUE TAREFAS
+                    </p>
+                    <p class="futuro-comeca">
+                        O futuro começa aqui
+                    </p>
+                    <div class="d-flex justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center">
+                        <a href="../login/login.page.php">
+                            <div class="btnEntrar-2 d-flex align-items-center">
+                                <div class="label-entrar-hero">
+                                    Entrar
+                                </div>
+                                <div class="arrow-hero">
+                                    <img src="../../images/arrow.svg" alt="Seta indicando a entrada no HERE!">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-end-content">
+                    <div class="row">
+                        <p class="footer-text plataforma col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            Plataforma
+                        </p>
+                        <p class="footer-text comunidade col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            Comunidade
+                        </p>
+                        <p class="footer-text fale col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            Fale conosco
+                        </p>
+                    </div>
+                    <br>
+                    <hr class="final-line">
+                    <div class="row">
+                        <p class="copyright text-center mx-auto">
+                            Copyright © Cold Wolf - 2022. Todos os direitos reservados.
+                        </p>
+                    </div>
+                    
+                </div>
+        </div>
+    </footer>
     <!-- Animação da Emillie -->
     <script type="text/javascript" src="../../js/index.scripts.js"></script>
 

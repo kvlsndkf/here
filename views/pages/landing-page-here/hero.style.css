@@ -220,3 +220,84 @@ div div.textG{
     transform: translateY(0px);
     opacity: 1;
 }
+
+/* FOOTER STYLE */
+
+.footer-background {
+    background: rgb(36,0,70);
+    background: linear-gradient(0deg, rgba(36,0,70,1) 55%, rgba(36,0,70,0.9051995798319328) 78%, rgba(36,0,70,0.6867121848739496) 100%);
+    min-height: 400px;
+    max-height: 450px;
+    border-radius:  0px 0 100% 100%;
+    padding-block: 85px;
+    box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.50);
+}
+
+.poupe-tempo {
+    color: var(--white);
+    font-family: var(--font);
+    font-size: var(--p);
+    font-weight: var(--bold);
+    text-align: center;
+}
+
+.futuro-comeca {
+    font-weight: var(--extra-bold);
+    font-family: var(--font);
+    font-size: var(--h2);
+    color: var(--white);
+    text-align: center;
+}
+
+.btnEntrar-2 {
+    background-color: var(--white);
+    border-radius: 50px;
+    font-size: var(--h6);
+    font-weight: var(--extra-bold);
+    color: var(--medium-violet);
+    font-family: var(--font);
+    width: 320px;
+    height: 70px;
+    border: none;
+    margin: 30px 0;
+    padding: 0 10px 0 30px;
+    box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.50);
+}
+
+.footer-text {
+    color: var(--medium-violet);
+    font-size: var(--h6);
+    font-weight: var(--bold);
+    font-family: var(--font);
+}
+
+.footer-end-content {
+    padding-block-start: 150px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* .fale {
+    margin-left: 80px;
+} 
+
+.plataforma {
+    margin-right: 80px;
+} 
+
+.comunidade {
+
+}  */
+
+.final-line {
+    height: 1px;
+    background-color: var(--darker-violet);
+    border: none;
+}
+
+.copyright {
+    font-size: var(--p);
+    color: var(--darker-violet);
+    font-family: var(--font);
+    font-weight: var(--bold);
+}
