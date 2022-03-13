@@ -33,6 +33,27 @@ class School
     }
 
     //métodos
+
+    public function register($school)
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("INSERT INTO schools(nameSchool)
+                                        VALUES (?)");
+            $stmt->bindValue(1, $school->getNameSchool());
+           
+
+            $stmt->execute();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+
+
+
+
     public function tableRegisterSchool($table): void
     {
         $connection = Connection::connection();
@@ -100,4 +121,6 @@ class School
             echo $e->getMessage();
         }
     }
+
+    
 }

@@ -47,6 +47,13 @@ try {
 
     <hr>
 
+    <h3>Cadastro unitário ETEC</h3>
+    <a href="./register-school-unit.page.php">
+        <input type="button" value="Cadastrar ETEC">
+    </a>
+
+    <hr>
+
     <h3>Cadastro Secretaria</h3>
     <a href="./register-secretary.page.php">
         <input type="button" value="Cadastrar secretaria">
@@ -58,7 +65,7 @@ try {
         <thead>
             <tr>
                 <th>Nome ETEC</th>
-                <th>Secreário responsável</th>
+                <th>Secretário responsável</th>
                 <th>Ações</th>
             </tr>
         </thead>

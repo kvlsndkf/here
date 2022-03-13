@@ -7,15 +7,16 @@
     <title>Cadastro ETEC | HERE!</title>
 </head>
 <body>
-    <form action="./controller/school-batch-resgistration.controller.php" name="school-batch-registration" method="post" enctype="multipart/form-data">
-        <label>Cadastro em lote</label>
+    <form action="./controller/school-unit-registration.controller.php" name="school-unit-registration" method="post" enctype="multipart/form-data">
+        <label>Cadastro unitário ETEC</label>
         <br/>
         <br/>
-        <input type="file" name="school-table-file">
+        <label>Nome ETEC</label>
+        <br/>
+        <input type="text" placeholder="Digite o nome da ETEC" name="name">
         <br/>
         <br/>
         <input type="submit" value="Salvar">
     </form>
-    
 </body>
 </html>
