@@ -8,10 +8,12 @@
 </head>
 <body>
     <form action="./controller/school-unit-registration.controller.php" name="school-unit-registration" method="post" enctype="multipart/form-data">
-        <label>Cadastro unitário de ETEC's</label>
+        <label>Cadastro unitário ETEC</label>
         <br/>
         <br/>
-        <input type="text" name="name">
+        <label>Nome ETEC</label>
+        <br/>
+        <input type="text" placeholder="Digite o nome da ETEC" name="name">
         <br/>
         <br/>
         <input type="submit" value="Salvar">
