@@ -21,7 +21,8 @@ try {
 </head>
 
 <body>
-    <form action="./controller/secretary-unit-registration.controller.php" method="POST">
+    <!-- início do form -->
+    <form action="../controller/secretary-unit-registration.controller.php" method="POST">
         <label>Cadastro secretaria</label>
         <br />
         <br />

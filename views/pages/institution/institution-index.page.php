@@ -7,10 +7,11 @@ include_once('/xampp/htdocs' . '/here/classes/secretary/Secretary.class.php');
 $connection = Connection::connection();
 
 try {
-    //$stmt = $connection->prepare("SELECT * FROM schools ORDER BY nameSchool");
-    //$stmt->execute();
     $stmt = new Secretary();
+    $stmtt = new School();
     $listSchools = $stmt->list();
+    $countSecretary = $stmt->countSecretary();
+    $countSchool = $stmtt->countSchool();
 } catch (Exception $e) {
     echo $e->getMessage();
 }
@@ -40,33 +41,78 @@ try {
 </head>
 
 <body>
-    <h3>Cadastro em lote ETEC</h3>
-    <a href="./register-school.page.php">
-        <input type="button" value="Cadastrar ETEC">
-    </a>
+    <!-- menu teste -->
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <a href="./school/list-school.page.php">
+                        ETEC's
+                    </a>
+                </th>
 
-    <hr>
+                <th>
+                    <a href="./secretary/list-secretary.page.php">
+                        Secretaria
+                    </a>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <!-- fim menu teste -->
 
-    <h3>Cadastro unitário ETEC</h3>
-    <a href="./register-school-unit.page.php">
-        <input type="button" value="Cadastrar ETEC">
-    </a>
+    <!-- início count etec-->
+    <br />
+    <br />
+    <br />
+    <br />
 
-    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Total de ETEC's cadastradas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($row = $countSchool->fetch(PDO::FETCH_BOTH)) { ?>
+                <tr>
+                    <th><?php echo $row['Quantidade']; ?></th>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+    <!-- fim count etec -->
 
-    <h3>Cadastro Secretaria</h3>
-    <a href="./register-secretary.page.php">
-        <input type="button" value="Cadastrar secretaria">
-    </a>
+    <!-- início count secretarias -->
+    <table>
+        <thead>
+            <tr>
+                <th>Total de secretários(as) cadastrados</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($row = $countSecretary->fetch(PDO::FETCH_BOTH)) { ?>
+                <tr>
+                    <th><?php echo $row['Quantidade']; ?></th>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 
-    <hr>
-    <h3>Lista de ETEC's</h3>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- fim count secretarias -->
+
+    <!-- início da tabela teste -->
+    <h3>Lista de ETEC's e secretarias</h3>
     <table>
         <thead>
             <tr>
                 <th>Nome ETEC</th>
                 <th>Secretário responsável</th>
-                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -80,6 +126,7 @@ try {
 
         </tbody>
     </table>
+    <!-- fim da tabela teste -->
 </body>
 
 </html>

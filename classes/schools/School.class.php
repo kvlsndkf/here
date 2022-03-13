@@ -1,6 +1,6 @@
 <?php
 
-include_once ('/xampp/htdocs' . '/here/database/connection.php');
+include_once('/xampp/htdocs' . '/here/database/connection.php');
 class School
 {
     //atributos
@@ -42,7 +42,7 @@ class School
             $stmt = $connection->prepare("INSERT INTO schools(nameSchool)
                                         VALUES (?)");
             $stmt->bindValue(1, $school->getNameSchool());
-           
+
 
             $stmt->execute();
         } catch (Exception $e) {
@@ -50,10 +50,7 @@ class School
         }
     }
 
-
-
-
-
+    /*
     public function tableRegisterSchool($table): void
     {
         $connection = Connection::connection();
@@ -83,18 +80,13 @@ class School
             }
         }
     }
+    */
 
-   
     public function list()
     {
         $connection = Connection::connection();
 
         try {
-            //$stmt = $connection->prepare("SELECT * FROM schools ORDER BY nameSchool");
-           // $stmt = $connection->prepare("SELECT s.nameSchool, y.nameSecretary FROM schools s
-            //            INNER JOIN secretary y ON s.idSchool = y.idSchool
-            //                ORDER BY s.nameSchool
-            //        ");
             $stmt = $connection->prepare("SELECT s.idSchool, s.nameSchool, y.nameSecretary, y.idSchool 
                                             FROM schools s, secretary y
                                             WHERE s.idSchool = y.idSchool
@@ -104,6 +96,16 @@ class School
         } catch (Exception $e) {
             echo $e->getMessage();
         }
+    }
+
+    public function listSchools()
+    {
+        $connection = Connection::connection();
+
+        $stmt = $connection->prepare("SELECT * FROM schools s
+                                        ORDER BY s.nameSchool");
+        $stmt->execute();
+        return $stmt;
     }
 
     public function selectList()
@@ -122,5 +124,19 @@ class School
         }
     }
 
-    
+    public function countSchool()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("SELECT COUNT(idSchool) 
+                                            AS Quantidade 
+                                            FROM schools
+                                        ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }

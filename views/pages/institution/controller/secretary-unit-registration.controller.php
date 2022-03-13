@@ -1,5 +1,5 @@
 <?php
-header('Location: /here/views/pages/institution/institution-index.page.php');
+header('Location: /here/views/pages/institution/secretary/list-secretary.page.php');
 include_once ('/xampp/htdocs' . '/here/database/connection.php');
 require_once ('/xampp/htdocs' . '/here/classes/schools/School.class.php');
 require_once ('/xampp/htdocs' . '/here/classes/secretary/Secretary.class.php');
