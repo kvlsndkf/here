@@ -111,4 +111,36 @@ class Secretary
             echo $e->getMessage();
         }
     }
+
+    public function listSecretary()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("SELECT y.nameSecretary, y.emailSecretary, y.passwordSecretary 
+                                            FROM secretary y
+                                            ORDER BY y.nameSecretary
+                                        ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public function countSecretary()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("SELECT COUNT(idSecretary) 
+                                            AS Quantidade 
+                                            FROM secretary
+                                        ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }

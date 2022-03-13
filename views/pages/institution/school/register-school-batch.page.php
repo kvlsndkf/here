@@ -7,7 +7,7 @@
     <title>Cadastro ETEC | HERE!</title>
 </head>
 <body>
-    <form action="./controller/school-batch-resgistration.controller.php" name="school-batch-registration" method="post" enctype="multipart/form-data">
+    <form action="../controller/school-batch-resgistration.controller.php" name="school-batch-registration" method="post" enctype="multipart/form-data">
         <label>Cadastro em lote</label>
         <br/>
         <br/>

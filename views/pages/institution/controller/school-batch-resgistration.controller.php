@@ -1,6 +1,6 @@
 <?php
 
-header('Location:/here/views/pages/institution/institution-index.page.php');
+header('Location:/here/views/pages/institution/school/list-school.page.php');
 include_once '/xampp/htdocs' . '/here/database/connection.php';
 
 $connection = Connection::connection();

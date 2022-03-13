@@ -7,7 +7,7 @@
     <title>Cadastro ETEC | HERE!</title>
 </head>
 <body>
-    <form action="./controller/school-unit-registration.controller.php" name="school-unit-registration" method="post" enctype="multipart/form-data">
+    <form action="../controller/school-unit-registration.controller.php" name="school-unit-registration" method="post" enctype="multipart/form-data">
         <label>Cadastro unitário ETEC</label>
         <br/>
         <br/>
