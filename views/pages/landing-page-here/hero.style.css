@@ -220,3 +220,290 @@ div div.textG{
     transform: translateY(0px);
     opacity: 1;
 }
+
+
+/*CSS ARTHUR*/
+
+#comunidade{
+        font-family: var(--font);
+        font-weight: var(--bold);
+        position: absolute;
+        color: var(--purple);
+        width: 108px;
+        height: 24px;
+        left: 110px;
+        top: 1500px;
+        font-size: 16px;
+        line-height: 24px;
+
+
+    }
+
+#title01{
+    font-family: var(--font);
+    font-weight: var(--bold);
+    color: var(--darker-violet);
+    position: absolute;
+    width: 776px;
+    height: 152px;
+    left: 110px;
+    top: 1550px;
+
+}
+
+#title02{
+    font-family: var(--font);
+    font-weight: var(--bold);
+    font-size: var(--h5);
+    color: var(--darker-violet);
+    position: absolute;
+    width: 776px;
+    height: 128px;
+    left: 110px;
+    top: 1700px;
+
+
+}
+
+#title03{
+    font-family: var(--font);
+    font-size: var(--h6);
+    font-weight: var(--extra-bold);
+    color: var(--darker-violet);
+    position: absolute;
+    width: 413px;
+    height: 72px;
+    left: 560px;
+    top: 1900px;
+    text-align: center;
+    mix-blend-mode: normal;
+
+}
+
+.seta{
+
+
+position: absolute;
+width: 214.5px;
+height: 66.5px;
+left: 680px;
+top: 1815px;
+
+
+}
+
+#display{
+position: absolute;
+width: 427px;
+height: 402px;
+left: 900px;
+top: 1600px;
+background: linear-gradient(180deg, #FFFFFF 80.21%, rgba(255, 255, 255, 0) 100%);
+
+}
+
+#xp{
+position: absolute;
+width: 117px;
+height: 18px;
+left: 929px;
+top: 1705px;
+
+background: var(--magenta-dark);
+border-radius: 50px;
+
+}
+
+#nxp{
+    font: var(--bold);
+    font-size: var(--tiny);
+    color: var(--white);
+    position: absolute;
+    width: 49px;
+    height: 20px;
+    left: 965px;
+    top: 1708px;
+
+}
+
+#level{
+    font: var(--bold);
+    font-size: var(--h6);
+    color: var(--darker-violet);
+    
+
+position: absolute;
+width: 73px;
+height: 34px;
+left: 963px;
+top: 1734px;
+
+}
+
+#perfil{
+position: absolute;
+width: 162px;
+height: 23px;
+left: 900px;
+top: 1600px;
+
+mix-blend-mode: normal;
+}
+
+
+/**/
+#camp{
+    position: absolute;
+    width: 205.88px;
+    height: 205.88px;
+    left: 873px;
+    top: 1460px;
+}
+/**/
+
+
+#info{
+
+    position: absolute;
+    width: 203px;
+    height: 84px;
+    left: 1150px;
+    top: 1700px;
+
+    font: var(--bold);
+    font-size: var(--h6);
+    color: var(--darker-violet);
+
+
+}
+
+#conquista{
+    /* Conquistas */
+
+position: absolute;
+width: 112px;
+height: 28px;
+left: 1050px;
+top: 1790px;
+
+font: var(--bold);
+font-size: var(--h6);
+color: var(--black);
+}
+
+#triangle{
+position: absolute;
+width: 22px;
+height: 28.02px;
+left: 1160px;
+top: 1856px;
+background: var(--light);
+transform: rotate(-137deg);
+
+}
+
+#ballon{
+position: absolute;
+width: 167px;
+height: 83px;
+left: 1167px;
+top: 1790px;
+
+background: var(--light);
+border-radius: 70px;
+
+}
+
+#pergunta{
+/* Na mosca! Responda uma pergunta e receba um joinha do autor */
+
+position: absolute;
+width: 143px;
+height: 76px;
+left: 1195px;
+top: 1790px;
+
+font: var(--bold);
+font-size: var(--tiny);
+color: var(--magenta-dark);
+text-align: center;
+}
+
+#first{
+    
+    /* 1 */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1090px;
+top: 1850px;
+
+background:  url(1.svg);
+
+}
+
+#team{
+    /* team */
+
+position: absolute;
+left: 1120px;
+top: 1883px;
+
+background: url(../img/team.svg);
+
+}
+
+#target{
+    /* target */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1060px;
+top: 1883px;
+
+background: url(target.svg);
+
+}
+
+#binocolo{
+    /* binoculars */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1030px;
+top: 1923px;
+
+background: url(binoculars.svg);
+
+}
+
+#foguete{
+    /* success */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1090px;
+top: 1923px;
+
+background: url(success.svg);
+
+}
+
+#star{
+    /* star */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1150px;
+top: 1923px;
+
+background: url(star.svg);
+
+}     
+        
+        
