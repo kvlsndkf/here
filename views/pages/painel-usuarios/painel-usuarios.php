@@ -84,7 +84,7 @@
                 
             </div>
             <div class="container">
-                    <h6 class="fina">Fale conosco</h6>
+                    <h6 class="final">Fale conosco</h6>
                 </div>
         </div>
     </div>

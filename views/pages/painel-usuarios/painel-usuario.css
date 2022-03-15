@@ -76,8 +76,14 @@
   margin-right: auto;
 }
 
-h6{
-  padding-top: 85px;
-  color: var(--medium-violet);
+.final{
+  color: var(--darker-violet);
+  font-size: 20px;
+  font-family: var(--font);
+  margin-top: 85px;
+  font-weight: var(--extra-bold);
+  margin-left: auto;
+  margin-left: auto;
   text-align: center;
+  
 }
