@@ -68,6 +68,7 @@ try {
                 <th>Nome</th>
                 <th>E-mail</th>
                 <th>Senha</th>
+                <th>Etec</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -78,7 +79,8 @@ try {
                     <th><?php echo $row[0]; ?></th>
                     <th><?php echo $row[1]; ?></th>
                     <th><?php echo $row[2]; ?></th>
-                    <th><a href="#">Excluir</a></th>
+                    <th><?php echo $row[3]; ?></th>
+                    <th><a href="../controller/delete-secretary.php?idSecretary=<?php echo $row[0]; ?>">Excluir</a></th>
                     <th><a href="#">Editar</a></th>
                 </tr>
             <?php } ?>
