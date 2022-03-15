@@ -224,6 +224,7 @@ div div.textG{
 
 /*CSS ARTHUR*/
 
+
 #comunidade{
         font-family: var(--font);
         font-weight: var(--bold);
@@ -237,17 +238,22 @@ div div.textG{
         line-height: 24px;
 
 
+
     }
 
 #title01{
     font-family: var(--font);
     font-weight: var(--bold);
     color: var(--darker-violet);
+
     position: absolute;
     width: 776px;
     height: 152px;
     left: 110px;
     top: 1550px;
+
+
+    
 
 }
 
@@ -271,12 +277,14 @@ div div.textG{
     font-weight: var(--extra-bold);
     color: var(--darker-violet);
     position: absolute;
+
     width: 413px;
     height: 72px;
-    left: 560px;
+    left: 520px;
     top: 1900px;
     text-align: center;
     mix-blend-mode: normal;
+
 
 }
 
@@ -284,20 +292,22 @@ div div.textG{
 
 
 position: absolute;
+
 width: 214.5px;
 height: 66.5px;
 left: 680px;
 top: 1815px;
 
-
 }
 
 #display{
+
 position: absolute;
 width: 427px;
 height: 402px;
 left: 900px;
 top: 1600px;
+
 background: linear-gradient(180deg, #FFFFFF 80.21%, rgba(255, 255, 255, 0) 100%);
 
 }
@@ -309,7 +319,7 @@ height: 18px;
 left: 929px;
 top: 1705px;
 
-background: var(--magenta-dark);
+
 border-radius: 50px;
 
 }
@@ -330,13 +340,12 @@ border-radius: 50px;
     font: var(--bold);
     font-size: var(--h6);
     color: var(--darker-violet);
-    
+    position: absolute;
+    width: 73px;
+    height: 34px;
+    left: 963px;
+    top: 1734px;
 
-position: absolute;
-width: 73px;
-height: 34px;
-left: 963px;
-top: 1734px;
 
 }
 
@@ -347,43 +356,47 @@ height: 23px;
 left: 900px;
 top: 1600px;
 
+border-radius: 0px 0px 60px 60px;
+
 mix-blend-mode: normal;
 }
 
 
 /**/
 #camp{
-    position: absolute;
-    width: 205.88px;
+    /* profile pic */
+
+position: absolute;
+width: 205.88px;
     height: 205.88px;
-    left: 873px;
+    left: 850px;
     top: 1460px;
+
 }
 /**/
 
 
 #info{
+position: absolute;
+width: 203px;
+height: 84px;
+left: 1150px;
+top: 1700px;
 
-    position: absolute;
-    width: 203px;
-    height: 84px;
-    left: 1150px;
-    top: 1700px;
 
-    font: var(--bold);
-    font-size: var(--h6);
-    color: var(--darker-violet);
+font: var(--bold);
+font-size: var(--h6);
+color: var(--darker-violet);
 
 
 }
 
 #conquista{
     /* Conquistas */
-
 position: absolute;
 width: 112px;
 height: 28px;
-left: 1050px;
+left: 1030px;
 top: 1790px;
 
 font: var(--bold);
@@ -392,11 +405,13 @@ color: var(--black);
 }
 
 #triangle{
+
 position: absolute;
 width: 22px;
 height: 28.02px;
 left: 1160px;
 top: 1856px;
+
 background: var(--light);
 transform: rotate(-137deg);
 
@@ -409,6 +424,7 @@ height: 83px;
 left: 1167px;
 top: 1790px;
 
+
 background: var(--light);
 border-radius: 70px;
 
@@ -420,7 +436,7 @@ border-radius: 70px;
 position: absolute;
 width: 143px;
 height: 76px;
-left: 1195px;
+left: 1170px;
 top: 1790px;
 
 font: var(--bold);
@@ -447,10 +463,10 @@ background:  url(1.svg);
     /* team */
 
 position: absolute;
-left: 1120px;
+left: 1138px;
 top: 1883px;
 
-background: url(../img/team.svg);
+
 
 }
 
@@ -504,6 +520,6 @@ top: 1923px;
 
 background: url(star.svg);
 
-}     
+}
         
         
