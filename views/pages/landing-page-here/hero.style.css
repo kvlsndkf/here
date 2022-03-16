@@ -225,12 +225,11 @@ div div.textG{
 
 .footer-background {
     background: rgb(36,0,70);
-    background: linear-gradient(0deg, rgba(36,0,70,1) 55%, rgba(36,0,70,0.9051995798319328) 78%, rgba(36,0,70,0.6867121848739496) 100%);
+    background: linear-gradient(0deg, rgba(36,0,70,1) 55%, rgba(36,0,70,0.8071603641456583) 74%, rgba(36,0,70,0.6867121848739496) 100%);
     min-height: 400px;
     max-height: 450px;
-    border-radius:  0px 0 100% 100%;
+    border-radius:  0px 0 170px 170px;
     padding-block: 85px;
-    box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.50);
 }
 
 .poupe-tempo {
@@ -271,23 +270,21 @@ div div.textG{
     font-family: var(--font);
 }
 
+a:link, a:visited,  a:hover, a:active
+{
+    color: var(--dark-purple-light);
+    text-decoration: none;
+}
+
 .footer-end-content {
     padding-block-start: 150px;
     text-align: center;
     padding-bottom: 30px;
 }
 
-/* .fale {
-    margin-left: 80px;
-} 
-
-.plataforma {
-    margin-right: 80px;
-} 
-
-.comunidade {
-
-}  */
+.back-button {
+    cursor: pointer;
+}
 
 .final-line {
     height: 1px;
@@ -301,3 +298,4 @@ div div.textG{
     font-family: var(--font);
     font-weight: var(--bold);
 }
+
