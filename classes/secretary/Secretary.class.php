@@ -81,7 +81,7 @@ class Secretary
         $connection = Connection::connection();
 
         try {
-            $stmt = $connection->prepare("INSERT INTO secretary(nameSecretary, emailSecretary, passwordSecretary, idSchool)
+            $stmt = $connection->prepare("INSERT INTO secretarys(nameSecretary, emailSecretary, passwordSecretary, idSchool)
                                         VALUES (?, ?, ?, ?)");
             $stmt->bindValue(1, $secretary->getNameSecretary());
             $stmt->bindValue(2, $secretary->getEmailSecretary());
@@ -100,7 +100,7 @@ class Secretary
 
         try {
             $stmt = $connection->prepare("SELECT y.idSecretary, y.nameSecretary, s.nameSchool 
-                                          FROM secretary y
+                                          FROM secretarys y
                                           RIGHT JOIN schools s
                                           ON s.idSchool = y.idSchool
                                           ORDER BY s.nameSchool
@@ -118,7 +118,7 @@ class Secretary
 
         try {
             $stmt = $connection->prepare("SELECT y.nameSecretary, y.emailSecretary, y.passwordSecretary 
-                                            FROM secretary y
+                                            FROM secretarys y
                                             ORDER BY y.nameSecretary
                                         ");
             $stmt->execute();
@@ -135,7 +135,7 @@ class Secretary
         try {
             $stmt = $connection->prepare("SELECT COUNT(idSecretary) 
                                             AS Quantidade 
-                                            FROM secretary
+                                            FROM secretarys
                                         ");
             $stmt->execute();
             return $stmt;

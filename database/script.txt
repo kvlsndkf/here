@@ -1,0 +1,100 @@
+CREATE TABLE institutions(
+    idInstitution INT AUTO_INCREMENT
+    , PRIMARY KEY (idInstitution)
+    , nameInstitution VARCHAR(100) NOT NULL
+    , emailInstitution VARCHAR(100) NOT NULL
+    , passwordInstitution VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE schools(
+    idSchool INT AUTO_INCREMENT
+    , PRIMARY KEY (idSchool)
+    , nameSchool VARCHAR(100) NOT NULL
+    , emailSchool VARCHAR(100) NOT NULL
+    , passwordSchool VARCHAR(100) NOT NULL
+    , idInstitution INT
+    , FOREIGN KEY (idInstitution) REFERENCES institutions(idInstitution)
+)
+
+CREATE TABLE secretarys(
+    idSecretary INT AUTO_INCREMENT
+    , PRIMARY KEY (idSecretary)
+    , nameSecretary VARCHAR(100) NOT NULL
+    , emailSecretary VARCHAR(100) NOT NULL
+    , passwordSecretary VARCHAR(100) NOT NULL
+    , idSchool INT
+    , FOREIGN KEY (idSchool) REFERENCES schools(idSchool)
+)
+
+CREATE TABLE courses(
+    idCourse INT AUTO_INCREMENT
+    , PRIMARY KEY (idCourse)
+    , nameCourse VARCHAR(100) NOT NULL
+    , isAnnualDurationDate VARCHAR(10) NOT NULL
+    , idSchool INT
+    , FOREIGN KEY (idSchool) REFERENCES schools(idSchool)
+)
+
+CREATE TABLE groups(
+    idGroup INT AUTO_INCREMENT
+    , PRIMARY KEY (idGroup)
+    , nameGroup VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE Teams(
+    idTeam INT AUTO_INCREMENT
+    , PRIMARY KEY (idTeam)
+    , nameTeam VARCHAR(100) NOT NULL
+    , startDateTeam DATETIME NOT NULL
+    , moduleTeam VARCHAR(100) NOT NULL
+    , idCourse INT
+    , FOREIGN KEY (idCourse) REFERENCES courses(idCourse)
+)
+
+CREATE TABLE student(
+    idStudent INT AUTO_INCREMENT
+    , PRIMARY KEY (idStudent)
+    , nameStudent VARCHAR(100) NOT NULL
+    , emailStudent VARCHAR(100) NOT NULL
+    , passwordStudent VARCHAR(100) NOT NULL
+    , idGroup INT
+    , idTeam INT
+    , FOREIGN KEY (idGroup) REFERENCES groups(idGroup)
+    , FOREIGN KEY (idTeam) REFERENCES teams(idTeam)
+)
+
+CREATE TABLE subjects(
+    idSubject INT AUTO_INCREMENT
+    , PRIMARY KEY (idSubject)
+    , nameSubject VARCHAR(100) NOT NULL
+    , idTeam INT
+    , FOREIGN KEY (idTeam) REFERENCES teams(idTeam)
+)
+
+CREATE TABLE professors(
+    idProfessor INT AUTO_INCREMENT
+    , PRIMARY KEY (idProfessor)
+    , nameProfessor VARCHAR(100) NOT NULL
+    , emailProfessor VARCHAR(100) NOT NULL
+    , passwordProfessor VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE subjectsHasProfessors(
+    idSubjectHasProfessor INT AUTO_INCREMENT
+    , PRIMARY KEY (idSubjectHasProfessor)
+    , idTeam INT
+    , idProfessor INT
+    , idSubject INT
+    , FOREIGN KEY (idTeam) REFERENCES teams(idTeam)
+    , FOREIGN KEY (idProfessor) REFERENCES professors(idProfessor)
+    , FOREIGN KEY (idSubject) REFERENCES subjects(idSubject)
+)
+
+CREATE TABLE professorsHasSchools(
+    idProfessorHasSchool INT AUTO_INCREMENT
+    , PRIMARY KEY (idProfessorHasSchool)
+    , idProfessor INT
+    , idSchool INT
+    , FOREIGN KEY (idProfessor) REFERENCES professors(idProfessor)
+    , FOREIGN KEY (idSchool) REFERENCES schools(idSchool)
+)

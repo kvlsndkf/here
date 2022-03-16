@@ -88,7 +88,7 @@ class School
 
         try {
             $stmt = $connection->prepare("SELECT s.idSchool, s.nameSchool, y.nameSecretary, y.idSchool 
-                                            FROM schools s, secretary y
+                                            FROM schools s, secretarys y
                                             WHERE s.idSchool = y.idSchool
                                         ");
             $stmt->execute();
@@ -115,7 +115,7 @@ class School
         try {
             $stmt = $connection->prepare("SELECT * FROM schools s
                                         WHERE s.idSchool NOT IN 
-                                        (SELECT y.idSchool FROM secretary y)
+                                        (SELECT y.idSchool FROM secretarys y)
                                         ");
             $stmt->execute();
             return $stmt;
