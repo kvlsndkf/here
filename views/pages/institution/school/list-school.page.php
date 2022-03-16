@@ -83,7 +83,7 @@ try {
                 <tr>
                     <th><?php echo $row[1]; ?></th>
                     <th><a href="#">Editar</a></th>
-                    <th><a href="#">Excluir</a></th>
+                    <th><a href="../controller/delete-school.php?idSchool=<?php echo $row[0]; ?>">Excluir</a></th>
                 </tr>
             <?php } ?>
 
