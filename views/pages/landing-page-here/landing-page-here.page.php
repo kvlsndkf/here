@@ -161,112 +161,44 @@
 <!--PARTE ARTHUR-->    
     <div class="comunidade-p">       
                 <div class="container">
-                        <div class="row">
-            <div class="container" id="comunidade">
-                <p>Comunidade</p>
-            </div>
-                    <!--TEXTO-->
-                <h1 class="container" class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left" id="title01"> Esclareça suas dúvidas com alunos e professores </h1>
-                    <!--TEXTO-->
-                    <h2 class="container" class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left" id="title02"> Mural coletivo que possibilita fazer perguntas e respondê-las através da contribuição de alunos e professores! Incentivando o trabalho em equipe e disseminando conhecimento por toda comunidade.</h2>
-                    <!--TEXTO-->
-                    <h3 class="container" class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left" id="title03"> Ganhe conquistas e etiquetas especiais ajudando a comunidade </h3>
-                    <!--FIM TEXTO-->
-                    <!--SETA-->
-                                    
-                                <div class="seta" class="container">
-                                    <div id="svg">
-            <svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 68.4999C26.3333 40.9999 102.6 -7.00006 217 20.9999M217 20.9999L205 2M217 20.9999L205 39.5" stroke="url(#paint0_linear_245_978)" stroke-width="4"></path>
-                <defs>
-                    <linearGradient id="paint0_linear_245_978" x1="-2" y1="74.5" x2="217" y2="20.5" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#9710A1"></stop>
-                    <stop offset="1" stop-color="#F22C57"></stop>
-                    </linearGradient>
-                </defs>
-            </svg>
-                                    </div>
-                                </div>
-
-                        <!--DISPLAY BRANCO-->
-                                    <div class="container" id="display">
-            <img src="../../images/display.svg" alt="">
-                                    </div>
-
-                                <!-- XP -->
-                                    <div  class="container"  id="xp">
-                                    <img src="../../images/Rectangle 269.svg" alt="">
-                                    
-                                    </div>
-                                    <div class="container" id="nxp" style="width: 49px; height: 20px;">
-                                    <p>15461xp</p>
-                                    </div>
-
-                                <!-- LEVEL-->
-            <div class="container" id="level">  
-                <img src="../../images/lvl.svg" alt="">
-                                    </div>
-                                <!--Fim Level-->
-                                <!--PERFIL-->
-                                <div class="container" id="perfil">
-                                <img src="../../images/title.svg" alt="">
-                                </div>
-                                <div class="container" id="camp">
-            <img src="../../images/perfilCamp.svg" alt="">
-                                    </div>
-
-                                <!--INFORMAÇÕES-->
-
-                                <div class="container" id="info">
-                                <img src="../../images/info.svg" alt="">
-                                </div>
-                                <!--CONQUISTAS-->
-
-                                <div class="container" id="conquista">
-                                <img src="../../images/Conquistas.svg" alt="">
-                                </div>
-
-                                <!--Inicio div Ballon-->
-                            
-                                <div class="container">
-                                    <div id="triangle">
-                                    <img src="../../images/triangleR.svg" alt="">
-                                    </div>
-                                    <div id="ballon">
-                                      <img src="../../images/rect(2).svg" alt="">
-                                    </div>
-                                </div>
-                                <!--Fim div Ballon-->
-
-                                <!--PERGUNTAS-->
-                                <div class="container" id="pergunta">
-                                <img src="../../images/pergunta.svg" alt="">
-                                </div>
-                                <!--Fim div Pergunta-->
-
-                                <!-- Triângulo de Conquistas-->
-                                <div class="container" id="first">
-                                    <img src="../../images/1.svg" alt="">
-                                </div>
-                                <div  id="team">
-                                    <img src="../../images/team.svg" alt="">
-                                </div>
-                                <div class="container" id="target">
-                                     <img src="../../images/target.svg" alt="">
-                                </div>
-                                <div class="container" id="binocolo">
-                                     <img src="../../images/binoculars.svg" alt="">
-                                </div>
-                                <div class="container" id="foguete">
-                                     <img src="../../images/success.svg" alt="">
-                                </div>
-                                <div class="container" id="star">
-                                     <img src="../../images/star.svg" alt="">
-                                </div>
+                        <div class="row ">           
+                                <div class="container" id="comunidade">
+                                    <p>Comunidade</p>
         </div>
-            
+                                <!--TEXTO-->
+                            <h1 class="container" class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left" id="title01"> Esclareça suas dúvidas com alunos e professores </h1>
+                                <!--TEXTO-->
+                                <h2 class="container" class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left" id="title02"> Mural coletivo que possibilita fazer perguntas e respondê-las através da contribuição de alunos e professores! Incentivando o trabalho em equipe e disseminando conhecimento por toda comunidade.</h2>
+                                <!--TEXTO-->
+                                <h3 class="container" class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left" id="title03"> Ganhe conquistas e etiquetas especiais ajudando a comunidade </h3>
+
+<!--FIM TEXTO-->
+<!--SETA-->
+
+                                 <div class="seta" class="container">
+                                     <div id="svg">
+             <svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M2.5 68.4999C26.3333 40.9999 102.6 -7.00006 217 20.9999M217 20.9999L205 2M217 20.9999L205 39.5" stroke="url(#paint0_linear_245_978)" stroke-width="4"></path>
+                 <defs>
+                     <linearGradient id="paint0_linear_245_978" x1="-2" y1="74.5" x2="217" y2="20.5" gradientUnits="userSpaceOnUse">
+                     <stop stop-color="#9710A1"></stop>
+                     <stop offset="1" stop-color="#F22C57"></stop>
+                     </linearGradient>
+                 </defs>
+             </svg>
+         </div>
+        </div>
+
+        <div class="d-none d-sm-flex d-md-flex d-lg-flex col-md-6 col-sm-12 col-xs-12" id="profile-pic">
+                        <div class="profile-s">
+                            <img src="../../images/profile.svg" alt="">
+                    </div>
+                    
+                </div>    
+            </div>
         </div>
      </div>
+     
 </body>
 
 </html>
