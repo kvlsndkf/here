@@ -117,8 +117,9 @@ class Secretary
         $connection = Connection::connection();
 
         try {
-            $stmt = $connection->prepare("SELECT y.nameSecretary, y.emailSecretary, y.passwordSecretary 
-                                            FROM secretarys y
+            $stmt = $connection->prepare("SELECT y.nameSecretary, y.emailSecretary, y.passwordSecretary, s.nameSchool
+                                            FROM secretarys y, schools s
+                                            WHERE y.idSchool = s.idSchool
                                             ORDER BY y.nameSecretary
                                         ");
             $stmt->execute();
