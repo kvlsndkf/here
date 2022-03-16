@@ -7,7 +7,7 @@ $id = $_GET['idSecreatry'];
 $connection = Connection::connection();
 
 try {
-    $stmt = $connection->prepare("DELETE FROM secretary WHERE idSecretary='$id'");
+    $stmt = $connection->prepare("DELETE FROM secretarys WHERE idSecretary='$id'");
     $stmt->execute();
 } catch (Exception $e) {
     echo $e->getMessage();
