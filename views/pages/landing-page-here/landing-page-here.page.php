@@ -159,45 +159,46 @@
     </script>
 
 <!--PARTE ARTHUR-->    
-    <div class="comunidade-p">       
-                <div class="container">
-                        <div class="row ">           
-                                <div class="container" id="comunidade">
-                                    <p>Comunidade</p>
-        </div>
-                                <!--TEXTO-->
-                            <h1 class="container" class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left" id="title01"> Esclareça suas dúvidas com alunos e professores </h1>
-                                <!--TEXTO-->
-                                <h2 class="container" class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left" id="title02"> Mural coletivo que possibilita fazer perguntas e respondê-las através da contribuição de alunos e professores! Incentivando o trabalho em equipe e disseminando conhecimento por toda comunidade.</h2>
-                                <!--TEXTO-->
-                                <h3 class="container" class="title-1 text-center text-sm-center text-md-left text-lg-left text-xl-left" id="title03"> Ganhe conquistas e etiquetas especiais ajudando a comunidade </h3>
+        
+<div class="header-container">
+<div class="container">
+        <div class="row ">
+        <div class="col-md-12 col-sm-12 col-xs-12 "> 
+            <div class="container" id="comunidade" >
+                    <p>Comunidade</p>
+                </div>
+                    <!--TEXTO-->
+                    <div>
+                        <h1 class="container" id="title01"> Esclareça suas dúvidas com<br> alunos e professores </h1>
+                    </div>
+                    <!--TEXTO-->
 
-<!--FIM TEXTO-->
-<!--SETA-->
+                    <div>
+                        <h2 class="container" id="title02"> Mural coletivo que possibilita fazer perguntas e respondê-las <br>através da contribuição de alunos e professores! Incentivando<br> o trabalho em equipe e disseminando conhecimento por toda<br> comunidade.</h2>
+                    </div>
+                    <!--TEXTO-->
+                    <div class="d-none d-sm-flex d-md-flex d-lg-flex col-md-12 col-sm-12 col-xs-12">
+                            <h3 class="container"  id="title03"> Ganhe conquistas e etiquetas<br> especiais  ajudando a comunidade </h3>
+                    </div>
 
-                                 <div class="seta" class="container">
-                                     <div id="svg">
-             <svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M2.5 68.4999C26.3333 40.9999 102.6 -7.00006 217 20.9999M217 20.9999L205 2M217 20.9999L205 39.5" stroke="url(#paint0_linear_245_978)" stroke-width="4"></path>
-                 <defs>
-                     <linearGradient id="paint0_linear_245_978" x1="-2" y1="74.5" x2="217" y2="20.5" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#9710A1"></stop>
-                     <stop offset="1" stop-color="#F22C57"></stop>
-                     </linearGradient>
-                 </defs>
-             </svg>
-         </div>
-        </div>
-
-        <div class="d-none d-sm-flex d-md-flex d-lg-flex col-md-6 col-sm-12 col-xs-12" id="profile-pic">
-                        <div class="profile-s">
-                            <img src="../../images/profile.svg" alt="">
+                    <!--Seta-->
+                    
+                    <div class="d-none d-sm-flex d-md-flex d-lg-flex col-md-12 col-sm-12 col-xs-12">
+                        <div class="container" id="seta">
+                                <img src="../../images/seta.svg" alt="Seta">
+                            </div>
                     </div>
                     
-                </div>    
+                    <!--FOTO-->
+                     <div class="container" id="foto-profile">
+                        <img src="../../images/profile.svg" class="img-profile">
+                    </div>      
+                                <!--FIM FOTO-->
+                            </div>          
+                        </div>
+                    </div>               
+                </div>
             </div>
-        </div>
-     </div>
      
 </body>
 

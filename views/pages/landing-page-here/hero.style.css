@@ -149,6 +149,7 @@ div.right-picture{
     text-align: center;
     color: var(--purple);
 }
+
 .title2 {
     font-family: var(--font);
     font-weight: var(--extra-bold);
@@ -224,88 +225,103 @@ div div.textG{
 
 /*CSS ARTHUR*/
     
+
+.header-container{
+    background-position: center;
+    position: relative;
+    padding-block: 100px;
+    max-width: 100%;
+    
+}
+
+.header-container::after{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
 #comunidade{
         font-family: var(--font);
         font-weight: var(--bold);
-        position: absolute;
+        font-size: var(--p);
         color: var(--purple);
-        width: 108px;
+        position: relative;
+        max-width: 100%;
         height: 24px;
-        left: 110px;
-        top: 1500px;
-        font-size: 16px;
-        line-height: 24px;
-
-
+        right:1%;
+        
 
     }
 
 #title01{
     font-family: var(--font);
-    font-weight: var(--bold);
+    font-weight: var(--extra-bold);
     color: var(--darker-violet);
-
-    position: absolute;
-    width: 776px;
+    position: relative;
+    max-width: 100%;
     height: 152px;
-    left: 110px;
-    top: 1550px;
-
-
-    
-
+    top: 10px;
+    right: 1%;
+    padding-top: 5px;   
 }
+
 
 #title02{
     font-family: var(--font);
     font-weight: var(--bold);
     font-size: var(--h5);
     color: var(--darker-violet);
-    position: absolute;
-    width: 776px;
+    position: relative;
+    max-width: 100%;
     height: 128px;
-    left: 110px;
-    top: 1700px;
-
-
+    right: 1%;
+    bottom: 20px;
+    padding-top:15px;
 }
+
+
 
 #title03{
     font-family: var(--font);
     font-size: var(--h6);
     font-weight: var(--extra-bold);
     color: var(--darker-violet);
-    position: absolute;
-
-    width: 413px;
+    position: relative;
+    width: 400px;
     height: 72px;
-    left: 520px;
-    top: 1900px;
-    text-align: center;
-    mix-blend-mode: normal;
-
+    left: 8%;
+    top: 50px;
 
 }
 
-.seta{
-
-
-position: absolute;
-
+#seta{
+position: relative;
 width: 214.5px;
 height: 66.5px;
-left: 680px;
-top: 1815px;
+left: 117px;
+bottom: 110px;
+
 
 }
 
-#profile-pic{
-    /* profile pic */
+#foto-profile{
+    
 
+/* profile pic */
 
-    position: absolute;
-width: 444px;
-height: 545px;
-left: 863px;
-top: 1400px;
+position: relative;
+width: 227.94px;
+height: 240px;
+left: 320px;
+bottom: 550px;
 }
+
+.img-profile{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
