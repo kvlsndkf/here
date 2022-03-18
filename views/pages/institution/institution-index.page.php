@@ -56,6 +56,12 @@ try {
                         Secretaria
                     </a>
                 </th>
+
+                <th>
+                    <a href="./professor/list-professor.page.php">
+                        Professor
+                    </a>
+                </th>
             </tr>
         </thead>
     </table>
@@ -98,13 +104,28 @@ try {
             <?php } ?>
         </tbody>
     </table>
-
-    <br />
-    <br />
-    <br />
-    <br />
-
     <!-- fim count secretarias -->
+
+    <!-- início count professores -->
+    <table>
+        <thead>
+            <tr>
+                <th>Total de professores(as) cadastrados</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr>
+               <th>nada</th>
+           </tr>
+        </tbody>
+    </table>
+    <!-- fim count professores -->
+
+
+    <br />
+    <br />
+    <br />
+    <br />
 
     <!-- início da tabela teste -->
     <h3>Lista de ETEC's e secretarias</h3>
