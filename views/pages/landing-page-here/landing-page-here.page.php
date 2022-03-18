@@ -146,20 +146,33 @@
     <div class="content-comunidade">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <label>COMUNIDADE</label>
-                    <label>
-                        Esclareça suas dúvidas com alunos e professores
-                    </label>
-                    <label>
-                        Mural coletivo que possibilita fazer perguntas e respondê-las através da contribuição de 
+                <div class="col-md-8 col-sm-6">
+                    <div>
+                        <label id="comunidade">COMUNIDADE</label>
+                    </div>
+                    <div>
+                        <label id="title-comunidade">
+                            Esclareça suas dúvidas com alunos e professores
+                        </label>
+                    </div>
+                    <label id=descricao-comunidade>
+                        Mural coletivo que possibilita fazer perguntas e respondê-las através da contribuição de
                         alunos e professores! Incentivando o trabalho em equipe e disseminando conhecimento por toda
                         comunidade.
                     </label>
+                    <div class="width-comunidade justify-content-end d-none d-sm-flex d-md-flex d-lg-flex">
+                        <img id="seta" src="../../images/seta.svg">
+                    </div>
+                    <div class="d-flex justify-content-end mt-5 mt-sm-1 mt-md-1">
+                        <label id="descricao-imagem-comunidade">
+                            Ganhe conquistas e etiquetas especiais ajudando a comunidade!
+                        </label>
+                    </div>
+                    
                 </div>
 
-                <div class="col-md-4">
-                    helena
+                <div class="col-md-4 col-sm-6 ">
+                    <img class="img-profile img-fluid" src="../../images/profile.svg">
                 </div>
             </div>
         </div>
