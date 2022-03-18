@@ -82,7 +82,7 @@ try {
                                         </div>
                                     </tr>
                                 <?php } ?>
-                                <img src="../../images/dark-mini-logo.svg" alt="Logo HERE!" class="mini-logo-card position-absolute d-none d-sm-flex">
+                                <img src="../../images/dark-mini-logo.svg" alt="Logo HERE!" class="mini-logo-card position-absolute img-fluid">
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@ try {
                                     </tr>
                                     
                                 <?php } ?>
-                                <img src="../../images/logo.svg" alt="" class="mini-logo-card position-absolute d-none d-sm-flex">
+                                <img src="../../images/logo.svg" alt="" class="mini-logo-card position-absolute img fluid">
                             </div>
                         </div>
                     </div>
