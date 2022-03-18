@@ -142,6 +142,28 @@
         </div>
     </div>
 
+    <!--PARTE ARTHUR-->
+    <div class="content-comunidade">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <label>COMUNIDADE</label>
+                    <label>
+                        Esclareça suas dúvidas com alunos e professores
+                    </label>
+                    <label>
+                        Mural coletivo que possibilita fazer perguntas e respondê-las através da contribuição de 
+                        alunos e professores! Incentivando o trabalho em equipe e disseminando conhecimento por toda
+                        comunidade.
+                    </label>
+                </div>
+
+                <div class="col-md-4">
+                    helena
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Animação da Emillie -->
     <script type="text/javascript" src="../../js/index.scripts.js"></script>
@@ -157,49 +179,6 @@
             speed: 400
         });
     </script>
-
-<!--PARTE ARTHUR-->    
-        
-<div class="header-container">
-<div class="container">
-        <div class="row ">
-        <div class="col-md-12 col-sm-12 col-xs-12 "> 
-            <div class="container" id="comunidade" >
-                    <p>Comunidade</p>
-                </div>
-                    <!--TEXTO-->
-                    <div>
-                        <h1 class="container" id="title01"> Esclareça suas dúvidas com<br> alunos e professores </h1>
-                    </div>
-                    <!--TEXTO-->
-
-                    <div>
-                        <h2 class="container" id="title02"> Mural coletivo que possibilita fazer perguntas e respondê-las <br>através da contribuição de alunos e professores! Incentivando<br> o trabalho em equipe e disseminando conhecimento por toda<br> comunidade.</h2>
-                    </div>
-                    <!--TEXTO-->
-                    <div class="d-none d-sm-flex d-md-flex d-lg-flex col-md-12 col-sm-12 col-xs-12">
-                            <h3 class="container"  id="title03"> Ganhe conquistas e etiquetas<br> especiais  ajudando a comunidade </h3>
-                    </div>
-
-                    <!--Seta-->
-                    
-                    <div class="d-none d-sm-flex d-md-flex d-lg-flex col-md-12 col-sm-12 col-xs-12">
-                        <div class="container" id="seta">
-                                <img src="../../images/seta.svg" alt="Seta">
-                            </div>
-                    </div>
-                    
-                    <!--FOTO-->
-                     <div class="container" id="foto-profile">
-                        <img src="../../images/profile.svg" class="img-profile">
-                    </div>      
-                                <!--FIM FOTO-->
-                            </div>          
-                        </div>
-                    </div>               
-                </div>
-            </div>
-     
 </body>
 
 </html>
