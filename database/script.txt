@@ -10,8 +10,6 @@ CREATE TABLE schools(
     idSchool INT AUTO_INCREMENT
     , PRIMARY KEY (idSchool)
     , nameSchool VARCHAR(100) NOT NULL
-    , emailSchool VARCHAR(100) NOT NULL
-    , passwordSchool VARCHAR(100) NOT NULL
     , idInstitution INT
     , FOREIGN KEY (idInstitution) REFERENCES institutions(idInstitution)
 )
@@ -30,7 +28,7 @@ CREATE TABLE courses(
     idCourse INT AUTO_INCREMENT
     , PRIMARY KEY (idCourse)
     , nameCourse VARCHAR(100) NOT NULL
-    , isAnnualDurationDate VARCHAR(10) NOT NULL
+    , isAnnualDurationDate VARCHAR(10)
     , idSchool INT
     , FOREIGN KEY (idSchool) REFERENCES schools(idSchool)
 )
