@@ -132,6 +132,8 @@ class Professor
         }
     }
 
+    //where cod professor com as elscolas dele
+
     public function listSchoolsProfessors()
     {
         $connection = Connection::connection();

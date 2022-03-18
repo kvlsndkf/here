@@ -83,6 +83,7 @@ try {
         <?php while ($row = $listSchoolsProfessor->fetch(PDO::FETCH_BOTH)) { ?>
             <?php echo 'ETEC ' . $row[0] . '<br>' ?>
             <?php echo '-------------------------- <br>' ?>
+            
             <br>
             <hr>
         <?php } ?>
