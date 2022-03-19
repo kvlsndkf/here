@@ -82,7 +82,7 @@ try {
             <?php while ($row = $listSchools->fetch(PDO::FETCH_BOTH)) { ?>
                 <tr>
                     <th><?php echo $row[1]; ?></th>
-                    <th><a href="./forms-update-school-page.php?nameSchool=<?php echo $row[1]; ?>">Editar</a></th>
+                    <th><a href="./forms-update-school-page.php?updateSchool=<?php echo $row[0]; ?>">Editar</a></th>
                     <th><a href="../controller/delete-school.php?idSchool=<?php echo $row[0]; ?>">Excluir</a></th>
                 </tr>
             <?php } ?>
