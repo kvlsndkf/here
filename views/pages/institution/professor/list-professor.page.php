@@ -7,9 +7,7 @@ $connection = Connection::connection();
 
 try {
     $stmt = new Professor();
-    $stmtt = new Professor();
-    $listProfessor = $stmt->listProfessors();
-    $listSchoolsProfessor = $stmtt->listSchoolsProfessors();
+    $listProfessor = $stmt->list();
 } catch (Exception $e) {
     echo $e->getMessage();
 }
@@ -78,16 +76,8 @@ try {
     <?php while ($row = $listProfessor->fetch(PDO::FETCH_BOTH)) { ?>
         <?php echo 'Nome ' . $row[0] . '<br>' ?>
         <?php echo 'Email ' . $row[1] . '<br>' ?>
-        <?php echo '-------------------------- <br>' ?>
         <br>
-        <?php while ($row = $listSchoolsProfessor->fetch(PDO::FETCH_BOTH)) { ?>
-            <?php echo 'ETEC ' . $row[0] . '<br>' ?>
-            <?php echo '-------------------------- <br>' ?>
-            
-            <br>
-            <hr>
-        <?php } ?>
-        <a href="../controller/delete-secretary.php?idSecretary=<?php echo $row[0]; ?>">Excluir</a>
+        <a href="#">Excluir</a>
         <a href="#">Editar</a>
         <hr>
     <?php } ?>

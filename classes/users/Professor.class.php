@@ -113,6 +113,7 @@ class Professor
         }
     }
     //----------------------------------------------
+    /*
     public function listProfessors()
     {
         $connection = Connection::connection();
@@ -151,8 +152,23 @@ class Professor
             return $stmt;
         } catch (Exception $e) {
             echo $e->getMessage();
-        }
+        } 
+    }*/
 
-        
+    public function list()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("SELECT nameProfessor, emailProfessor 
+                                            FROM professors
+                                            ORDER BY nameProfessor
+                                        ");
+            $stmt->execute();
+            $stmt->fetch();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        } 
     }
 }
