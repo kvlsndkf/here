@@ -126,7 +126,7 @@ try {
                     </div>
                     <br/>
 
-                    <table class="table table-striped info-table">
+                    <table class="table table-striped info-table ">
                         <thead>
                             <tr>
                                 <th scope="col" class=" th-title">Nome</th>
