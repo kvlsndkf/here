@@ -34,9 +34,9 @@ class Course
     }
     public function setIsAnnualDurationDate($isAnnualDurationDate): void
     {
-        if($isAnnualDurationDate == true){
+        if ($isAnnualDurationDate == true) {
             $isAnnualDurationDate = "Sim";
-        } else{
+        } else {
             $isAnnualDurationDate = "Não";
         }
 
@@ -70,7 +70,7 @@ class Course
             echo $e->getMessage();
         }
     }
-
+    //---------------------------------------------
     //método para listar os cursos
     public function list()
     {
@@ -80,6 +80,21 @@ class Course
             $stmt = $connection->prepare("SELECT idCourse, nameCourse, isAnnualDurationDate 
                                             FROM courses
                                             ORDER BY nameCourse
+                                        ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+    //---------------------------------------------
+    //método para listar os cursos no select do cadastro da turma
+    public function selectList()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("SELECT * FROM courses
                                         ");
             $stmt->execute();
             return $stmt;
