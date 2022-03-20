@@ -60,9 +60,9 @@ try {
                                     Organização
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right customize-dropdown" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Turmas</a>
-                                        <a class="dropdown-item" href="#">Cursos</a>
-                                        <a class="dropdown-item" href="#">Matérias</a>
+                                        <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold);">Cursos</a>
+                                        <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold);">Turmas</a>
+                                        <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold);">Matérias</a>
                                     </div>
                                 </li>
                 <a class="nav-link active font-header-hero" href="../secretary/list-secretary.page.php">Estudantes</a>
@@ -80,41 +80,40 @@ try {
     <div class="row gx-5 line">
 
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="card position-relative dad-card">
+            <div class="card position-relative dad-card ">
                 <div class="card-body card-body-mine cb-curso flex-column d-flex">Total de Cursos cadastrados
                     <br/>
-                    <div id="text-2">212</div>
+                    <div class="text-2">212</div>
                     <img src="../../images/dark-mini-logo.svg" alt="Logo HERE!" class="mini-logo-card position-absolute img-fluid">
                 </div>
             </div>
         </div>
 
         <div class="col col 12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="card position-relative dad-card">
+            <div class="card position-relative dad-card align-card">
                 <div class="card-body card-body-mine cb-turm flex-column d-flex">Total de turmas cadastrados
                     <br/>
-                    <div id="text-2">212</div>
+                    <div class="text-2">212</div>
                     <img src="../../images/logo.svg" alt="" class="mini-logo-card position-absolute img fluid">
                 </div>
             </div>
         </div>
 
-        
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="card position-relative dad-card">
+            <div class="card position-relative dad-card-2">
                 <div class="card-body card-body-mine cb-prof flex-column d-flex">Total de professores cadastrados
                     <br/>
-                    <div id="text-2">212</div>
+                    <div class="text-2">212</div>
                     <img src="../../images/icon-magenta.svg" alt="Logo HERE!" class="mini-logo-card position-absolute img-fluid">
                 </div>
             </div>
         </div>
         
         <div class="col col 12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="card position-relative dad-card">
+            <div class="card position-relative dad-card-2 align-card">
                 <div class="card-body card-body-mine cb-aluno flex-column d-flex">Total de alunos cadastrados
                     <br/>
-                <div id="text-2">212</div>
+                <div class="text-2">212</div>
                     <img src="../../images/icon-light.svg" alt="" class="mini-logo-card position-absolute img fluid">
                 </div>
             </div>
@@ -123,8 +122,10 @@ try {
         <img class="img-fluid" src="../../images/table-white.svg" alt="">
         </div>
 
+
     </div>
 </div>
+
 
 
 
@@ -135,6 +136,8 @@ try {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../../../js/index.scripts.js"></script>
+
+        
     </body>
 
 </html>
