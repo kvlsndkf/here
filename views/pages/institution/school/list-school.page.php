@@ -50,8 +50,8 @@ try {
                     <!-- Menus -->
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div class="navbar-nav animate-menu navbar-mine">
-                            <a class="nav-link active font-header-hero current" href="#resources">Home</a>
-                            <a class="nav-link active font-header-hero" href="../school/list-school.page.php">ETEC's</a>
+                            <a class="nav-link active font-header-hero" href="../institution-index.page.php">Home</a>
+                            <a class="nav-link active font-header-hero current" href="../school/list-school.page.php">ETEC's</a>
                             <a class="nav-link active font-header-hero" href="../secretary/list-secretary.page.php">Secretaria</a>
                             <a class="nav-link active font-header-hero" href="#">Professores</a>
                             <a class="nav-link active font-header-hero" href="#">Sair</a>
@@ -115,7 +115,7 @@ try {
 
                     <div class="search-section">
                         <div class="search-container position-relative">
-                        <img src="../../images/icon-search.svg" class="icon-search position-absolute" alt="">
+                        <img src="../../../images/icon-search.svg" class="icon-search position-absolute" alt="">
                             <input type="text" name="" id="" placeholder="Pesquise pelo nome" class="search">
                         </div>
                     </div>
