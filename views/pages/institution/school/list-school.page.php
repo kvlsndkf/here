@@ -67,7 +67,7 @@ try {
         <div class="container px-4 container-cards">
                 <div class="row gx-5 line">
                     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <a href="./register-school-batch.page.php" id="card-button" value="Cadastrar ETEC">
+                    <a href="./register-school-unit.page.php" id="card-button" value="Cadastrar ETEC">
                         <div class="card position-relative dad-card">
                             <div class="card-body card-body-mine cb-secretary flex-column d-flex">Para fazer cadastro unitário <br> clique aqui
                                 <br/>
