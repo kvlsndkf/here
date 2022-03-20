@@ -53,7 +53,7 @@ try {
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav animate-menu navbar-mine">
                         <a class="nav-link active font-header-hero " href="../institution-index.page.php">Home</a>
-                        <a class="nav-link active font-header-hero" href="./school/list-school.page.php">ETEC's</a>
+                        <a class="nav-link active font-header-hero" href="../school/list-school.page.php">ETEC's</a>
                         <a class="nav-link active font-header-hero current" href="./secretary/list-secretary.page.php">Secretaria</a>
                         <a class="nav-link active font-header-hero" href="#">Sair</a>
                     </div>
@@ -67,7 +67,8 @@ try {
 
     <div class="container px-4 container-cards">
         <div class="row gx-5 line">
-            <div class="col col-12 col-sm-10 col-md-12 col-lg-12 col-xl-6">
+            <!-- <div class="col col-12 col-sm-10 col-md-12 col-lg-12 col-xl-6"> -->
+            <div class="col-12 col-sm-6 col-md-12">
                 <a href="./register-secretary.page.php" id="card-button" value="Cadastrar ETEC">
                     <div class="card position-relative dad-card">
                         <div class="card-body card-body-mine cb-secretary flex-column d-flex">Para fazer cadastro unitário <br> clique aqui
@@ -99,7 +100,7 @@ try {
 
             <div class="search-section">
                 <div class="search-container position-relative">
-                    <img src="../../images/icon-search.svg" class="icon-search position-absolute" alt="">
+                    <img src="../../../images/icon-search.svg" class="icon-search position-absolute" alt="">
                     <input type="text" name="" id="" placeholder="Pesquise pelo nome" class="search">
                 </div>
             </div>
