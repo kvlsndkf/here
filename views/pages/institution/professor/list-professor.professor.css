@@ -129,17 +129,13 @@ body nav.sticky .logo-name {
 
 /* LISTA DE PROFESSORES */
 
-.list-background {
+.background-list {
     background-color: var(--white);
     border-radius: 20px;
 }
 
-.info-list {
-    padding: 100px;
-}
-
-.list-title {
-    text-align: center;
+.formatting-list {
+    margin-top: 60px;
 }
 
 .search {
@@ -163,4 +159,26 @@ body nav.sticky .logo-name {
 .icon-search {
     right: 40px;
     bottom: 25px;
+}
+
+.info-list {
+    padding: 0px 50px 50px 50px;
+}
+
+.list-title {
+    text-align: center;
+    font-weight: var(--extra-bold);
+    font-family: var(--font);
+    color: var(--medium-violet);
+}
+
+.list-card-body {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.name-card {
+    font-family: var(--font);
+    font-weight: var(--extra-bold);
+    color: var(--medium-violet);
 }
