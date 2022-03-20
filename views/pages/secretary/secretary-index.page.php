@@ -46,13 +46,13 @@ try {
         <thead>
             <tr>
                 <th>
-                    <a href="./course/list-couse.page.php">
+                    <a href="./course/list-course.page.php">
                         Cursos
                     </a>
                 </th>
 
                 <th>
-                    <a href="#">
+                    <a href="./team/list-team.page.php">
                         Turmas
                     </a>
                 </th>

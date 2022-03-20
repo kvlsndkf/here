@@ -42,7 +42,7 @@ try {
         <thead>
             <tr>
                 <th>
-                    <a href="../institution-index.page.php">
+                    <a href="../secretary-index.page.php">
                         Home
                     </a>
                 </th>
