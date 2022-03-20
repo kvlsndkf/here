@@ -56,9 +56,9 @@ try {
             <div class="navbar-nav animate-menu navbar-mine">
                 <a class="nav-link active font-header-hero current" href="#resources">Home</a>
                 <a class="nav-link active font-header-hero" href="../institution/school/list-school.page.php">Organização
-                <img src="../../images/vetor.svg" alt=""></a>
+                <img src="../../images/Vector.svg" alt=""></a>
 
-                
+
                 <a class="nav-link active font-header-hero" href="#">Estudantes</a>
                 <a class="nav-link active font-header-hero" href="#">Professores</a>
                 <a class="nav-link active font-header-hero" href="#">Sair</a>
