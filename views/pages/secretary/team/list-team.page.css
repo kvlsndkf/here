@@ -67,6 +67,12 @@ body nav.sticky .logo-name {
     text-decoration: underline;
 }
 
+/* DROPDOWN ORGANIZAÇÃO */
+.customize-dropdown {
+    font-family: var(--font);
+    font-size: var(--p);
+}
+
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
@@ -127,8 +133,9 @@ body nav.sticky .logo-name {
     text-decoration: none;
 }
 
-/* DROPDOWN */
-.customize-dropdown {
-    font-family: var(--font);
-    font-size: var(--p);
+/* LIST */
+
+.list-background {
+    background-color: var(--white);
+    border-radius: 20px;
 }

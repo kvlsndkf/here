@@ -103,23 +103,27 @@ try {
 
         <!-- início da tabela teste -->
         <div class="container">
-            <h3>Lista de turmas</h3>
+            <div class="list-background">
+                <h3>Lista de turmas</h3>
 
-            <?php while ($row = $listTeam->fetch(PDO::FETCH_BOTH)) { ?>
-                <?php echo $row[1] . '<br>'; ?>
-                <?php echo $row[2] . '<br>'; ?>
-                <?php echo $row[3] . '<br>'; ?>
-                <?php echo $row[4] . '<br>'; ?>
-                <a href="../controller/delete-team.php?idTeam=<?php echo $row[0]; ?>">Excluir</a>
-                <a href="#">Editar</a>
-                <?php echo '<hr>'; ?>
-            <?php } ?>
+                <?php while ($row = $listTeam->fetch(PDO::FETCH_BOTH)) { ?>
+                    <?php echo $row[1] . '<br>'; ?>
+                    <?php echo $row[2] . '<br>'; ?>
+                    <?php echo $row[3] . '<br>'; ?>
+                    <?php echo $row[4] . '<br>'; ?>
+                    <a href="../controller/delete-team.php?idTeam=<?php echo $row[0]; ?>">Excluir</a>
+                    <a href="#">Editar</a>
+                    <?php echo '<hr>'; ?>
+                <?php } ?>
+            </div>
         </div>
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis velit illum autem aperiam asperiores sed dolor possimus repellendus corporis, laudantium molestiae temporibus consectetur tempore ex nihil ducimus labore. Fugiat, magni dolore ullam quia neque consectetur error in ipsam voluptatum, provident tenetur a beatae molestiae cumque dolor, delectus ratione laboriosam saepe nostrum nesciunt totam sunt optio! Cupiditate, provident sit similique fugit inventore, nam temporibus recusandae facilis eligendi blanditiis earum voluptatem saepe natus facere voluptate dolore. Reiciendis perspiciatis facere eos asperiores dolores odit, sit quidem facilis sed quisquam sapiente temporibus saepe exercitationem provident molestias autem vero ratione tenetur impedit! Eos porro repellendus inventore iusto quia cum rem ipsa quibusdam dolor soluta ab consequuntur consectetur, saepe reprehenderit dicta perspiciatis temporibus, facilis, eligendi eaque culpa? Earum quaerat soluta veritatis? Saepe laudantium neque doloribus. Inventore dolor impedit natus voluptatem quidem cumque quisquam. Beatae error accusantium eveniet voluptatibus modi omnis porro magni deserunt aperiam est. Accusamus exercitationem deleniti assumenda laborum, nostrum deserunt! Nostrum, fugit perspiciatis illo ipsum, est accusamus aut, maiores hic molestias natus incidunt corrupti exercitationem vero temporibus blanditiis dolorum modi nulla quibusdam officiis quo? Architecto sunt aut perferendis eveniet voluptatibus, omnis praesentium dignissimos aspernatur, fugiat, corporis explicabo quas laborum quaerat culpa libero ratione dolor ad repellendus similique id quod ipsa voluptate possimus hic? Molestias dolorem dignissimos aperiam non odio placeat facilis harum cum magnam tenetur quae officiis soluta fugiat temporibus aspernatur obcaecati ea doloribus hic nulla, natus omnis, illo deleniti aliquam! Reprehenderit ipsum ipsa magnam itaque obcaecati quibusdam hic harum, consequuntur voluptatem sint. Architecto fuga, aspernatur at impedit nisi velit eligendi dolor! Fuga odit obcaecati deserunt ut officia amet cum accusantium voluptas aliquid provident totam temporibus, necessitatibus et fugit corporis dicta exercitationem illo quos animi accusamus voluptatibus nihil, reprehenderit ipsam! Iste ipsum nobis accusantium ducimus dolorem iure veniam aspernatur sit voluptatum unde amet labore quo nulla ipsa molestiae, eius alias maxime. Cum similique, aspernatur deleniti fugit consequatur, corporis ut in labore itaque est minima maiores quod culpa. Culpa, numquam sint. Quis ullam corrupti porro est maxime atque repudiandae laudantium totam. Amet nam perspiciatis in non totam maxime dolores cumque aperiam veritatis corrupti dolor eos quia, cum nulla. Officiis nemo illo libero sunt consequatur quasi, nihil nostrum beatae perferendis repudiandae dolore magnam, quia minima qui quos harum dignissimos deleniti totam nobis dolorum nisi exercitationem optio. Aut, voluptas natus! Aliquid doloremque quidem eveniet? Odit fugiat minus cupiditate, sapiente error ullam earum harum veniam aperiam soluta suscipit et illo enim quas dolor veritatis tempora nesciunt corrupti nemo facere fugit. Optio sunt aliquam ut amet praesentium beatae officiis, ab nihil in delectus atque quia, quasi sit et, voluptatem eius incidunt commodi! Quisquam nam natus quaerat aut quo, ea architecto pariatur doloremque impedit consequatur obcaecati quae mollitia numquam a dolores culpa blanditiis consectetur eveniet corporis ullam. Modi odit dolorum ullam expedita deleniti, ex architecto dolore quos asperiores quisquam provident ipsam aperiam? Distinctio neque asperiores cupiditate deleniti repellendus maiores possimus, aliquam at, voluptates obcaecati nam debitis harum placeat repudiandae beatae! Corrupti quo fugit dolor ab temporibus voluptate nesciunt nam numquam.
         <!-- fim da tabela teste -->
           <!-- Animação da Emillie -->
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../../../js/index.scripts.js"></script>
     </body>
