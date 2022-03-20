@@ -55,6 +55,7 @@ try {
                         <a class="nav-link active font-header-hero " href="../institution-index.page.php">Home</a>
                         <a class="nav-link active font-header-hero" href="../school/list-school.page.php">ETEC's</a>
                         <a class="nav-link active font-header-hero current" href="./secretary/list-secretary.page.php">Secretaria</a>
+                        <a class="nav-link active font-header-hero" href="#">Professores</a>
                         <a class="nav-link active font-header-hero" href="#">Sair</a>
                     </div>
                 </div>
@@ -68,7 +69,7 @@ try {
     <div class="container px-4 container-cards">
         <div class="row gx-5 line">
             <!-- <div class="col col-12 col-sm-10 col-md-12 col-lg-12 col-xl-6"> -->
-            <div class="col-12 col-sm-6 col-md-12">
+            <div class="col-12 col-sm-12 col-md-12">
                 <a href="./register-secretary.page.php" id="card-button" value="Cadastrar ETEC">
                     <div class="card position-relative dad-card">
                         <div class="card-body card-body-mine cb-secretary flex-column d-flex">Para fazer cadastro unitário <br> clique aqui
@@ -106,8 +107,8 @@ try {
             </div>
             <!--  fim Barra de Pesquisa -->
             <br />
-
-            <table class="table table-striped info-table table-responsive-sm">
+            <div class="table-responsive">
+            <table class="table table-striped info-table ">
                 <thead>
                     <tr>
                         <th scope="col" class="th-title ">Nome</th>
@@ -153,6 +154,7 @@ try {
                 </tbody>
 
             </table>
+            </div>
         </div>
         <!-- fim da tabela teste -->
 
