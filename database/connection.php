@@ -16,4 +16,18 @@ class Connection
 
         return $connection;
     }
+
+    public static function connectionli(){
+
+        $servidor = "localhost";
+	    $usuario = "root";
+	    $senha = "";
+	    $dbname = "database_here";
+
+        //Criar a conexão
+	    $conn = mysqli_connect($servidor, $usuario, $senha, $dbname) 
+        or die("Erro na conexão com o servidor! Erro: " . mysqli_connect_error());
+
+        return $conn;
+    }
 }
