@@ -1,0 +1,166 @@
+body {
+    background-color: var(--purple-light);
+}
+
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+body nav{
+    transition: 0.6s;
+    position: fixed;
+    z-index: 2;
+}
+
+#header{
+    padding: 30px 0;
+}
+
+a.font-header-hero{
+    color: var(--medium-violet);
+    font-family: var(--font);
+    font-weight: var(--extra-bold);
+    font-size: var(--p);
+    margin-left: 60px;
+}
+
+body nav.sticky {
+    position: fixed;
+    width: 100%;
+    background-color: var(--medium-violet);
+    box-shadow: 0 8px 32px 0 var(--magenta-light);
+    z-index: 2;
+}
+
+body nav.sticky .font-header-hero,
+body nav.sticky .logo-name {
+    color: var(--purple-light); 
+}
+
+.logo {
+    height: 30px;
+}
+
+.logo-name {
+    font-family: var(--font);
+    position: relative;
+    font-size: var(--h4);
+    font-weight: var(--extra-bold);
+    color: var(--purple);
+    left: 8px;
+}
+
+.logo-box {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-mine .current {
+    text-decoration: underline;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--dark-purple-light);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: var(--medium-violet);
+}
+
+
+/* CARDS/BOTÕES */
+
+.mini-logo-card {
+    width: 80px;
+    right: 30px;
+    bottom: 30px;
+}
+
+.line {
+    margin-bottom: 100px;
+}
+
+.container-cards {
+    padding-block-start: 70px;
+}
+
+.card-body-mine {
+    padding: 40px;
+    font-family: var(--font);
+    font-weight: var(--extra-bold);
+    color: var(--white);
+    font-size: var(--h6);
+    border-radius: 20px;
+}
+
+.cb-unitario {
+    background-color: var(--purple);
+    text-decoration: none;
+}
+
+.cb-lote {
+    background-color: var(--magenta-dark);
+    
+}
+
+.dad-card {
+    border-radius: 20px;
+}
+
+.mini-arrow-card {
+    left: 40px;
+    bottom: 30px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/* LISTA DE PROFESSORES */
+
+.list-background {
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+.info-list {
+    padding: 100px;
+}
+
+.list-title {
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: var(--light);
+    font-family: var(--font);
+    font-weight: var(--bold);
+    color: var(--medium-dark);
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: var(--medium);
+}
+
+.search-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.icon-search {
+    right: 40px;
+    bottom: 25px;
+}
