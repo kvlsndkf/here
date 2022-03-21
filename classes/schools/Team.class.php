@@ -104,8 +104,36 @@ class Team
             echo $e->getMessage();
         }
     }
-    
+    //---------------------------------------------
+    //método para listar as turmas no select do cadastro de matérias
+    public function selectListTeams()
+    {
+        $connection = Connection::connection();
 
+        try {
+            $stmt = $connection->prepare("SELECT * FROM teams
+                                        ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+    //----------------------------------------------
+    //método para contar turmas
+    public function countTeam()
+    {
+        $connection = Connection::connection();
 
-
+        try {
+            $stmt = $connection->prepare("SELECT COUNT(idTeam) 
+                                            AS Quantidade 
+                                            FROM teams
+                                        ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }

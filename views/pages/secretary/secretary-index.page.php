@@ -1,17 +1,19 @@
 <?php
 
 include_once('/xampp/htdocs' . '/here/database/connection.php');
-include_once('/xampp/htdocs' . '/here/classes/schools/School.class.php');
-include_once('/xampp/htdocs' . '/here/classes/secretary/Secretary.class.php');
+include_once('/xampp/htdocs' . '/here/classes/schools/Subject.class.php');
+include_once('/xampp/htdocs' . '/here/classes/schools/Course.class.php');
+include_once('/xampp/htdocs' . '/here/classes/schools/Team.class.php');
 
 $connection = Connection::connection();
 
 try {
-    $stmt = new Secretary();
-    $stmtt = new School();
-    $listSchools = $stmt->list();
-    $countSecretary = $stmt->countSecretary();
-    $countSchool = $stmtt->countSchool();
+    $subject = new Subject();
+    $countSubject = $subject->countSubject();
+    $course = new Course();
+    $countCourse = $course->countCourse();
+    $team = new Team();
+    $countTeam = $team->countTeam();
 } catch (Exception $e) {
     echo $e->getMessage();
 }
@@ -58,7 +60,7 @@ try {
                 </th>
 
                 <th>
-                    <a href="#">
+                    <a href="./subject/list-subject.page.php">
                         Matérias
                     </a>
                 </th>
@@ -86,7 +88,11 @@ try {
             </tr>
         </thead>
         <tbody>
-            <th>nada</th>
+            <?php while ($row = $countCourse->fetch(PDO::FETCH_BOTH)) { ?>
+                <tr>
+                    <th><?php echo $row['Quantidade']; ?></th>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
     <!-- fim count cursos -->
@@ -99,7 +105,11 @@ try {
             </tr>
         </thead>
         <tbody>
-            <th>nada</th>
+            <?php while ($row = $countTeam->fetch(PDO::FETCH_BOTH)) { ?>
+                <tr>
+                    <th><?php echo $row['Quantidade']; ?></th>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
     <!-- fim count turmas -->
@@ -108,13 +118,15 @@ try {
     <table>
         <thead>
             <tr>
-                <th>Total de professores(as) cadastrados</th>
+                <th>Total de matérias cadastradas</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th>nada</th>
-            </tr>
+            <?php while ($row = $countSubject->fetch(PDO::FETCH_BOTH)) { ?>
+                <tr>
+                    <th><?php echo $row['Quantidade']; ?></th>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
     <!-- fim count professores -->

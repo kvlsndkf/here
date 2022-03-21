@@ -171,4 +171,18 @@ class Professor
             echo $e->getMessage();
         } 
     }
+    //----------------------------------------------
+    //método para listar os professores,  na tela de cadastro de matérias
+    public function selectListProfessors()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("SELECT * FROM professors");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
