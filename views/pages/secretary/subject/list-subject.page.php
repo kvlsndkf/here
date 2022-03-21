@@ -74,7 +74,7 @@ try {
         ?>
             <?php echo 'Nome professor ' . $professor['nameProfessor'] . '<br>'; ?>
         <?php } ?>
-        <a href="#">Excluir</a>
+        <a href="../controller/delete-subject.php?idSubject=<?php echo $row->idSubject; ?>">Excluir</a>
         <a href="#">Editar</a>
         <?php echo '<hr>'; ?>
     <?php } ?>

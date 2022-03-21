@@ -82,8 +82,8 @@ CREATE TABLE subjectsHasProfessors(
     , PRIMARY KEY (idSubjectHasProfessor)
     , idProfessor INT
     , idSubject INT
-    , FOREIGN KEY (idProfessor) REFERENCES professors(idProfessor)
-    , FOREIGN KEY (idSubject) REFERENCES subjects(idSubject)
+    , FOREIGN KEY (idProfessor) REFERENCES professors(idProfessor) ON DELETE CASCADE
+    , FOREIGN KEY (idSubject) REFERENCES subjects(idSubject) ON DELETE CASCADE
 )
 
 CREATE TABLE professorsHasSchools(
