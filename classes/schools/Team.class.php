@@ -104,8 +104,19 @@ class Team
             echo $e->getMessage();
         }
     }
-    
+    //---------------------------------------------
+    //método para listar as turmas no cadastro de alunos
+    public function selectList()
+    {
+        $connection = Connection::connection();
 
-
-
+        try {
+            $stmt = $connection->prepare("SELECT * FROM teams
+                                        ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }

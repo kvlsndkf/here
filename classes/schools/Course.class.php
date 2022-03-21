@@ -10,7 +10,7 @@ class Course
     public int $idSchool;
 
     //getters e setters
-    public function getIdCourse(): string
+    public function getIdCourse(): int
     {
         return $this->idCourse;
     }
