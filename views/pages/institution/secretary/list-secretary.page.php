@@ -125,8 +125,8 @@ try {
                     <?php while ($row = $listSecretary->fetch(PDO::FETCH_BOTH)) { ?>
                         <tr class="th col-12">
 
-                            <th class="th"><?php echo $row[0]; ?></th>
                             <th class="th"><?php echo $row[1]; ?></th>
+                            <th class="th"><?php echo $row[2]; ?></th>
                             <th class="th"><?php echo $row[3]; ?></th>
 
 
