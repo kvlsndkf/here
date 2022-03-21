@@ -80,7 +80,7 @@ try {
     <div class="row gx-5 line">
 
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="card position-relative dad-card ">
+            <div class="card position-relative dad-card top-card">
                 <div class="card-body card-body-mine cb-curso flex-column d-flex">Total de Cursos cadastrados
                     <br/>
                     <div class="text-2">212</div>
@@ -90,7 +90,7 @@ try {
         </div>
 
         <div class="col col 12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="card position-relative dad-card align-card">
+            <div class="card position-relative dad-card align-card top-card">
                 <div class="card-body card-body-mine cb-turm flex-column d-flex">Total de turmas cadastrados
                     <br/>
                     <div class="text-2">212</div>
@@ -100,7 +100,7 @@ try {
         </div>
 
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="card position-relative dad-card-2">
+            <div class="card position-relative dad-card-2 top-card">
                 <div class="card-body card-body-mine cb-prof flex-column d-flex">Total de professores cadastrados
                     <br/>
                     <div class="text-2">212</div>
@@ -110,7 +110,7 @@ try {
         </div>
         
         <div class="col col 12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="card position-relative dad-card-2 align-card">
+            <div class="card position-relative dad-card-2 align-card top-card">
                 <div class="card-body card-body-mine cb-aluno flex-column d-flex">Total de alunos cadastrados
                     <br/>
                 <div class="text-2">212</div>
