@@ -146,8 +146,6 @@ try {
                                     <h5 class="card-title th">Professor(es)</h5>
                                     <p class="card-text p-select"><?php echo $professor['nameProfessor'] . '<br>'; ?></p>
                                 <?php } ?>
-                                <a href="../controller/delete-subject.php?idSubject=<?php echo $row->idSubject; ?>">Excluir</a>
-                                <a href="#">Editar</a>
                             </div>
                         </div>
 
