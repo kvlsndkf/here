@@ -135,7 +135,7 @@ body nav.sticky .logo-name {
 }
 
 .formatting-list {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .search {
@@ -162,7 +162,7 @@ body nav.sticky .logo-name {
 }
 
 .info-list {
-    padding: 0px 50px 50px 50px;
+    padding: 0 50px 50px 50px;
 }
 
 .list-title {
@@ -175,10 +175,71 @@ body nav.sticky .logo-name {
 .list-card-body {
     padding: 10px;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .name-card {
     font-family: var(--font);
     font-weight: var(--extra-bold);
     color: var(--medium-violet);
+    margin-bottom: 4px;
+}
+
+.information-card {
+    font-family: var(--font);
+    font-weight: var(--bold);
+    color: var(--medium-violet);
+    margin-bottom: 14px;
+}
+
+.information-card-etec {
+    font-family: var(--font);
+    font-weight: var(--bold);
+    color: var(--medium-violet);
+    margin-bottom: 4px;
+}
+
+li {
+    list-style: none;
+}
+/* 
+.dropdown {
+    position: relative;
+    display: inline-block;
+  } */
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } 
+
+
+  .p-select{
+      font-family: var(--font);
+      font-weight: var(--bold);
+      font-size: var(--p);
+      color: var(--medium-violet);
+  }
+
+  .tres-p{
+    max-width: 35px;
+    max-height: 35px;
+    outline: none;
+  }
+
+  .nome-subject{
+      margin-right: 178px;
+  }
+
+.icon-kebab {
+    position: absolute;
 }

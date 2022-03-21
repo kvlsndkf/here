@@ -20,7 +20,7 @@ a.font-header-hero{
     font-family: var(--font);
     font-weight: var(--extra-bold);
     font-size: var(--p);
-    margin-left: 80px;
+    margin-left: 60px;
 }
 
 body nav.sticky {

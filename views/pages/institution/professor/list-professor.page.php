@@ -48,7 +48,7 @@ try {
                 <!-- Menus -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav animate-menu navbar-mine">
-                        <a class="nav-link active font-header-hero" href="#resources">Home</a>
+                        <a class="nav-link active font-header-hero" href="../institution-index.page.php">Home</a>
                         <a class="nav-link active font-header-hero" href="../school/list-school.page.php">ETEC's</a>
                         <a class="nav-link active font-header-hero" href="../secretary/list-secretary.page.php">Secretaria</a>
                         <a class="nav-link active font-header-hero current" href="list-professor.page.php">Professores</a>
@@ -99,7 +99,7 @@ try {
             <div class="container formatting-list">
                 <div class="background-list">
 
-                    <h5 class="p-4 list-title">Lista de professores</h5>
+                    <h5 class="pt-4 list-title">Lista de professores</h5>
 
                     <div class="info-list mx-auto">
                         <div class="search-section">
@@ -108,7 +108,7 @@ try {
                                 <input type="text" name="" id="" placeholder="Pesquise pelo nome" class="search">
                             </div>
                         </div>
-                        <br />
+                      <br>
                         <!-- cards -->
 
                         <div class="row">
@@ -118,23 +118,30 @@ try {
                                 <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                                     <div class="card list-card-body">
                                         <div class="card-body">
-                                            <?php echo '<div class=name-card> Nome <br>' . $row->nameProfessor . '</div><br>' ?>
-                                            <?php echo '<div class=name-card> Email <br>' . $row->emailProfessor . '</div><br>' ?>
+                                        <div class="d-flex flex-row-reverse">
+                                            <li class="dropdown tres-p">
+                                                    <a class="dropdown dp" href="#" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="../../../images/options-icon.svg" class="icon-kebab">
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right customize-dropdown" style="border-radius: 15px;" aria-labelledby="navbarDropdown">
+                                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Editar</a>
+                                                        <a class="dropdown-item" href="../controller/delete-professor.php?idProfessor=<?php echo $row->idProfessor; ?>" style="font-weight: var(--bold); color: var(--medium-violet);">Excluir</a>
+                                                    </div>
+                                                </li>
+                                        </div>
+                                            <?php echo '<div class="name-card"> Nome </div><div class="information-card">' . $row->nameProfessor . '</div>' ?>
+                                            <?php echo '<div class="name-card"> Email </div><div class="information-card">' . $row->emailProfessor . '</div>' ?>
+                                            <div class="name-card">Etec </div>
                                             <?php for ($j = 0; $j < count($row->school); $j++) {
                                                 $school = $row->school[$j];
                                             ?>
-                                                <?php echo 'Etec ' . $school['nameSchool'] . '<br>'; ?>
+                                                <?php echo '<div class="information-card-etec"> ' . $school['nameSchool'] . '</div>'; ?>
                                             <?php } ?>
-                                            <a href="../controller/delete-professor.php?idProfessor=<?php echo $row->idProfessor; ?>">Excluir</a>
-                                            <a href="#">Editar</a>
                                         </div>
                                     </div>
                                 </div>
-
                             <?php } ?>
-
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -144,6 +151,10 @@ try {
             <!-- Animação da Emillie -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
             <script type="text/javascript" src="../../../js/index.scripts.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 
