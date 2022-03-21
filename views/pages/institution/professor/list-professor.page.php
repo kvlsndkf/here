@@ -125,6 +125,8 @@ try {
                                             ?>
                                                 <?php echo 'Etec ' . $school['nameSchool'] . '<br>'; ?>
                                             <?php } ?>
+                                            <a href="../controller/delete-professor.php?idProfessor=<?php echo $row->idProfessor; ?>">Excluir</a>
+                                            <a href="#">Editar</a>
                                         </div>
                                     </div>
                                 </div>

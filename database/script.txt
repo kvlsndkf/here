@@ -80,12 +80,12 @@ CREATE TABLE professors(
 CREATE TABLE subjectsHasProfessors(
     idSubjectHasProfessor INT AUTO_INCREMENT
     , PRIMARY KEY (idSubjectHasProfessor)
-    , idTeam INT
     , idProfessor INT
     , idSubject INT
-    , FOREIGN KEY (idTeam) REFERENCES teams(idTeam)
     , FOREIGN KEY (idProfessor) REFERENCES professors(idProfessor)
     , FOREIGN KEY (idSubject) REFERENCES subjects(idSubject)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 )
 
 CREATE TABLE professorsHasSchools(
@@ -93,6 +93,6 @@ CREATE TABLE professorsHasSchools(
     , PRIMARY KEY (idProfessorHasSchool)
     , idProfessor INT
     , idSchool INT
-    , FOREIGN KEY (idProfessor) REFERENCES professors(idProfessor)
     , FOREIGN KEY (idSchool) REFERENCES schools(idSchool)
+    , FOREIGN KEY (idProfessor) REFERENCES professors(idProfessor) ON DELETE CASCADE
 )
