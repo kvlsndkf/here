@@ -6,7 +6,7 @@ require_once('/xampp/htdocs' . '/here/classes/schools/School.class.php');
 class Professor
 {
     public int $idProfessor;
-    public string $namaProfessor;
+    public string $nameProfessor;
     public string $emailProfessor;
     public string $passwordProfessor;
 
@@ -113,6 +113,46 @@ class Professor
         }
     }
     //----------------------------------------------
+    //método para listar professores
+    public function list()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $professorsArray = [];
+
+            $stmt = $connection->prepare("SELECT idProfessor, nameProfessor, emailProfessor 
+                                            FROM professors
+                                            ORDER BY nameProfessor
+                                        ");
+            $stmt->execute();
+
+
+            $professorsColumns = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            for ($i = 0; $i < count($professorsColumns); $i++) {
+                $row = $professorsColumns[$i];
+
+                $stmtSchools = $connection->prepare("SELECT s.idSchool, s.nameSchool
+                                                        FROM schools s
+                                                        INNER JOIN professorsHasSchools pf
+                                                        ON s.idSchool = pf.idSchool
+                                                        AND " . $row['idProfessor'] . " = pf.idProfessor
+                                                ");
+                $stmtSchools->execute();
+                $professor = new Professor();
+                $professor->school = $stmtSchools->fetchAll(PDO::FETCH_ASSOC);
+                $professor->nameProfessor = $row['nameProfessor'];
+                $professor->idProfessor = $row['idProfessor'];
+                $professor->emailProfessor = $row['emailProfessor'];
+                array_push($professorsArray, $professor);
+            }
+            return $professorsArray;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+    //----------------------------------------------
     /*
     public function listProfessors()
     {
@@ -153,7 +193,7 @@ class Professor
         } catch (Exception $e) {
             echo $e->getMessage();
         } 
-    }*/
+    }
 
     public function list()
     {
@@ -170,5 +210,5 @@ class Professor
         } catch (Exception $e) {
             echo $e->getMessage();
         } 
-    }
+    }*/
 }
