@@ -141,9 +141,9 @@ try {
                                 <p class="card-text p-select"><?php echo $row->nameSubject . '<br>'; ?></p>
                                 <h5 class="card-title th">Turma</h5>
                                 <p class="card-text p-select"><?php echo $row->team . '<br>'; ?></p>
+                                <h5 class="card-title th">Professor(es)</h5>
                                 <?php for ($j = 0; $j < count($row->professor); $j++) {
                                     $professor = $row->professor[$j];?>
-                                    <h5 class="card-title th">Professor(es)</h5>
                                     <p class="card-text p-select"><?php echo $professor['nameProfessor'] . '<br>'; ?></p>
                                 <?php } ?>
                             </div>
