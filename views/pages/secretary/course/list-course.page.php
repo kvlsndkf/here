@@ -56,9 +56,9 @@ try {
                                     Organização
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right customize-dropdown" style="border-radius: 15px;" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="./list-course.page.php" style="font-weight: var(--extra-bold); text-decoration: underline">Cursos</a>
-                                        <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold);">Turmas</a>
-                                        <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold);">Matérias</a>
+                                        <a class="dropdown-item" href="./list-course.page.php" style="font-weight: var(--extra-bold); color: var(--medium-purple); text-decoration: underline">Cursos</a>
+                                        <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold); color: var(--medium-purple);">Turmas</a>
+                                        <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold); color: var(--medium-purple);">Matérias</a>
                                     </div>
                                 </li>
                 <a class="nav-link active font-header-hero" href="../../secretary/list-secretary.page.php">Estudantes</a>
@@ -128,7 +128,7 @@ try {
                         </div>
                     </div>
                     <br/>
-
+                    <div class="table-responsive">
                     <table class="table table-striped info-table">
                         <thead>
                             <tr>
@@ -167,6 +167,7 @@ try {
                             <?php } ?>
                         </tbody>
                     </table>
+                    </div>
                 </div>
         </div>
         <!-- fim da tabela -->
