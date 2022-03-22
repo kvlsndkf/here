@@ -1,0 +1,326 @@
+/* Coisas Gerais*/
+
+/* Titulo dos modais */
+.modal-title{
+    margin-top: 20px;
+    font-family: var(--font);
+    font-weight: var(--bold);
+    color: var(--medium-violet);
+    margin-right: auto;
+    margin-left: auto;
+    
+    display: flex;
+}
+
+
+/* Nome dos subtitulos */
+
+.nameGeral{
+    font-family: var(--font);
+    color: var(--medium-violet);
+    font-weight: var(--bold);
+    max-height: auto;
+    max-width: auto;
+    display: flex;
+    margin-top: auto;
+}
+
+
+
+/* 1º Modal -> Cadastro Unitário ETEC */
+
+
+/*Campo de texto do 1º Modal */
+.box{
+    outline: unset;
+    padding: 20px;
+    background-color: var(--light);
+    border-radius: 20px;
+    border: 1px solid var(--medium);
+    align-items: center;
+    width: 100%;
+    height: 56px;
+}
+
+/*Parte do Placeholder*/
+.box::placeholder {
+    font-weight: normal;
+    color: var(--medium-dark);
+    
+}
+
+/* Botão de Cadastrar do 1º Modal*/
+.buttonCadastrar{
+    margin-top: 30px;
+    position: relative;
+    font-family: var(--font);
+    background-color: var(--medium-violet);
+    color: var(--white);
+    font-weight: var(--bold);
+    border-radius: 20px;
+    border: none solid var(--medium);
+    width: 100%;
+    height: 56px;
+
+}
+/* Botão de limpar do 1º Modal*/
+.buttonLimpar{
+    position: relative;
+    margin-top: 10px;
+    font-family: var(--font);
+    color: var(--medium-violet);
+    background-color: var(--white );
+    border-radius: 20px;
+    font-weight: var(--bold);
+    border: solid var(--medium);
+    border-color: var(--medium-violet);
+    width: 100%;
+    height: 56px;
+}
+
+/* 2º Modal -> Cadastro em Lote da ETEC */
+
+/* Ajuste do Modal (forma dele etec)*/
+.modal-dialog{
+    border-radius: 25px;
+    box-shadow: 3px 4px 15px var(--darker-violet);
+    overflow: auto;
+}
+
+.buttonDownload{
+    
+    position: relative;
+    font-family: var(--font);
+    background-color: var(--darker-violet);
+    color: var(--white);
+    font-weight: var(--bold);
+    border-radius: 20px;
+    border: none solid var(--medium);
+    width: 100%;
+    height: 56px;
+
+}
+
+/*Alert do formulario*/
+.alert1{
+    padding: 20px;
+    margin-top: 20px ;
+    width: 100%;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    border: 1px solid #1C54F5;
+}
+
+/*Mensagem do Alert*/
+.msg{
+    font-family: var(--font);
+    color: var(--medium-violet);
+    font-weight: var(--bold);
+}
+
+/*Palavra azul que fica no alert*/
+.xml{
+    color: var(--blue);
+    font-family: var(--font);
+    font-weight: var(--bold);
+}
+
+/*Icon do Alert*/
+.fas{
+    color: var(--blue);
+}
+
+/* Input de adicionar um arquivo. Parte que usei para
+ajudar na estilização do input, para meio que parecer um
+button*/
+input[type="file"] {
+    display: none;
+}
+
+/*Parte de dentro do "Button"*/
+.label{
+    width: 100%;
+    height: 56px;
+    border: 3px solid var(--darker-violet);
+    background-color: var(--darker-violet);
+    border-radius: 20px;
+    margin-top: 20px;
+    font-family: var(--font);
+    margin-bottom: 3px;
+    text-align: center;
+    color: var(--white);
+    font-weight: var(--bold);
+}
+
+
+
+/*Botão de cadastrar do 2º Modal*/
+.cadastrarLote{
+    position: relative;
+    font-family: var(--font);
+    background-color: var(--medium-violet);
+    color: var(--white);
+    font-weight: var(--bold);
+    border-radius: 20px;
+    border: none solid var(--medium);
+    width: 100%;
+    height: 56px;
+
+}
+
+
+
+
+/*Botão de Cancelar do 2º Modal*/
+.buttonCancelar{
+    position: relative;
+    margin-top: 10px;
+    
+    color: var(--medium-violet);
+    background-color: var(--white);
+    border-radius: 20px;
+    font-weight: var(--bold);
+    border: solid var(--medium);
+    border-color: var(--medium-violet);
+    width: 100%;
+    height: 56px;
+}
+
+/*Select menu*/
+
+.select{
+    padding: 13px;
+    width: 100%;
+    background-color: var(--light);
+    border: 1px solid var(--medium);
+    border-radius: 20px;
+    outline: unset;
+}
+
+.custom-select{
+    position: relative;
+}
+/*Seta personalizada*/
+
+
+
+.form-select{
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 56%;
+    line-height: 3;
+    background: var(--light);
+    overflow: hidden;
+}
+
+.nameSecretaria{
+    margin-top: 35px;
+    font-family: var(--font);
+    color: var(--medium-violet);
+    font-weight: var(--bold);
+    max-height: auto;
+    max-width: auto;
+    display: flex;
+    
+}
+
+/*4º Modal -> Modal do Curso Unitário*/
+
+.nameCurso{
+    font-family: var(--font);
+    color: var(--medium-violet);
+    font-weight: var(--bold);
+    max-height: auto;
+    max-width: auto;
+    display: flex;
+    margin-top: auto;
+}
+
+
+.textCurso{
+    font-family: var(--font);
+    color: var(--darker-violet);
+    font-weight: var(--bold);
+}
+
+.custom-checkbox{
+    margin-top: 30px;
+}
+
+.nameCheck{
+    font-family: var(--font);
+    color: var(--darker-violet);
+    font-weight: var(--bold);
+}
+
+.checkbox{
+    width: 15px;
+    height: 15px;
+}
+
+/*6º Modal -> Modal da Turma Unitário*/
+
+.namecol{
+    margin-top: 30px;
+    font-family: var(--font);
+    color: var(--medium-violet);
+    font-weight: var(--bold);
+    max-height: auto;
+    max-width: auto;
+}
+
+.nameSelect{
+    margin-top: 30px;
+    font-family: var(--font);
+    color: var(--medium-violet);
+    font-weight: var(--extra-bold);
+    max-height: auto;
+    max-width: auto;
+}
+
+.arquivo{
+    padding-top: 10px;
+    margin-bottom: 100px;
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+}
+
+/*Mensagem que some e da lugar ao arquivo*/
+.text1{
+    margin-top: 15px;
+    color: var(--darker-violet);
+    font-family: var(--font);
+    font-weight: var(--extra-bold);
+}
+
+/*Mensagem que some e da lugar ao arquivo*/
+.text2{
+    margin-top: 15px;
+    color: var(--darker-violet);
+    font-family: var(--font);
+    font-weight: var(--bold);
+}
+
+.close{
+    
+    background-color: var(--white);
+}
+
+#botao{
+    background-color: var(--white);
+    border: 0;
+    margin-right: 10px;
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+}
+
+
+
+.btn{
+    padding: 0;
+    outline: unset;
+}
