@@ -142,6 +142,7 @@ try {
                             <!-- Listagem de conteúdos da Tabela -->
 
                         </tr>
+                        <?php }?>
                     </thead>
                     <tbody>
 
