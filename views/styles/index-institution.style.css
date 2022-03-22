@@ -104,6 +104,7 @@ body nav.sticky .logo-name {
 
 .cb-secretary {
     background-color: var(--purple);
+    align-items: baseline;
     
 }
 
@@ -168,4 +169,6 @@ body nav.sticky .logo-name {
     color: var(--medium-violet);
     font-size: var(--h6);
 }
+
+
 

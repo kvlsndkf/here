@@ -2,12 +2,22 @@
 
 include_once('/xampp/htdocs' . '/here/database/connection.php');
 include_once('/xampp/htdocs' . '/here/classes/secretary/Secretary.class.php');
+require_once('/xampp/htdocs' . '/here/classes/schools/School.class.php');
+
+
 
 $connection = Connection::connection();
 
 try {
     $stmt = new Secretary();
     $listSecretary = $stmt->listSecretary();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+
+try {
+    $school = new School();
+    $list = $school->selectList();
 } catch (Exception $e) {
     echo $e->getMessage();
 }
@@ -25,6 +35,8 @@ try {
     <meta name="description" content="Here é uma plataforma institucional com o foco de criar um canal que facilite a comunicação entre professores e seus alunos.">
     <link rel="stylesheet" href="../../../styles/style.css">
     <link rel="stylesheet" href="list-secretary.style.css">
+    <link rel="stylesheet" href="../../../styles/modal-geral.css">
+    <script src="../../../js/modal.js"></script>
     <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +44,7 @@ try {
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@200;300;400;500;600;700;800&family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <title>Secretarias | HERE!</title>
 
-   
+
 </head>
 
 <body>
@@ -70,10 +82,12 @@ try {
         <div class="row gx-5 line">
             <!-- <div class="col col-12 col-sm-10 col-md-12 col-lg-12 col-xl-6"> -->
             <div class="col-12 col-sm-12 col-md-12">
-                <a href="./register-secretary.page.php" id="card-button" value="Cadastrar ETEC">
-                    <div class="card position-relative dad-card">
-                        <div class="card-body card-body-mine cb-secretary flex-column d-flex">Para fazer cadastro unitário <br> clique aqui
-                            <br />
+                <div class="card position-relative dad-card">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalSecretaria" data-bs-whatever="@mdo">
+                        <div class="card-body card-body-mine cb-secretary flex-column d-flex">Para fazer cadastro unitário
+                            <div>
+                            clique aqui
+                            </div>
                             <tr>
                                 <div style="font-size: 35px">
                                     <th>→</th>
@@ -81,7 +95,7 @@ try {
                             </tr>
                             <img src="../../../images/logo.svg" alt="Logo HERE!" class="mini-logo-card position-absolute img-fluid">
                         </div>
-                    </div>
+                </div>
                 </a>
             </div>
         </div>
@@ -108,52 +122,52 @@ try {
             <!--  fim Barra de Pesquisa -->
             <br />
             <div class="table-responsive">
-            <table class="table table-striped info-table ">
-                <thead>
-                    <tr>
-                        <th scope="col" class="th-title ">Nome</th>
-                        <th scope="col" class="th-title ">E-mail</th>
-                        <th scope="col" class="th-title">Etec</th>
-                        <th scope="col" class="th-title col-2">Ações</th>
+                <table class="table table-striped info-table ">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="th-title ">Nome</th>
+                            <th scope="col" class="th-title ">E-mail</th>
+                            <th scope="col" class="th-title">Etec</th>
+                            <th scope="col" class="th-title col-2">Ações</th>
 
-                        <!-- Listagem de conteúdos da Tabela -->
-
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <?php while ($row = $listSecretary->fetch(PDO::FETCH_BOTH)) { ?>
-                        <tr class="th col-12">
-
-                            <th class="th"><?php echo $row[1]; ?></th>
-                            <th class="th"><?php echo $row[2]; ?></th>
-                            <th class="th"><?php echo $row[3]; ?></th>
-
-
-                            <td>
-                                <div class="divo">
-                                    <div class="botao-edit butao">
-                                        <a href="">
-                                            <img src="../../../images/lapis.svg" class="trash">
-                                        </a>
-                                    </div>
-
-                                    <div class="botao-edit butao2">
-                                    <a href="../controller/delete-secretary.php?idSecretary=<?php echo $row[0]; ?>">
-                                            <img src=" ../../../images/trash-can.svg" class="trash">
-                                           
-                                        </a>
-                                        </th>
-                                    </div>
-                                </div>
-                            </td>
+                            <!-- Listagem de conteúdos da Tabela -->
 
                         </tr>
-                    <?php } ?>
+                    </thead>
+                    <tbody>
 
-                </tbody>
+                        <?php while ($row = $listSecretary->fetch(PDO::FETCH_BOTH)) { ?>
+                            <tr class="th col-12">
 
-            </table>
+                                <th class="th"><?php echo $row[1]; ?></th>
+                                <th class="th"><?php echo $row[2]; ?></th>
+                                <th class="th"><?php echo $row[3]; ?></th>
+
+
+                                <td>
+                                    <div class="divo">
+                                        <div class="botao-edit butao">
+                                            <a href="">
+                                                <img src="../../../images/lapis.svg" class="trash">
+                                            </a>
+                                        </div>
+
+                                        <div class="botao-edit butao2">
+                                            <a href="../controller/delete-secretary.php?idSecretary=<?php echo $row[0]; ?>">
+                                                <img src=" ../../../images/trash-can.svg" class="trash">
+
+                                            </a>
+                                            </th>
+                                        </div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        <?php } ?>
+
+                    </tbody>
+
+                </table>
             </div>
         </div>
         <!-- fim da tabela teste -->
@@ -164,7 +178,61 @@ try {
 
         <br />
 
-    
+
+
+        <!-- Inicio dos Modais -->
+
+        <!-- Modal da Secretária -->
+        <div class="modal fade" id="modalSecretaria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <h5 class="modal-title" id="exampleModalLabel">Cadastro unitário secretário(a) </h5>
+                        <button id="botao"><img type="button" data-bs-dismiss="modal" aria-label="Close" src="../../../images/fechar.svg" class="close"></button>
+                    </div>
+                    <div class="container">
+                    <div class="modal-body">
+
+                        <!-- Formulario Unitário da Secretária -->
+                        <form action="../controller/secretary-unit-registration.controller.php" method="POST">
+                            <div class="user-details">
+                                <div class="input-box">
+                                    <h6 class="nameGeral">Etec responsável</h6>
+                                    <div class=>
+                                        <select class="select" name="idSchool">
+                                            <option selected>Selecione a ETEC responsável pela secretaria</option>
+                                            <?php foreach ($list as $value) { ?>
+                                                <option value="<?php echo ($value['idSchool']) ?>"> <?php echo ($value['nameSchool']) ?> </option>
+                                            <?php } ?>
+                                        </select>
+
+                                    </div>
+                                    <div class="modal-header"> </div>
+
+                                    <h6 class="nameSecretaria">Nome secretário</h6>
+                                    <input type="text" class="box" placeholder="Digite o nome do secretário responsável pela ETEC" name="name" id="name" required>
+
+                                    <h6 class="nameSecretaria">Email secretário</h6>
+                                    <input type="email" class="box" placeholder="Digite o email para o secretário" name="email" id="email" required>
+
+                                    <h6 class="nameSecretaria">Senha secretário</h6>
+                                    <input type="password" class="box" placeholder="Digite uma senha para o secretário" name="password" id="password" required>
+
+
+
+                                    <a href="#"><button type="submit" class="buttonCadastrar" value="Submit">Cadastrar secretário(a)</button></a><br>
+
+                                    <a href="#"><button type="reset" class="buttonLimpar" value="Reset">Limpar</button></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fim dos Modais -->
 
 
 
