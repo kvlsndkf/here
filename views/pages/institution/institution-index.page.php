@@ -99,7 +99,6 @@ try {
                                     <th><?php echo $row['Quantidade']; ?></th>
                                 </div>
                             </tr>
-
                         <?php } ?>
                         <img src="../../images/logo.svg" alt="" class="mini-logo-card position-absolute img fluid">
                     </div>
@@ -108,8 +107,7 @@ try {
         </div>
     </div>
     <!-- fim card count secretarias -->
-
-
+  
     <!-- início da tabela -->
 
     <div class="container">

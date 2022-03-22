@@ -64,7 +64,7 @@ try {
                 </th>
 
                 <th>
-                    <a href="#">
+                    <a href="./student/list-student.page.php">
                         Estudantes
                     </a>
                 </th>

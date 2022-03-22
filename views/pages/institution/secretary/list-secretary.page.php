@@ -142,6 +142,7 @@ try {
                             <!-- Listagem de conteúdos da Tabela -->
 
                         </tr>
+
                         <?php }?>
                     </thead>
                     <tbody>
@@ -202,6 +203,7 @@ try {
             $back_page = $page - 1;
             $next_page = $page + 1;
             ?>
+
             <ul class="pagination justify-content-center pt-4 ala">
                 <?php
                 if ($back_page != 0) { ?>
@@ -217,6 +219,7 @@ try {
                 <?php
                 for ($i = 1; $i < $qnt_page + 1; $i++) {  ?>
                     <li class="page-item">
+
                         <a class="page-link" href="list-secretary.page.php?page=<?php echo $i; ?>"><?php echo '<div class="pagination-style">'. $i .'</div>' ?></a>
                     </li>
                 <?php } ?>
@@ -224,6 +227,7 @@ try {
                 <?php
                 if ($next_page <= $qnt_page) { ?>
                     <li class="page-item ">
+
                         <a class="page-link" href="list-secretary.page.php?page=<?php echo $next_page; ?>">Próximo</a>
                     </li>
                 <?php  } else { ?>
