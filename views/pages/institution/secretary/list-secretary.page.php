@@ -32,7 +32,7 @@ try {
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@200;300;400;500;600;700;800&family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
     <title>Secretarias | HERE!</title>
 
-   
+
 </head>
 
 <body>
@@ -138,36 +138,102 @@ try {
                                         </a>
                                     </div>
 
-                                    <div class="botao-edit butao2">
-                                    <a href="../controller/delete-secretary.php?idSecretary=<?php echo $row[0]; ?>">
-                                            <img src=" ../../../images/trash-can.svg" class="trash">
-                                           
-                                        </a>
-                                        </th>
-                                    </div>
-                                </div>
-                            </td>
+
+                            <!-- Listagem de conteúdos da Tabela -->
 
                         </tr>
-                    <?php } ?>
+                    </thead>
+                    <tbody>
 
-                </tbody>
+                        <?php while ($row = $listSecretary->fetch(PDO::FETCH_BOTH)) { ?>
+                            <tr class="th col-12">
 
-            </table>
+                                <th class="th"><?php echo $row[0]; ?></th>
+                                <th class="th"><?php echo $row[1]; ?></th>
+                                <th class="th"><?php echo $row[3]; ?></th>
+
+
+                                <td>
+                                    <div class="divo">
+                                        <div class="botao-edit butao">
+                                            <a href="">
+                                                <img src="../../../images/lapis.svg" class="trash">
+                                            </a>
+                                        </div>
+
+                                        <div class="botao-edit butao2">
+                                            <a href="../controller/delete-secretary.php?idSecretary=<?php echo $row[0]; ?>">
+                                                <img src=" ../../../images/trash-can.svg" class="trash">
+
+                                            </a>
+                                            </th>
+                                        </div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        <?php } ?>
+
+                    </tbody>
+
+                </table>
             </div>
         </div>
+        <?php
+
+            //*Pagina atual
+            $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
+            $page = (!empty($current_page)) ? $current_page : 1;
+
+            //* Setar a quantidade de registros por pagina
+            $limit_results = 10;
+
+            //* Quantidade de paginas
+            $query_qnt_register = "SELECT COUNT(idSecretary) AS idSecretary FROM secretarys";
+            $result_qnt_register = $connection->prepare($query_qnt_register);
+            $result_qnt_register->execute();
+            $row_qnt_registros = $result_qnt_register->fetch(PDO::FETCH_ASSOC);
+
+            //* Quantidade de paginas
+            $qnt_page = ceil($row_qnt_registros['idSecretary'] / $limit_results);
+
+            //*Verificar a pagina anterior e posterios
+            $back_page = $page - 1;
+            $next_page = $page + 1;
+            ?>
+            <ul class="pagination">
+                <?php
+                if ($back_page != 0) { ?>
+                    <li class="page-item ">
+                        <a class="page-link" href="list-secretary.page.php?page=<?php echo $back_page; ?>">Prev</a>
+                    </li>
+                <?php  } else { ?>
+                    <li class="page-item disabled">
+                        <a class="page-link">Prev</a>
+                    </li>
+                <?php }   ?>
+
+                <?php
+                for ($i = 1; $i < $qnt_page + 1; $i++) {  ?>
+                    <li class="page-item">
+                        <a class="page-link" href="list-secretary.page.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                    </li>
+                <?php } ?>
+
+                <?php
+                if ($next_page <= $qnt_page) { ?>
+                    <li class="page-item ">
+                        <a class="page-link" href="list-secretary.page.php?page=<?php echo $next_page; ?>">Next</a>
+                    </li>
+                <?php  } else { ?>
+                    <li class="page-item disabled">
+                        <a class="page-link">Next</a>
+                    </li>
+                <?php }   ?>
+            </ul>
+        </div>
         <!-- fim da tabela teste -->
-
-
-
-
-
         <br />
-
-    
-
-
-
 
         <!-- Animação da Emillie -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
