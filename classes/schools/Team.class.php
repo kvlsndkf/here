@@ -91,12 +91,22 @@ class Team
     {
         $connection = Connection::connection();
 
+        $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
+        $page = (!empty($current_page)) ? $current_page : 1;
+
+         //* Setar a quantidade de registros por pagina
+         $limit_results = 10;
+
+         //* Calcular o inicio da vizualização
+         $start = ($limit_results * $page) - $limit_results;
+
         try {
             $stmt = $connection->prepare("SELECT t.idTeam, t.nameTeam, date_format(t.startDateTeam, '%d/%m/%Y'), t.ModuleTeam, c.nameCourse
                                           FROM teams t
                                           INNER JOIN courses c
                                           ON t.idCourse = c.idCourse 
                                           ORDER BY t.nameTeam
+                                          LIMIT $start,$limit_results
                                         ");
             $stmt->execute();
             return $stmt;
