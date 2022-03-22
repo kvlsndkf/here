@@ -248,3 +248,9 @@ li {
     color: var(--medium-violet);
     margin-bottom: 4px;
 }
+
+/* PAGINAÇÃO */
+
+.pagination-style {
+    color: var(--medium-violet);
+}
