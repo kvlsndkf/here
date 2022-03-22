@@ -118,14 +118,8 @@ try {
             <div class="table-title">
                 <h5 class="p-2 table-title">Lista de Cursos</h5>
             </div>
-<<<<<<< Updated upstream
 
             <!-- Barra de Pesquisa -->
-
-=======
-
-            <!-- Barra de Pesquisa -->
->>>>>>> Stashed changes
             <div class="search-section">
                 <div class="search-container position-relative">
                     <img src="../../../images/icon-search.svg" class="icon-search position-absolute" alt="">
