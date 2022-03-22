@@ -169,3 +169,8 @@ body nav.sticky .logo-name {
     font-size: var(--h6);
 }
 
+/* PAGINAÇÃO */
+
+.pagination-style {
+    color: var(--medium-violet);
+}

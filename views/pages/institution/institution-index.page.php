@@ -165,33 +165,33 @@ try {
             $back_page = $page - 1;
             $next_page = $page + 1;
             ?>
-                <ul class="pagination">
+                <ul class="pagination justify-content-center pt-4">
                     <?php
                     if ($back_page != 0) { ?>
                         <li class="page-item ">
-                            <a class="page-link" href="institution-index.page.php?page=<?php echo $back_page; ?>">Prev</a>
+                            <a class="page-link" href="institution-index.page.php?page=<?php echo $back_page; ?>">Anterior</a>
                         </li>
                     <?php  } else { ?>
                         <li class="page-item disabled">
-                            <a class="page-link">Prev</a>
+                            <a class="page-link">Anterior</a>
                         </li>
                     <?php }   ?>
 
                     <?php
                     for ($i = 1; $i < $qnt_page + 1; $i++) {  ?>
                         <li class="page-item">
-                            <a class="page-link" href="institution-index.page.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                            <a class="page-link" href="institution-index.page.php?page=<?php echo $i; ?>"><?php echo '<div class="pagination-style">'. $i .'</div>' ?></a>
                         </li>
                     <?php } ?>
 
                     <?php
                     if ($next_page <= $qnt_page) { ?>
                         <li class="page-item ">
-                            <a class="page-link" href="institution-index.page.php?page=<?php echo $next_page; ?>">Next</a>
+                            <a class="page-link" href="institution-index.page.php?page=<?php echo $next_page; ?>">Próximo</a>
                         </li>
                     <?php  } else { ?>
                         <li class="page-item disabled">
-                            <a class="page-link">Next</a>
+                            <a class="page-link">Próximo</a>
                         </li>
                     <?php }   ?>
                 </ul>
