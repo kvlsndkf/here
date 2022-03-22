@@ -6,7 +6,8 @@ require_once('/xampp/htdocs' . '/here/classes/schools/School.class.php');
 class Professor
 {
     public int $idProfessor;
-    public string $namaProfessor;
+    public string $nameProfessor;
+
     public string $emailProfessor;
     public string $passwordProfessor;
 
@@ -113,51 +114,61 @@ class Professor
         }
     }
     //----------------------------------------------
-    /*
-    public function listProfessors()
+
+    //método para listar professores
+    public function list()
     {
         $connection = Connection::connection();
 
+        $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
+        $page = (!empty($current_page)) ? $current_page : 1;
+
+         //* Setar a quantidade de registros por pagina
+         $limit_results = 10;
+
+         //* Calcular o inicio da vizualização
+         $start = ($limit_results * $page) - $limit_results;
+
         try {
-            $stmt = $connection->prepare("SELECT DISTINCT p.nameProfessor, p.emailProfessor
-                                            FROM professors p
-                                            INNER JOIN professorsHasSchools pf
-                                            ON p.idProfessor = pf.idProfessor
-                                            INNER JOIN schools s
-                                            ON pf.idSchool = s.idSchool
+            $professorsArray = [];
+
+            $stmt = $connection->prepare("SELECT idProfessor, nameProfessor, emailProfessor 
+                                            FROM professors
+                                            ORDER BY nameProfessor
+                                            LIMIT $start,$limit_results
                                         ");
             $stmt->execute();
-            return $stmt;
+
+
+            $professorsColumns = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            for ($i = 0; $i < count($professorsColumns); $i++) {
+                $row = $professorsColumns[$i];
+
+                $stmtSchools = $connection->prepare("SELECT s.idSchool, s.nameSchool
+                                                        FROM schools s
+                                                        INNER JOIN professorsHasSchools pf
+                                                        ON s.idSchool = pf.idSchool
+                                                        AND " . $row['idProfessor'] . " = pf.idProfessor
+                                                ");
+                $stmtSchools->execute();
+                $professor = new Professor();
+                $professor->school = $stmtSchools->fetchAll(PDO::FETCH_ASSOC);
+                $professor->nameProfessor = $row['nameProfessor'];
+                $professor->idProfessor = $row['idProfessor'];
+                $professor->emailProfessor = $row['emailProfessor'];
+                array_push($professorsArray, $professor);
+            }
+            return $professorsArray;
         } catch (Exception $e) {
             echo $e->getMessage();
         }
     }
 
-    //where cod professor com as elscolas dele
-
-    public function listSchoolsProfessors()
-    {
-        $connection = Connection::connection();
-
-        try {
-            $stmt = $connection->prepare("SELECT s.nameSchool 
-                                            FROM professorshasschools pf
-                                            JOIN professors p
-                                            ON p.idProfessor = pf.idProfessor
-                                            JOIN schools s
-                                            ON s.idSchool = pf.idSchool
-                                        ");
-            $stmt->execute();
-            $stmt->fetch();
-            return $stmt;
-        } catch (Exception $e) {
-            echo $e->getMessage();
-        } 
-    }*/
-
     public function list()
     {
         $connection = Connection::connection();
+
 
         //*Pagina atual
         $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
@@ -174,6 +185,7 @@ class Professor
                                             FROM professors
                                             ORDER BY nameProfessor
                                             LIMIT $start,$limit_results
+
                                         ");
             $stmt->execute();
             $stmt->fetch();
@@ -181,6 +193,7 @@ class Professor
         } catch (Exception $e) {
             echo $e->getMessage();
         } 
+
     }
     //----------------------------------------------
     //método para listar os professores,  na tela de cadastro de matérias

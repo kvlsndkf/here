@@ -16,6 +16,7 @@ try {
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
     <head>
     <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,25 +90,60 @@ try {
                         </a>
                     </div>
                 </div>
-            </div>
-        <!-- fim cadastro unitário -->
+            </div> -->
+            <!-- fim cadastro em lote-->
 
-        
-        <!-- inicio lista professores -->
-        <div class="container">
-                <h3>Lista de professores</h3>
-            <hr>
 
-            <?php while ($row = $listProfessor->fetch(PDO::FETCH_BOTH)) { ?>
-                <?php echo 'Nome ' . $row[0] . '<br>' ?>
-                <?php echo 'Email ' . $row[1] . '<br>' ?>
-                <br>
-                <a href="#">Excluir</a>
-                <a href="#">Editar</a>
-                <hr>
-            <?php } ?>
+            <!-- inicio lista professores -->
+            <div class="container formatting-list">
+                <div class="background-list">
 
-            <?php
+                    <h5 class="pt-4 list-title">Lista de professores</h5>
+
+                    <div class="info-list mx-auto">
+                        <div class="search-section">
+                            <div class="search-container position-relative">
+                                <img src="../../../images/icon-search.svg" class="icon-search position-absolute" alt="">
+                                <input type="text" name="" id="" placeholder="Pesquise pelo nome" class="search">
+                            </div>
+                        </div>
+                      <br>
+                        <!-- cards -->
+
+                        <div class="row">
+                            <?php for ($i = 0; $i < count($listProfessor); $i++) {
+                                $row = $listProfessor[$i];
+                            ?>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                    <div class="card list-card-body">
+                                        <div class="card-body">
+                                        <div class="d-flex flex-row-reverse">
+                                            <li class="dropdown tres-p">
+                                                    <a class="dropdown dp" href="#" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="../../../images/options-icon.svg" class="icon-kebab">
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right customize-dropdown" style="border-radius: 15px;" aria-labelledby="navbarDropdown">
+                                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Editar</a>
+                                                        <a class="dropdown-item" href="../controller/delete-professor.php?idProfessor=<?php echo $row->idProfessor; ?>" style="font-weight: var(--bold); color: var(--medium-violet);">Excluir</a>
+                                                    </div>
+                                                </li>
+                                        </div>
+                                            <?php echo '<div class="name-card"> Nome </div><div class="information-card">' . $row->nameProfessor . '</div>' ?>
+                                            <?php echo '<div class="name-card"> Email </div><div class="information-card">' . $row->emailProfessor . '</div>' ?>
+                                            <div class="name-card">Etec </div>
+                                            <?php for ($j = 0; $j < count($row->school); $j++) {
+                                                $school = $row->school[$j];
+                                            ?>
+                                                <?php echo '<div class="information-card-etec"> ' . $school['nameSchool'] . '</div>'; ?>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+                <?php
             //*Pagina atual
             $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
             $page = (!empty($current_page)) ? $current_page : 1;
@@ -116,56 +152,66 @@ try {
             $limit_results = 10;
 
             //* Quantidade de paginas
-            $query_qnt_register = "SELECT COUNT(idSchool) AS idSchool FROM professors";
+            $query_qnt_register = "SELECT COUNT(idProfessor) AS idProfessor FROM professors";
             $result_qnt_register = $connection->prepare($query_qnt_register);
             $result_qnt_register->execute();
             $row_qnt_register = $result_qnt_register->fetch(PDO::FETCH_ASSOC);
 
             //* Quantidade de paginas
-            $qnt_page = ceil($row_qnt_register['idSchool'] / $limit_results);
+            $qnt_page = ceil($row_qnt_register['idProfessor'] / $limit_results);
+
 
 
             //*Verificar a pagina anterior e posterios
             $back_page = $page - 1;
             $next_page = $page + 1;
             ?>
-                <ul class="pagination">
+
+                <ul class="pagination justify-content-center pt-4">
                     <?php
                     if ($back_page != 0) { ?>
                         <li class="page-item ">
-                            <a class="page-link" href="list-professor.page.php?page=<?php echo $back_page; ?>">Prev</a>
+                            <a class="page-link" href="list-professor.page.php?page=<?php echo $back_page; ?>">Anterior</a>
                         </li>
                     <?php  } else { ?>
                         <li class="page-item disabled">
-                            <a class="page-link">Prev</a>
+                            <a class="page-link">Anterior</a>
+
                         </li>
                     <?php }   ?>
 
                     <?php
                     for ($i = 1; $i < $qnt_page + 1; $i++) {  ?>
                         <li class="page-item">
-                            <a class="page-link" href="list-professor.page.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                            <a class="page-link" href="list-professor.page.php?page=<?php echo $i; ?>"><?php echo'<div class="pagination-style">'. $i .'</div>' ?></a>
+
                         </li>
                     <?php } ?>
 
                     <?php
                     if ($next_page <= $qnt_page) { ?>
                         <li class="page-item ">
-                            <a class="page-link" href="list-professor.page.php?page=<?php echo $next_page; ?>">Next</a>
+                            <a class="page-link" href="list-professor.page.php?page=<?php echo $next_page; ?>">Próximo</a>
                         </li>
                     <?php  } else { ?>
                         <li class="page-item disabled">
-                            <a class="page-link">Next</a>
+                            <a class="page-link">Próximo</a>
                         </li>
                     <?php }   ?>
                 </ul>
-        </div>
+            </div>
 
-        <!-- fim da tabela teste -->
-        <!-- Animação da Emillie -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../../../js/index.scripts.js"></script>
-        
-    </body>
+
+            <!-- fim da tabela teste -->
+            <!-- Animação da Emillie -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="../../../js/index.scripts.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
 
 </html>

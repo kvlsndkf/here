@@ -5,7 +5,6 @@ body {
 
 a:link, a:visited,  a:hover, a:active
 {
-    color: #000000;
     text-decoration: none;
 }
 
@@ -66,6 +65,12 @@ body nav.sticky .logo-name {
     text-decoration: underline;
 }
 
+/* DROPDOWN ORGANIZAÇÃO */
+.customize-dropdown {
+    font-family: var(--font);
+    font-size: var(--p);
+}
+
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
@@ -77,7 +82,6 @@ body nav.sticky .logo-name {
     border-radius: 15px;
     background: var(--medium-violet);
 }
-
 
 /* CARDS/BOTÕES */
 
@@ -111,7 +115,7 @@ body nav.sticky .logo-name {
 
 .cb-lote {
     background-color: var(--magenta-dark);
-    
+
 }
 
 .dad-card {
@@ -127,15 +131,62 @@ body nav.sticky .logo-name {
     text-decoration: none;
 }
 
-/* LISTA DE PROFESSORES */
+/* LIST */
+
+.list-background {
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } 
+
+
+  .p-select{
+      font-family: var(--font);
+      font-weight: var(--bold);
+      font-size: var(--p);
+      color: var(--medium-violet);
+  }
+
+  .tres-p{
+    max-width: 35px;
+    max-height: 35px;
+    outline: none;
+  }
+
+  .nome-subject{
+      margin-right: 178px;
+  }
+
+.icon-kebab {
+    position: absolute;
+} 
+
+/* CARD LIST */
 .background-list {
     background-color: var(--white);
     border-radius: 20px;
 }
 
 .formatting-list {
+    margin-top: 60px;
     margin-top: 40px;
-
 }
 
 .search {
@@ -150,18 +201,17 @@ body nav.sticky .logo-name {
     border-width: 0.5px;
     border-color: var(--medium);
 }
-
 .search-container {
     width: 100%;
     padding: 10px;
 }
-
 .icon-search {
     right: 30px;
     bottom: 25px;
 }
 
 .info-list {
+    padding: 0 50px 50px 50px;
     padding: 0 50px 50px 50px;
 }
 
@@ -197,51 +247,6 @@ body nav.sticky .logo-name {
     font-weight: var(--bold);
     color: var(--medium-violet);
     margin-bottom: 4px;
-}
-
-li {
-    list-style: none;
-}
-/* 
-.dropdown {
-    position: relative;
-    display: inline-block;
-  } */
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  } 
-
-
-  .p-select{
-      font-family: var(--font);
-      font-weight: var(--bold);
-      font-size: var(--p);
-      color: var(--medium-violet);
-  }
-
-  .tres-p{
-    max-width: 35px;
-    max-height: 35px;
-    outline: none;
-  }
-
-  .nome-subject{
-      margin-right: 178px;
-  }
-
-.icon-kebab {
-    position: absolute;
 }
 
 /* PAGINAÇÃO */

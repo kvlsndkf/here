@@ -16,4 +16,5 @@ class Connection
 
         return $connection;
     }
+
 }

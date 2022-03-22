@@ -66,6 +66,8 @@ body nav.sticky .logo-name {
     text-decoration: underline;
 }
 
+
+
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
@@ -109,9 +111,9 @@ body nav.sticky .logo-name {
     text-decoration: none;
 }
 
+
 .cb-lote {
     background-color: var(--magenta-dark);
-
 }
 
 .dad-card {
@@ -161,6 +163,7 @@ body nav.sticky .logo-name {
     bottom: 25px;
 }
 
+
 .info-list {
     padding: 0 50px 50px 50px;
 }
@@ -170,12 +173,20 @@ body nav.sticky .logo-name {
     font-weight: var(--extra-bold);
     font-family: var(--font);
     color: var(--medium-violet);
+
 }
 
 .list-card-body {
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 20px;
+
+}
+
+/*Cursos CSS*/
+
+#card-button:hover{
+    text-decoration: none;
 }
 
 .name-card {
@@ -202,6 +213,7 @@ body nav.sticky .logo-name {
 li {
     list-style: none;
 }
+
 /* 
 .dropdown {
     position: relative;
@@ -243,6 +255,7 @@ li {
 .icon-kebab {
     position: absolute;
 }
+
 
 /* PAGINAÇÃO */
 
