@@ -42,7 +42,7 @@
         </nav>
 
         <!-- CONTEÚDO PARTE 1 -->
-        <div class="container">
+        <div class="container"id="start">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 d-flex align-items-center">
                     <div>
@@ -177,7 +177,55 @@
             </div>
         </div>
     </div>
-
+    <footer>
+            <div class="footer-background">
+                <div class="container">
+                    <div class="footer-head-content">
+                        <p class="poupe-tempo">
+                            POUPE TEMPO E SIMPLIFIQUE TAREFAS
+                        </p>
+                        <p class="futuro-comeca">
+                            O futuro começa aqui
+                        </p>
+                        <div class="d-flex justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center">
+                            <a href="../login/login.page.php">
+                                <div class="btnEntrar-2 btn-final d-flex align-items-center">
+                                    <div class="label-entrar-hero">
+                                        Entrar
+                                    </div>
+                                    <div class="arrow-hero">
+                                        <img src="../../images/arrow.svg" alt="Seta indicando a entrada no HERE!">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-end-content">
+                        <div class="row">
+                            <p class="footer-text plataforma col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                               <a href="#resources"> Plataforma </a>
+                            </p>
+                            <p class="footer-text comunidade col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                               <a href=""> Comunidade </a>
+                            </p>
+                            <p class="footer-text fale col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                <a href=""> Fale conosco </a>
+                            </p>
+                        </div>
+                        <br>
+                        <div class=" d-flex justify-content-end">
+                            <a href="#start"><img src="../../images/back-button.svg" alt="Botão de voltar ao início da página" class="back-button"></a>
+                        </div>
+                        <hr class="final-line">
+                        <div class="row">
+                            <p class="copyright text-center mx-auto">
+                                Copyright © Cold Wolf - 2022. Todos os direitos reservados.
+                            </p>
+                        </div>
+                        
+                    </div>
+            </div>
+        </footer>
     <!-- Animação da Emillie -->
     <script type="text/javascript" src="../../js/index.scripts.js"></script>
 
