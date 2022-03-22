@@ -146,6 +146,59 @@ try {
                     </div>
             </div>
         </div>
+        <?php
+            //*Pagina atual
+            $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
+            $page = (!empty($current_page)) ? $current_page : 1;
+
+            //* Setar a quantidade de registros por pagina
+            $limit_results = 10;
+
+            //* Quantidade de paginas
+            $query_qnt_register = "SELECT COUNT(idTeam) AS idTeam FROM teams";
+            $result_qnt_register = $connection->prepare($query_qnt_register);
+            $result_qnt_register->execute();
+            $row_qnt_register = $result_qnt_register->fetch(PDO::FETCH_ASSOC);
+
+            //* Quantidade de paginas
+            $qnt_page = ceil($row_qnt_register['idTeam'] / $limit_results);
+
+
+            //*Verificar a pagina anterior e posterios
+            $back_page = $page - 1;
+            $next_page = $page + 1;
+            ?>
+                <ul class="pagination">
+                    <?php
+                    if ($back_page != 0) { ?>
+                        <li class="page-item ">
+                            <a class="page-link" href="list-team.page.php?page=<?php echo $back_page; ?>">Prev</a>
+                        </li>
+                    <?php  } else { ?>
+                        <li class="page-item disabled">
+                            <a class="page-link">Prev</a>
+                        </li>
+                    <?php }   ?>
+
+                    <?php
+                    for ($i = 1; $i < $qnt_page + 1; $i++) {  ?>
+                        <li class="page-item">
+                            <a class="page-link" href="list-team.page.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                        </li>
+                    <?php } ?>
+
+                    <?php
+                    if ($next_page <= $qnt_page) { ?>
+                        <li class="page-item ">
+                            <a class="page-link" href="list-team.page.php?page=<?php echo $next_page; ?>">Next</a>
+                        </li>
+                    <?php  } else { ?>
+                        <li class="page-item disabled">
+                            <a class="page-link">Next</a>
+                        </li>
+                    <?php }   ?>
+                </ul>
+        </div>   
         <br>
         
         <!-- fim da tabela teste -->
