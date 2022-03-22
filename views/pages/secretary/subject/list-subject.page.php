@@ -139,8 +139,7 @@ try {
                         </div>
                     </div>
                 </div>
-            </div>
-            <?php
+                <?php
             //*Pagina atual
             $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
             $page = (!empty($current_page)) ? $current_page : 1;
@@ -192,6 +191,8 @@ try {
                         </li>
                     <?php }   ?>
                 </ul>
+            </div>
+    
 
 
 
