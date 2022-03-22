@@ -289,7 +289,7 @@ input[type="file"] {
 }
 
 /*Mensagem que some e da lugar ao arquivo*/
-.text{
+.text1{
     margin-top: 15px;
     color: var(--darker-violet);
     font-family: var(--font);
@@ -297,7 +297,7 @@ input[type="file"] {
 }
 
 /*Mensagem que some e da lugar ao arquivo*/
-.text1{
+.text2{
     margin-top: 15px;
     color: var(--darker-violet);
     font-family: var(--font);

@@ -244,7 +244,8 @@ try {
                                     <label for="file" class="label">
                                         <p class="arquivo">+ Adicionar arquivos</p>
                                     </label>
-                                    <p class="text1">Nenhum arquivo selecionado.</p>
+                                    <p class="text">Nenhum arquivo selecionado.</p>
+                                    
                                     <!-- Fim do Input -->
 
                                     <br><a href="#"><button type="submit" class="cadastrarLote" value="Salvar">Cadastrar em lote</button></a>

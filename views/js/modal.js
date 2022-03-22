@@ -3,5 +3,5 @@ document.querySelector('#file').addEventListener('change', function(){
 })
 
 document.querySelector('#file').addEventListener('change', function(){
-    document.querySelector('.text1').textContent = this.files[0].name
+    document.querySelector('.arquivo').textContent = this.files[0].name
 })
