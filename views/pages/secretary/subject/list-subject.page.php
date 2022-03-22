@@ -71,87 +71,76 @@ try {
 <!-- fim menu -->
 
 
-<!-- início card cadastro-->
-
-<div class="container px-4 container-cards">
-                <div class="row gx-5 line">
-                    <div class="col-12 col-sm-12 col-md-12">
-                    <a href="./register-subject-unit.page.php" id="card-button" value="Cadastrar ETEC">
-                        <div class="card position-relative dad-card">
-                            <div class="card-body card-body-mine cb-secretary flex-column d-flex">Para fazer cadastro unitário clique aqui
-                                <br/>
-                                    <tr>
-                                        <div style="font-size: 35px">
-                                            <th>→</th>
-                                        </div>
-                                    </tr>
-                                <img src="../../../images/logo.svg" alt="Logo HERE!" class="mini-logo-card position-absolute img-fluid">
-                            </div>
+ <!-- início cadastro unitario -->
+ <div class="container px-4 container-cards">
+        <div class="row gx-5 line">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <a href="./register-subject-unit.page.php" class="link" id="card-button">
+                    <div class="card position-relative dad-card">
+                        <div class="card-body card-body-mine cb-unitario flex-column d-flex">Para fazer cadastro unitário<br />clique aqui
+                            <br />
+                            <img src="../../../images/logo.svg" alt="Logo HERE!" class="mini-logo-card position-absolute img-fluid">
+                            <img src="../../../images/mini-arrow-card.svg" alt="" class="mini-arrow-card position-absolute img fluid">
+                            <br />
                         </div>
-                    </a>
                     </div>
-                </div>
-        <!-- fim card cadastro unitário -->
+                </a>
+            </div>
+
+            <!-- fim cadastro unitario -->
 
         <!-- início da tabela -->
 
-    <div class="container">
-                <div class="table-background mx-auto p-4 col-12">
-                    <div class="table-title">
-                        <h5 class="p-2 table-title">Lista de Matérias</h5>
-                    </div>
 
-                    <!-- Barra de Pesquisa -->
+        <!-- inicio lista professores -->
+        <div class="container formatting-list">
+                <div class="background-list">
 
-                    <div class="search-section">
-                        <div class="search-container position-relative">
-                        <img src="../../../images/icon-search.svg" class="icon-search position-absolute" alt="">
-                            <input type="text" name="" id="" placeholder="Pesquise pelo nome" class="search">
-                        </div>
-                    </div>
-                    <br/>
+                    <h5 class="pt-4 list-title">Lista de Matérias</h5>
 
-                    <!-- Início do Card para Listagem -->
-
-                    <?php for ($i = 0; $i < count($listSubjects); $i++) {
-                        $row = $listSubjects[$i];?>
-                        <div class="card card-subject" style="width: 18rem; border-radius: 25px;">
-                            <div class="card-body">
-                                <div class="d-flex flex-row-reverse">
-                            <li class="dropdown tres-p">
-                                    <a class="dropdown dp" href="#" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="../../../images/tres-pontinhos.svg">
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right customize-dropdown" style="border-radius: 15px;" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="../course/list-course.page.php" style="font-weight: var(--bold); color: var(--medium-violet);">Editar</a>
-                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Excluir</a>
-                                    </div>
-                                </li>
-                                <!-- <div class="menu-nav">
-        <div class="dropdown-container" tabindex="-1">
-          <div class="three-dots"></div>
-          <div class="dropdown-three-d">
-            <a href="#"><div>Editar</div></a>
-            <a href="#"><div>Excluir</div></a>
-          </div>
-        </div>
-      </div> -->
-                                <h5 class="card-title nome-subject th">Nome</h5>
-                                </div>
-                                <p class="card-text p-select"><?php echo $row->nameSubject . '<br>'; ?></p>
-                                <h5 class="card-title th">Turma</h5>
-                                <p class="card-text p-select"><?php echo $row->team . '<br>'; ?></p>
-                                <?php for ($j = 0; $j < count($row->professor); $j++) {
-                                    $professor = $row->professor[$j];?>
-                                    <h5 class="card-title th">Professor(es)</h5>
-                                    <p class="card-text p-select"><?php echo $professor['nameProfessor'] . '<br>'; ?></p>
-                                <?php } ?>
+                    <div class="info-list mx-auto">
+                        <div class="search-section">
+                            <div class="search-container position-relative">
+                                <img src="../../../images/icon-search.svg" class="icon-search position-absolute" alt="">
+                                <input type="text" name="" id="" placeholder="Pesquise pelo nome" class="search">
                             </div>
                         </div>
+                      <br>
+                        <!-- cards -->
 
-                    <?php } ?>
+                        <div class="row">
+                        <?php for ($i = 0; $i < count($listSubjects); $i++) {
+                        $row = $listSubjects[$i];?>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                    <div class="card list-card-body">
+                                        <div class="card-body">
+                                        <div class="d-flex flex-row-reverse">
+                                            <li class="dropdown tres-p">
+                                                    <a class="dropdown dp" href="#" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <img src="../../../images/tres-pontinhos.svg" class="icon-kebab">
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right customize-dropdown" style="border-radius: 15px;" aria-labelledby="navbarDropdown">
+                                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Editar</a>
+                                                        <a class="dropdown-item" href="../controller/delete-subject.php?idSubject=<?php echo $row->idSubject; ?>" style="font-weight: var(--bold); color: var(--medium-violet);">Excluir</a>
+                                                    </div>
+                                                </li>
+                                        </div>
+                                            <?php echo '<div class="name-card"> Nome </div><div class="information-card">' . $row->nameSubject . '</div>' ?>
+                                            <?php echo '<div class="name-card"> Turma </div><div class="information-card">' . $row->team . '</div>' ?>
+                                            <div class="name-card">Professor </div>
+                                            <?php for ($j = 0; $j < count($row->professor); $j++) {
+                                    $professor = $row->professor[$j];?>
+                                                <?php echo '<div class="information-card-etec"> ' . $professor['nameProfessor'] . '</div>'; ?>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Fim do Card para Listagem -->
 
 
                 </div>
