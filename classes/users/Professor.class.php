@@ -7,6 +7,7 @@ class Professor
 {
     public int $idProfessor;
     public string $nameProfessor;
+
     public string $emailProfessor;
     public string $passwordProfessor;
 
@@ -113,6 +114,7 @@ class Professor
         }
     }
     //----------------------------------------------
+
     //método para listar professores
     public function list()
     {
@@ -162,63 +164,20 @@ class Professor
             echo $e->getMessage();
         }
     }
+
+    
     //----------------------------------------------
-    /*
-    public function listProfessors()
+    //método para listar os professores,  na tela de cadastro de matérias
+    public function selectListProfessors()
     {
         $connection = Connection::connection();
 
         try {
-            $stmt = $connection->prepare("SELECT DISTINCT p.nameProfessor, p.emailProfessor
-                                            FROM professors p
-                                            INNER JOIN professorsHasSchools pf
-                                            ON p.idProfessor = pf.idProfessor
-                                            INNER JOIN schools s
-                                            ON pf.idSchool = s.idSchool
-                                        ");
+            $stmt = $connection->prepare("SELECT * FROM professors");
             $stmt->execute();
             return $stmt;
         } catch (Exception $e) {
             echo $e->getMessage();
         }
     }
-
-    //where cod professor com as elscolas dele
-
-    public function listSchoolsProfessors()
-    {
-        $connection = Connection::connection();
-
-        try {
-            $stmt = $connection->prepare("SELECT s.nameSchool 
-                                            FROM professorshasschools pf
-                                            JOIN professors p
-                                            ON p.idProfessor = pf.idProfessor
-                                            JOIN schools s
-                                            ON s.idSchool = pf.idSchool
-                                        ");
-            $stmt->execute();
-            $stmt->fetch();
-            return $stmt;
-        } catch (Exception $e) {
-            echo $e->getMessage();
-        } 
-    }
-
-    public function list()
-    {
-        $connection = Connection::connection();
-
-        try {
-            $stmt = $connection->prepare("SELECT nameProfessor, emailProfessor 
-                                            FROM professors
-                                            ORDER BY nameProfessor
-                                        ");
-            $stmt->execute();
-            $stmt->fetch();
-            return $stmt;
-        } catch (Exception $e) {
-            echo $e->getMessage();
-        } 
-    }*/
 }

@@ -128,7 +128,6 @@ body nav.sticky .logo-name {
 }
 
 /* LISTA DE PROFESSORES */
-
 .background-list {
     background-color: var(--white);
     border-radius: 20px;
@@ -136,6 +135,7 @@ body nav.sticky .logo-name {
 
 .formatting-list {
     margin-top: 40px;
+
 }
 
 .search {
