@@ -20,46 +20,49 @@ try {
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <meta name="description" content="Here é uma plataforma institucional com o foco de criar um canal que facilite a comunicação entre professores e seus alunos.">
-    <link rel="stylesheet" href="../../styles/style.css">
-    <link rel="stylesheet" href="../../styles/index-institution.style.css">
-    <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@200;300;400;500;600;700;800&family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
-    <title>Instituição | HERE!</title>
 
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <meta name="description" content="Here é uma plataforma institucional com o foco de criar um canal que facilite a comunicação entre professores e seus alunos.">
+        <link rel="stylesheet" href="../../styles/style.css">
+        <link rel="stylesheet" href="../../styles/index-institution.style.css">
+        <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@200;300;400;500;600;700;800&family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+        <title>Instituição | HERE!</title>
 
-<body>
+    </head>
 
-    <!-- inicio menu -->
-    <div id="background-hero">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container py-4">
-                <!-- Foto -->
-                <a class="navbar-brand logo-box" href="./index.php">
-                    <img src="../../images/logo.svg" class="logo" alt="Logo HERE!">
-                    <span class="logo-name">Here!</span>
-                </a>
-                <!-- Toggle -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Menus -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav animate-menu navbar-mine">
-                        <a class="nav-link active font-header-hero current" href="#resources">Home</a>
-                        <a class="nav-link active font-header-hero" href="./school/list-school.page.php">ETEC's</a>
-                        <a class="nav-link active font-header-hero" href="./secretary/list-secretary.page.php">Secretaria</a>
-                        <a class="nav-link active font-header-hero" href="#">Professores</a>
-                        <a class="nav-link active font-header-hero" href="#">Sair</a>
+    <body>
+
+        <!-- inicio menu -->
+        <div id="background-hero">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-4">
+                    <!-- Foto -->
+                    <a class="navbar-brand logo-box" href="./index.php">
+                        <img src="../../images/logo.svg" class="logo" alt="Logo HERE!">
+                        <span class="logo-name">Here!</span>
+                    </a>
+                    <!-- Toggle -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Menus -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <div class="navbar-nav animate-menu navbar-mine">
+                            <a class="nav-link active font-header-hero current" href="institution-index.page.php">Home</a>
+                            <a class="nav-link active font-header-hero" href="./school/list-school.page.php">ETEC's</a>
+                            <a class="nav-link active font-header-hero" href="./secretary/list-secretary.page.php">Secretaria</a>
+                            <a class="nav-link active font-header-hero" href="../institution/professor/list-professor.page.php">Professores</a>
+                            <a class="nav-link active font-header-hero" href="#" style="color: var(--medium-violet);">Sair</a>
+                        </div>
+
                     </div>
                 </div>
             </div>

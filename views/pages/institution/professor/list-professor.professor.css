@@ -3,6 +3,12 @@ body {
 }
 
 
+a:link, a:visited,  a:hover, a:active
+{
+    color: #000000;
+    text-decoration: none;
+}
+
 /* NAVBAR */
 
 body nav{
@@ -72,13 +78,13 @@ body nav.sticky .logo-name {
     background: var(--medium-violet);
 }
 
-/* CARD */
+
+/* CARDS/BOTÕES */
 
 .mini-logo-card {
     width: 80px;
-    /* margin-left: 75%; */
     right: 30px;
-    bottom: 40px;
+    bottom: 30px;
 }
 
 .line {
@@ -90,7 +96,7 @@ body nav.sticky .logo-name {
 }
 
 .card-body-mine {
-    padding: 35px;
+    padding: 40px;
     font-family: var(--font);
     font-weight: var(--extra-bold);
     color: var(--white);
@@ -98,12 +104,13 @@ body nav.sticky .logo-name {
     border-radius: 20px;
 }
 
-.cb-etec {
-    background-color: var(--violet);
+.cb-unitario {
+    background-color: var(--purple);
+    text-decoration: none;
 }
 
-.cb-secretary {
-    background-color: var(--purple);
+.cb-lote {
+    background-color: var(--magenta-dark);
     
 }
 
@@ -111,19 +118,24 @@ body nav.sticky .logo-name {
     border-radius: 20px;
 }
 
-/* TABLE */
+.mini-arrow-card {
+    left: 40px;
+    bottom: 30px;
+}
 
-.table-background {
+.link {
+    text-decoration: none;
+}
+
+/* LISTA DE PROFESSORES */
+
+.background-list {
     background-color: var(--white);
     border-radius: 20px;
 }
 
-.info-table {
-    padding: 100px;
-}
-
-.table-title {
-    text-align: center;
+.formatting-list {
+    margin-top: 40px;
 }
 
 .search {
@@ -145,28 +157,91 @@ body nav.sticky .logo-name {
 }
 
 .icon-search {
-    right: 40px;
+    right: 30px;
     bottom: 25px;
 }
 
-.table-title {
-    font-family: var(--font);
+.info-list {
+    padding: 0 50px 50px 50px;
+}
+
+.list-title {
+    text-align: center;
     font-weight: var(--extra-bold);
+    font-family: var(--font);
     color: var(--medium-violet);
 }
 
-.th {
+.list-card-body {
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.name-card {
+    font-family: var(--font);
+    font-weight: var(--extra-bold);
     color: var(--medium-violet);
+    margin-bottom: 4px;
+}
+
+.information-card {
     font-family: var(--font);
     font-weight: var(--bold);
-    font-size: 18px;
+    color: var(--medium-violet);
+    margin-bottom: 14px;
 }
 
-.th-title {
-    font-weight: var(--extra-bold);
+.information-card-etec {
     font-family: var(--font);
+    font-weight: var(--bold);
     color: var(--medium-violet);
-    font-size: var(--h6);
+    margin-bottom: 4px;
+}
+
+li {
+    list-style: none;
+}
+/* 
+.dropdown {
+    position: relative;
+    display: inline-block;
+  } */
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } 
+
+
+  .p-select{
+      font-family: var(--font);
+      font-weight: var(--bold);
+      font-size: var(--p);
+      color: var(--medium-violet);
+  }
+
+  .tres-p{
+    max-width: 35px;
+    max-height: 35px;
+    outline: none;
+  }
+
+  .nome-subject{
+      margin-right: 178px;
+  }
+
+.icon-kebab {
+    position: absolute;
 }
 
 /* PAGINAÇÃO */

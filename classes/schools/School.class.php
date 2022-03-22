@@ -9,31 +9,28 @@ class School
     public int $idSecretary;
     public string $createdAt;
     public string $updatedAt;
-    public int $idSchool;
+    public array $idSchool;
 
     //getters e setters
     public function getNameSchool(): string
     {
         return $this->nameSchool;
     }
-
     public function setNameSchool($nameSchool): void
     {
         $this->nameSchool = $nameSchool;
     }
 
-    public function getIdSchool(): string
+    public function getIdSchool(): array
     {
         return $this->idSchool;
     }
-
     public function setIdSchool($idSchool): void
     {
         $this->idSchool = $idSchool;
     }
 
     //métodos
-
     public function register($school)
     {
         $connection = Connection::connection();
@@ -128,6 +125,19 @@ class School
                                         WHERE s.idSchool NOT IN 
                                         (SELECT y.idSchool FROM secretarys y)
                                         ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public function selectListSchools()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("SELECT * FROM schools s");
             $stmt->execute();
             return $stmt;
         } catch (Exception $e) {

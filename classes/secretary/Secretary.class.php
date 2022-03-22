@@ -19,7 +19,6 @@ class Secretary
     {
         return $this->idSecretary;
     }
-
     public function setIdSecretary($idSecretary)
     {
         $this->idSecretary = $idSecretary;
@@ -29,7 +28,6 @@ class Secretary
     {
         return $this->nameSecretary;
     }
-
     public function setNameSecretary($nameSecretary)
     {
         $this->nameSecretary = $nameSecretary;
@@ -39,7 +37,6 @@ class Secretary
     {
         return $this->emailSecretary;
     }
-
     public function setEmailSecretary($emailSecretary)
     {
         $this->emailSecretary = $emailSecretary;
@@ -49,7 +46,6 @@ class Secretary
     {
         return $this->passwordSecretary;
     }
-
     public function setPasswordSecretary($passwordSecretary)
     {
         $this->passwordSecretary = $passwordSecretary;
@@ -59,7 +55,6 @@ class Secretary
     {
         return $this->idSchool;
     }
-
     public function setIdSchool($idSchool)
     {
         $this->idSchool = $idSchool;
@@ -69,7 +64,6 @@ class Secretary
     {
         return $this->school;
     }
-
     public function setSchool($school)
     {
         $this->school = $school;
