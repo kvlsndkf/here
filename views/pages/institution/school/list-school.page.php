@@ -80,6 +80,7 @@ try {
                             </div>
                         </div>
                     </a>
+
                     </div>
         <!-- fim card cadastro unitário -->
 
@@ -141,7 +142,7 @@ try {
                                     <td class="td col-2">
                                         <div class="divo">
                                             <div class="botao-edit butao">
-                                                <a href="#">
+                                                <a href="./forms-update-school-page.php?updateSchool=<?php echo $row[0]; ?>">
                                                 <img src="../../../images/lapis.svg" class="trash">
                                                 </a>
                                             </div>
@@ -165,4 +166,5 @@ try {
     </body>
 
 </html>
+
 
