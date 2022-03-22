@@ -243,3 +243,9 @@ li {
 .icon-kebab {
     position: absolute;
 }
+
+/* PAGINAÇÃO */
+
+.pagination-style {
+    color: var(--medium-violet);
+}
