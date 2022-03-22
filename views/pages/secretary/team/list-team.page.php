@@ -55,8 +55,9 @@ try {
                                     Organização
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right customize-dropdown" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Editar</a>
-                                        <a class="dropdown-item" href="#">Excluir</a>
+                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Cursos</a>
+                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Turmas</a>
+                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Matérias</a>
                                     </div>
                                 </li>
                                 <a class="nav-link active font-header-hero" href="./secretary/list-secretary.page.php">Estudantes</a>
@@ -71,7 +72,7 @@ try {
          <!-- início cadastro unitario -->
          <div class="container px-4 container-cards">
                 <div class="row gx-5 line">
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <a href="./register-team-unit.page.php" class="link">
                             <div class="card position-relative dad-card">
                                 <div class="card-body card-body-mine cb-unitario flex-column d-flex">Para fazer cadastro unitário<br/>clique aqui
@@ -85,7 +86,7 @@ try {
                     </div>
         <!-- fim cadastro unitário -->
         <!-- inicio cadastr em lote -->
-                    <div class="col col 12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <!-- <div class="col col 12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                         <a href="#">
                             <div class="card position-relative dad-card">
                                 <div class="card-body card-body-mine cb-lote flex-column d-flex">Para fazer cadastro em lote</br>clique aqui
@@ -98,27 +99,55 @@ try {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- fim cadastro em lote -->
 
         <!-- início da tabela teste -->
-        <div class="container">
-            <div class="list-background">
-                <h3>Lista de turmas</h3>
-
-                <?php while ($row = $listTeam->fetch(PDO::FETCH_BOTH)) { ?>
-                    <?php echo $row[1] . '<br>'; ?>
-                    <?php echo $row[2] . '<br>'; ?>
-                    <?php echo $row[3] . '<br>'; ?>
-                    <?php echo $row[4] . '<br>'; ?>
-                    <a href="../controller/delete-team.php?idTeam=<?php echo $row[0]; ?>">Excluir</a>
-                    <a href="#">Editar</a>
-                    <?php echo '<hr>'; ?>
-                <?php } ?>
+        <div class="container formatting-list">
+            <div class="background-list">
+                <div class="info-list mx-auto">
+                    <h5 class="p-4 list-title">Lista de turmas</h5>
+                    <div class="search-section">
+                            <div class="search-container position-relative">
+                                <img src="../../../images/icon-search.svg" class="icon-search position-absolute" alt="">
+                                <input type="text" name="" id="" placeholder="Pesquise pelo nome" class="search">
+                            </div>
+                        </div>
+                        <br />
+                    <div class="row">
+                        <?php while ($row = $listTeam->fetch(PDO::FETCH_BOTH)) { ?>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="card list-card-body">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-row-reverse">
+                                            <li class="dropdown tres-p">
+                                                <a class="dropdown dp" href="#" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <img src="../../../images/options-icon.svg" class="icon-kebab">
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right customize-dropdown" style="border-radius: 15px;" aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Editar</a>
+                                                    <a class="dropdown-item" href="../controller/delete-team.php?idTeam=<?php echo $row[0]; ?>" style="font-weight: var(--bold); color: var(--medium-violet);">Excluir</a>
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <p class="name-card">Nome</p>
+                                        <?php echo '<p class="information-card">'. $row[1] . '</p>'; ?>
+                                        <p class="name-card">Data de ingresso</p>
+                                        <?php echo '<p class="information-card">'. $row[2] . '</p>'; ?>
+                                        <p class="name-card">Módulo</p>
+                                        <?php echo '<p class="information-card">'. $row[3] . '</p>'; ?>
+                                        <p class="name-card">Curso</p>
+                                        <?php echo '<p class="information-card">'. $row[4] . '</p>'; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                            
+                    </div>
             </div>
         </div>
         <br>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis velit illum autem aperiam asperiores sed dolor possimus repellendus corporis, laudantium molestiae temporibus consectetur tempore ex nihil ducimus labore. Fugiat, magni dolore ullam quia neque consectetur error in ipsam voluptatum, provident tenetur a beatae molestiae cumque dolor, delectus ratione laboriosam saepe nostrum nesciunt totam sunt optio! Cupiditate, provident sit similique fugit inventore, nam temporibus recusandae facilis eligendi blanditiis earum voluptatem saepe natus facere voluptate dolore. Reiciendis perspiciatis facere eos asperiores dolores odit, sit quidem facilis sed quisquam sapiente temporibus saepe exercitationem provident molestias autem vero ratione tenetur impedit! Eos porro repellendus inventore iusto quia cum rem ipsa quibusdam dolor soluta ab consequuntur consectetur, saepe reprehenderit dicta perspiciatis temporibus, facilis, eligendi eaque culpa? Earum quaerat soluta veritatis? Saepe laudantium neque doloribus. Inventore dolor impedit natus voluptatem quidem cumque quisquam. Beatae error accusantium eveniet voluptatibus modi omnis porro magni deserunt aperiam est. Accusamus exercitationem deleniti assumenda laborum, nostrum deserunt! Nostrum, fugit perspiciatis illo ipsum, est accusamus aut, maiores hic molestias natus incidunt corrupti exercitationem vero temporibus blanditiis dolorum modi nulla quibusdam officiis quo? Architecto sunt aut perferendis eveniet voluptatibus, omnis praesentium dignissimos aspernatur, fugiat, corporis explicabo quas laborum quaerat culpa libero ratione dolor ad repellendus similique id quod ipsa voluptate possimus hic? Molestias dolorem dignissimos aperiam non odio placeat facilis harum cum magnam tenetur quae officiis soluta fugiat temporibus aspernatur obcaecati ea doloribus hic nulla, natus omnis, illo deleniti aliquam! Reprehenderit ipsum ipsa magnam itaque obcaecati quibusdam hic harum, consequuntur voluptatem sint. Architecto fuga, aspernatur at impedit nisi velit eligendi dolor! Fuga odit obcaecati deserunt ut officia amet cum accusantium voluptas aliquid provident totam temporibus, necessitatibus et fugit corporis dicta exercitationem illo quos animi accusamus voluptatibus nihil, reprehenderit ipsam! Iste ipsum nobis accusantium ducimus dolorem iure veniam aspernatur sit voluptatum unde amet labore quo nulla ipsa molestiae, eius alias maxime. Cum similique, aspernatur deleniti fugit consequatur, corporis ut in labore itaque est minima maiores quod culpa. Culpa, numquam sint. Quis ullam corrupti porro est maxime atque repudiandae laudantium totam. Amet nam perspiciatis in non totam maxime dolores cumque aperiam veritatis corrupti dolor eos quia, cum nulla. Officiis nemo illo libero sunt consequatur quasi, nihil nostrum beatae perferendis repudiandae dolore magnam, quia minima qui quos harum dignissimos deleniti totam nobis dolorum nisi exercitationem optio. Aut, voluptas natus! Aliquid doloremque quidem eveniet? Odit fugiat minus cupiditate, sapiente error ullam earum harum veniam aperiam soluta suscipit et illo enim quas dolor veritatis tempora nesciunt corrupti nemo facere fugit. Optio sunt aliquam ut amet praesentium beatae officiis, ab nihil in delectus atque quia, quasi sit et, voluptatem eius incidunt commodi! Quisquam nam natus quaerat aut quo, ea architecto pariatur doloremque impedit consequatur obcaecati quae mollitia numquam a dolores culpa blanditiis consectetur eveniet corporis ullam. Modi odit dolorum ullam expedita deleniti, ex architecto dolore quos asperiores quisquam provident ipsam aperiam? Distinctio neque asperiores cupiditate deleniti repellendus maiores possimus, aliquam at, voluptates obcaecati nam debitis harum placeat repudiandae beatae! Corrupti quo fugit dolor ab temporibus voluptate nesciunt nam numquam.
+        
         <!-- fim da tabela teste -->
           <!-- Animação da Emillie -->
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
