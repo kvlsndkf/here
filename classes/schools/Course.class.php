@@ -76,10 +76,21 @@ class Course
     {
         $connection = Connection::connection();
 
+        //*Pagina atual
+        $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
+        $page = (!empty($current_page)) ? $current_page : 1;
+
+         //* Setar a quantidade de registros por pagina
+         $limit_results = 10;
+
+         //* Calcular o inicio da vizualização
+         $start = ($limit_results * $page) - $limit_results;
+
         try {
             $stmt = $connection->prepare("SELECT idCourse, nameCourse, isAnnualDurationDate 
                                             FROM courses
                                             ORDER BY nameCourse
+                                            LIMIT $start,$limit_results
                                         ");
             $stmt->execute();
             return $stmt;
