@@ -219,3 +219,9 @@ body nav.sticky .logo-name {
     margin-top: 12px;
     margin-left: 12px;
 }
+
+/* PAGINAÇÃO */
+
+.pagination-style {
+    color: var(--medium-violet);
+}
