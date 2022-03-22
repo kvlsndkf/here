@@ -3,6 +3,12 @@ body {
 }
 
 
+a:link, a:visited,  a:hover, a:active
+{
+    color: #000000;
+    text-decoration: none;
+}
+
 /* NAVBAR */
 
 body nav{
@@ -72,13 +78,13 @@ body nav.sticky .logo-name {
     background: var(--medium-violet);
 }
 
-/* CARD */
+
+/* CARDS/BOTÕES */
 
 .mini-logo-card {
     width: 80px;
-    /* margin-left: 75%; */
     right: 30px;
-    bottom: 40px;
+    bottom: 30px;
 }
 
 .line {
@@ -90,7 +96,7 @@ body nav.sticky .logo-name {
 }
 
 .card-body-mine {
-    padding: 35px;
+    padding: 40px;
     font-family: var(--font);
     font-weight: var(--extra-bold);
     color: var(--white);
@@ -98,12 +104,13 @@ body nav.sticky .logo-name {
     border-radius: 20px;
 }
 
-.cb-etec {
-    background-color: var(--violet);
+.cb-unitario {
+    background-color: var(--purple);
+    text-decoration: none;
 }
 
-.cb-secretary {
-    background-color: var(--purple);
+.cb-lote {
+    background-color: var(--magenta-dark);
     
 }
 
@@ -111,19 +118,24 @@ body nav.sticky .logo-name {
     border-radius: 20px;
 }
 
-/* TABLE */
+.mini-arrow-card {
+    left: 40px;
+    bottom: 30px;
+}
 
-.table-background {
+.link {
+    text-decoration: none;
+}
+
+/* LISTA DE PROFESSORES */
+
+.background-list {
     background-color: var(--white);
     border-radius: 20px;
 }
 
-.info-table {
-    padding: 100px;
-}
-
-.table-title {
-    text-align: center;
+.formatting-list {
+    margin-top: 60px;
 }
 
 .search {
@@ -149,28 +161,24 @@ body nav.sticky .logo-name {
     bottom: 25px;
 }
 
-.table-title {
-    font-family: var(--font);
-    font-weight: var(--extra-bold);
-    color: var(--medium-violet);
+.info-list {
+    padding: 0px 50px 50px 50px;
 }
 
-.th {
-    color: var(--medium-violet);
-    font-family: var(--font);
-    font-weight: var(--bold);
-    font-size: 18px;
-}
-
-.th-title {
+.list-title {
+    text-align: center;
     font-weight: var(--extra-bold);
     font-family: var(--font);
     color: var(--medium-violet);
-    font-size: var(--h6);
 }
 
-/* PAGINAÇÃO */
+.list-card-body {
+    padding: 10px;
+    border-radius: 20px;
+}
 
-.pagination-style {
+.name-card {
+    font-family: var(--font);
+    font-weight: var(--extra-bold);
     color: var(--medium-violet);
 }
