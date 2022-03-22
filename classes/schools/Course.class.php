@@ -113,4 +113,21 @@ class Course
             echo $e->getMessage();
         }
     }
+    //----------------------------------------------
+    //método para contar cursos
+    public function countCourse()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("SELECT COUNT(idCourse) 
+                                            AS Quantidade 
+                                            FROM courses
+                                        ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
