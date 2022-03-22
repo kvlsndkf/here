@@ -108,13 +108,36 @@ try {
             <!--  fim Barra de Pesquisa -->
             <br />
             <div class="table-responsive">
-                <table class="table table-striped info-table ">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="th-title ">Nome</th>
-                            <th scope="col" class="th-title ">E-mail</th>
-                            <th scope="col" class="th-title">Etec</th>
-                            <th scope="col" class="th-title col-2">Ações</th>
+            <table class="table table-striped info-table ">
+                <thead>
+                    <tr>
+                        <th scope="col" class="th-title ">Nome</th>
+                        <th scope="col" class="th-title ">E-mail</th>
+                        <th scope="col" class="th-title">Etec</th>
+                        <th scope="col" class="th-title col-2">Ações</th>
+
+                        <!-- Listagem de conteúdos da Tabela -->
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <?php while ($row = $listSecretary->fetch(PDO::FETCH_BOTH)) { ?>
+                        <tr class="th col-12">
+
+                            <th class="th"><?php echo $row[1]; ?></th>
+                            <th class="th"><?php echo $row[2]; ?></th>
+                            <th class="th"><?php echo $row[3]; ?></th>
+
+
+                            <td>
+                                <div class="divo">
+                                    <div class="botao-edit butao">
+                                        <a href="">
+                                            <img src="../../../images/lapis.svg" class="trash">
+                                        </a>
+                                    </div>
+
 
                             <!-- Listagem de conteúdos da Tabela -->
 

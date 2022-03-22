@@ -104,7 +104,7 @@ body nav.sticky .logo-name {
 
 .cb-secretary {
     background-color: var(--purple);
-    
+
 }
 
 .dad-card {
@@ -153,6 +153,7 @@ body nav.sticky .logo-name {
     font-family: var(--font);
     font-weight: var(--extra-bold);
     color: var(--medium-violet);
+
 }
 
 .th {
@@ -167,5 +168,73 @@ body nav.sticky .logo-name {
     font-family: var(--font);
     color: var(--medium-violet);
     font-size: var(--h6);
+
 }
 
+/*ETECs CSS*/
+
+#card-button:hover{
+    text-decoration: none;
+}
+
+.cb-cad-lote{
+    background-color: var(--magenta-dark);
+}
+
+.th-title2{
+    font-weight: var(--extra-bold);
+    font-family: var(--font);
+    color: var(--medium-violet);
+    font-size: var(--h6);
+}
+
+.butao{
+    background-color: var(--blue);
+}
+
+.butao2{
+    background-color: var(--red);
+}
+
+
+.botao-edit{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--medium-dark);
+    display: inline-block;
+}
+
+
+
+.p{
+    color: var(--white);
+    font-size: 27px;
+    margin-right: 10px;
+    margin-top: 2px;
+    transform: scale(-1, 1);
+}
+
+.trash{
+    margin-top: 12px;
+    margin-left: 12px;
+} 
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
