@@ -98,12 +98,24 @@ class Secretary
     {
         $connection = Connection::connection();
 
+        //*Receber o número da pagina
+            //*Pagina atual
+            $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
+            $page = (!empty($current_page)) ? $current_page : 1;
+
+            //* Setar a quantidade de registros por pagina
+            $limit_results = 10;
+
+            //* Calcular o inicio da vizualização
+            $start = ($limit_results * $page) - $limit_results;
+
         try {
             $stmt = $connection->prepare("SELECT y.idSecretary, y.nameSecretary, s.nameSchool 
                                           FROM secretarys y
                                           RIGHT JOIN schools s
                                           ON s.idSchool = y.idSchool
                                           ORDER BY s.nameSchool
+                                          LIMIT $start, $limit_results
                                         ");
             $stmt->execute();
             return $stmt;
@@ -116,11 +128,23 @@ class Secretary
     {
         $connection = Connection::connection();
 
+        //*Receber o número da pagina
+            //*Pagina atual
+            $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
+            $page = (!empty($current_page)) ? $current_page : 1;
+
+            //* Setar a quantidade de registros por pagina
+            $limit_results = 10;
+
+            //* Calcular o inicio da vizualização
+            $start = ($limit_results * $page) - $limit_results;
+
         try {
             $stmt = $connection->prepare("SELECT y.idSecretary, y.nameSecretary, y.emailSecretary, s.nameSchool
                                             FROM secretarys y, schools s
                                             WHERE y.idSchool = s.idSchool
                                             ORDER BY y.nameSecretary
+                                            LIMIT $start, $limit_results
                                         ");
             $stmt->execute();
             return $stmt;

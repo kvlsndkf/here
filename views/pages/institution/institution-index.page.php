@@ -99,7 +99,6 @@ try {
                                     <th><?php echo $row['Quantidade']; ?></th>
                                 </div>
                             </tr>
-
                         <?php } ?>
                         <img src="../../images/logo.svg" alt="" class="mini-logo-card position-absolute img fluid">
                     </div>
@@ -108,8 +107,7 @@ try {
         </div>
     </div>
     <!-- fim card count secretarias -->
-
-
+  
     <!-- início da tabela -->
 
     <div class="container">
@@ -118,84 +116,83 @@ try {
                 <h5 class="p-2 table-title">Lista de ETEC's e secretários(as)</h5>
             </div>
 
-            <div class="search-section">
-                <div class="search-container position-relative">
-                    <img src="../../images/icon-search.svg" class="icon-search position-absolute" alt="">
-                    <input type="text" name="" id="" placeholder="Pesquise pelo nome" class="search">
+                <div class="search-section">
+                    <div class="search-container position-relative">
+                        <img src="../../images/icon-search.svg" class="icon-search position-absolute" alt="">
+                        <input type="text" name="" id="" placeholder="Pesquise pelo nome" class="search">
+                    </div>
                 </div>
-            </div>
-            <br />
+                <br />
 
-            <table class="table table-striped info-table ">
-                <thead>
-                    <tr>
-                        <th scope="col" class=" th-title">Nome</th>
-                        <th scope="col" class=" th-title">Secretário(a)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php while ($row = $listSchools->fetch(PDO::FETCH_BOTH)) { ?>
+                <table class="table table-striped info-table ">
+                    <thead>
                         <tr>
-                            <th class="th"><?php echo $row[2]; ?></th>
-                            <th class="th"><?php echo $row[1]; ?></th>
+                            <th scope="col" class=" th-title">Nome</th>
+                            <th scope="col" class=" th-title">Secretário(a)</th>
                         </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-        <?php
-        //*Pagina atual
-        $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
-        $page = (!empty($current_page)) ? $current_page : 1;
+                    </thead>
+                    <tbody>
+                        <?php while ($row = $listSchools->fetch(PDO::FETCH_BOTH)) { ?>
+                            <tr>
+                                <th class="th"><?php echo $row[2]; ?></th>
+                                <th class="th"><?php echo $row[1]; ?></th>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+            <?php
+            //*Pagina atual
+            $current_page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
+            $page = (!empty($current_page)) ? $current_page : 1;
 
-        //* Setar a quantidade de registros por pagina
-        $limit_results = 10;
+            //* Setar a quantidade de registros por pagina
+            $limit_results = 10;
 
-        //* Quantidade de paginas
-        $query_qnt_register = "SELECT COUNT(idSchool) AS idSchool FROM schools";
-        $result_qnt_register = $connection->prepare($query_qnt_register);
-        $result_qnt_register->execute();
-        $row_qnt_register = $result_qnt_register->fetch(PDO::FETCH_ASSOC);
+            //* Quantidade de paginas
+            $query_qnt_register = "SELECT COUNT(idSchool) AS idSchool FROM schools";
+            $result_qnt_register = $connection->prepare($query_qnt_register);
+            $result_qnt_register->execute();
+            $row_qnt_register = $result_qnt_register->fetch(PDO::FETCH_ASSOC);
 
-        //* Quantidade de paginas
-        $qnt_page = ceil($row_qnt_register['idSchool'] / $limit_results);
+            //* Quantidade de paginas
+            $qnt_page = ceil($row_qnt_register['idSchool'] / $limit_results);
 
 
-        //*Verificar a pagina anterior e posterios
-        $back_page = $page - 1;
-        $next_page = $page + 1;
-        ?>
-                <ul class="pagination">
+            //*Verificar a pagina anterior e posterios
+            $back_page = $page - 1;
+            $next_page = $page + 1;
+            ?>
+                <ul class="pagination justify-content-center pt-4">
                     <?php
                     if ($back_page != 0) { ?>
                         <li class="page-item ">
-                            <a class="page-link" href="institution-index.page.php?page=<?php echo $back_page; ?>">Prev</a>
+                            <a class="page-link" href="institution-index.page.php?page=<?php echo $back_page; ?>">Anterior</a>
                         </li>
                     <?php  } else { ?>
                         <li class="page-item disabled">
-                            <a class="page-link">Prev</a>
+                            <a class="page-link">Anterior</a>
                         </li>
                     <?php }   ?>
 
                     <?php
                     for ($i = 1; $i < $qnt_page + 1; $i++) {  ?>
                         <li class="page-item">
-                            <a class="page-link" href="institution-index.page.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                            <a class="page-link" href="institution-index.page.php?page=<?php echo $i; ?>"><?php echo '<div class="pagination-style">'. $i .'</div>' ?></a>
                         </li>
                     <?php } ?>
 
                     <?php
                     if ($next_page <= $qnt_page) { ?>
                         <li class="page-item ">
-                            <a class="page-link" href="institution-index.page.php?page=<?php echo $next_page; ?>">Next</a>
+                            <a class="page-link" href="institution-index.page.php?page=<?php echo $next_page; ?>">Próximo</a>
                         </li>
                     <?php  } else { ?>
                         <li class="page-item disabled">
-                            <a class="page-link">Next</a>
+                            <a class="page-link">Próximo</a>
                         </li>
                     <?php }   ?>
                 </ul>
-
         </div>
     </div>
     <!-- fim da tabela -->
