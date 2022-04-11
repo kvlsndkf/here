@@ -53,8 +53,8 @@ try {
                         <a class="nav-link active font-header-hero" href="../institution-index.page.php">Home</a>
                         <a class="nav-link active font-header-hero current" href="../school/list-school.page.php">ETEC's</a>
                         <a class="nav-link active font-header-hero" href="../secretary/list-secretary.page.php">Secretaria</a>
-                        <a class="nav-link active font-header-hero" href="#">Professores</a>
-                        <a class="nav-link active font-header-hero" href="#">Sair</a>
+                        <a class="nav-link active font-header-hero" href="../professor/list-professor.page.php">Professores</a>
+                        <a class="nav-link active font-header-hero" href="../../painel-usuarios/painel-usuarios.php">Sair</a>
                     </div>
                 </div>
             </div>

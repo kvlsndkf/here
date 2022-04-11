@@ -55,8 +55,8 @@ try {
                         <a class="nav-link active font-header-hero " href="../institution-index.page.php">Home</a>
                         <a class="nav-link active font-header-hero" href="../school/list-school.page.php">ETEC's</a>
                         <a class="nav-link active font-header-hero current" href="./secretary/list-secretary.page.php">Secretaria</a>
-                        <a class="nav-link active font-header-hero" href="#">Professores</a>
-                        <a class="nav-link active font-header-hero" href="#">Sair</a>
+                        <a class="nav-link active font-header-hero" href="../professor/list-professor.page.php">Professores</a>
+                        <a class="nav-link active font-header-hero" href="../../painel-usuarios/painel-usuarios.php">Sair</a>
                     </div>
                 </div>
             </div>
@@ -137,10 +137,14 @@ try {
                                             <img src="../../../images/lapis.svg" class="trash">
                                         </a>
                                     </div>
-
-
+                                    <div class="botao-edit butao2">
+                                        <a href="../controller/delete-secretary.php?idSecretary=<?php echo $row[0]; ?>">
+                                            <img src="../../../images/trash-can.svg" class="trash">
+                                        </a>
+                                    </div>
                             <!-- Listagem de conteúdos da Tabela -->
-
+                                </div>
+                            </td>
                         </tr>
 
                         <?php }?>

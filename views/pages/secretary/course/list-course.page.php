@@ -57,12 +57,12 @@ try {
                             </a>
                             <div class="dropdown-menu dropdown-menu-right customize-dropdown" style="border-radius: 15px;" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="./list-course.page.php" style="font-weight: var(--extra-bold); color: var(--medium-purple); text-decoration: underline">Cursos</a>
-                                <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold); color: var(--medium-purple);">Turmas</a>
-                                <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold); color: var(--medium-purple);">Matérias</a>
+                                <a class="dropdown-item" href="../team/list-team.page.php" style="font-weight: var(--extra-bold); color: var(--medium-purple);">Turmas</a>
+                                <a class="dropdown-item" href="../subject/list-subject.page.php" style="font-weight: var(--extra-bold); color: var(--medium-purple);">Matérias</a>
                             </div>
                         </li>
-                        <a class="nav-link active font-header-hero" href="../../secretary/list-secretary.page.php">Estudantes</a>
-                        <a class="nav-link active font-header-hero" href="#">Sair</a>
+                        <a class="nav-link active font-header-hero" href="../student/list-student.page.php">Estudantes</a>
+                        <a class="nav-link active font-header-hero" href="../../painel-usuarios/painel-usuarios.php">Sair</a>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@ try {
             <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <a href="./register-course-unit.page.php" id="card-button" value="Cadastrar ETEC">
                     <div class="card position-relative dad-card">
-                        <div class="card-body card-body-mine cb-secretary flex-column d-flex">Para fazer cadastro unitário <br> clique aqui
+                        <div class="card-body card-body-mine cb-unitario flex-column d-flex">Para fazer cadastro unitário <br> clique aqui
                             <br />
                             <tr>
                                 <div style="font-size: 35px">
@@ -95,7 +95,7 @@ try {
             <div class="col col 12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <a href="./register-course-batch.page.php" id="card-button">
                     <div class="card position-relative dad-card">
-                        <div class="card-body card-body-mine cb-cad-lote flex-column d-flex">Para fazer cadastro em lote <br> clique aqui
+                        <div class="card-body card-body-mine cb-lote flex-column d-flex">Para fazer cadastro em lote <br> clique aqui
                             <br />
                             <tr>
                                 <div style="font-size: 35px">
@@ -112,11 +112,10 @@ try {
     <!-- fim card cadastro em lote -->
 
     <!-- início da tabela -->
-
     <div class="container">
-        <div class="table-background mx-auto p-4 col-12">
+        <div class="background-list formatting-list mx-auto p-4 col-12">
             <div class="table-title">
-                <h5 class="p-2 table-title">Lista de Cursos</h5>
+                <h5 class="p-2 list-title">Lista de Cursos</h5>
             </div>
 
             <!-- Barra de Pesquisa -->
@@ -127,13 +126,14 @@ try {
                 </div>
             </div>
             <br />
+
             <div class="table-responsive">
                 <table class="table table-striped info-table">
                     <thead>
                         <tr>
                             <th scope="col" class="th-title col-7">Nome</th>
                             <th scope="col" class="th-title col-3">Anual</th>
-                            <th scope="col" class="th-title2 col-2">Ações</th>
+                            <th scope="col" class="th-title col-2">Ações</th>
 
                             <!-- Listagem de conteúdos da Tabela -->
 

@@ -7,7 +7,7 @@ try {
     $group = new Group();
     $listGroups = $group->selectList();
     $team = new Team();
-    $listTeams = $team->selectList();
+    $listTeams = $team->selectListTeams();
 } catch (Exception $e) {
     echo $e->getMessage();
 }

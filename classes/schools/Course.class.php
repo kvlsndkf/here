@@ -121,7 +121,7 @@ class Course
 
         try {
             $stmt = $connection->prepare("SELECT COUNT(idCourse) 
-                                            AS Quantidade 
+                                            AS Quantidade
                                             FROM courses
                                         ");
             $stmt->execute();

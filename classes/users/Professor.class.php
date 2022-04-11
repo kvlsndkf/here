@@ -180,4 +180,21 @@ class Professor
             echo $e->getMessage();
         }
     }
+    //----------------------------------------------
+    //método para contar professores
+    public function countProfessor()
+    {
+        $connection = Connection::connection();
+
+        try {
+            $stmt = $connection->prepare("SELECT COUNT(idProfessor) 
+                                            AS Quantidade
+                                            FROM professors
+                                        ");
+            $stmt->execute();
+            return $stmt;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
