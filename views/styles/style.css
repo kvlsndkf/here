@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: var(--font);
 }
 
 html,
@@ -58,4 +59,5 @@ body {
   --medium-blue: #1ba2e8;
   --sea-green: #1fafa9;
   --spring-green: #01eaa0;
+  --light-blue: #DAF7FB;
 }
