@@ -9,7 +9,7 @@ class School
     public int $idSecretary;
     public string $createdAt;
     public string $updatedAt;
-    public array $idSchool;
+    public $idSchool;
 
     //getters e setters
     public function getNameSchool(): string
@@ -21,7 +21,7 @@ class School
         $this->nameSchool = $nameSchool;
     }
 
-    public function getIdSchool(): array
+    public function getIdSchool()
     {
         return $this->idSchool;
     }

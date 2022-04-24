@@ -60,7 +60,7 @@ try {
                             <a class="nav-link active font-header-hero" href="./school/list-school.page.php">ETEC's</a>
                             <a class="nav-link active font-header-hero" href="./secretary/list-secretary.page.php">Secretaria</a>
                             <a class="nav-link active font-header-hero" href="../institution/professor/list-professor.page.php">Professores</a>
-                            <a class="nav-link active font-header-hero" href="#" style="color: var(--medium-violet);">Sair</a>
+                            <a class="nav-link active font-header-hero" href="../painel-usuarios/painel-usuarios.php" style="color: var(--medium-violet);">Sair</a>
                         </div>
 
                     </div>

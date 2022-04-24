@@ -38,7 +38,7 @@
 
                 <div class="card">
                     <div class="content">
-                        <a href="#">
+                        <a href="../institution/institution-index.page.php">
                         <img src="../../images/institucional.svg" class="img">
                         </a>
                         <span class="titleG">Institucional</span>
@@ -50,7 +50,7 @@
                     
                     <div class="content">
 
-                            <a href="#">
+                            <a href="../secretary/secretary-index.page.php">
                             <img src="../../images/secretaria.svg" class="img">
                             </a>
                             <span class="titleG">Secretária</span>

@@ -50,7 +50,7 @@
                         <p class="text-1 text-center text-sm-center text-md-left text-lg-left text-xl-left">Uma plataforma que facilitará a comunicação <br /> entre aluno e professor.</p>
 
                         <div class="d-flex justify-content-lg-start justify-content-md-start justify-content-sm-center justify-content-center">
-                            <a href="../login/login.page.php">
+                            <a href="../painel-usuarios/painel-usuarios.php">
                                 <div class="btnEntrar-1 d-flex align-items-center">
                                     <div class="label-entrar-hero">
                                         Entrar
@@ -188,7 +188,7 @@
                             O futuro começa aqui
                         </p>
                         <div class="d-flex justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center">
-                            <a href="../login/login.page.php">
+                            <a href="../painel-usuarios/painel-usuarios.php">
                                 <div class="btnEntrar-2 btn-final d-flex align-items-center">
                                     <div class="label-entrar-hero">
                                         Entrar

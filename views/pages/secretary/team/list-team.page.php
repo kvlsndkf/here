@@ -49,19 +49,19 @@ try {
                         <!-- Menus -->
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                             <div class="navbar-nav animate-menu navbar-mine">
-                                <a class="nav-link active font-header-hero current" href="../secretary-index.page.php">Home</a>
+                                <a class="nav-link active font-header-hero" href="../secretary-index.page.php">Home</a>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle nav-link active font-header-hero" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Organização
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right customize-dropdown" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Cursos</a>
-                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Turmas</a>
-                                        <a class="dropdown-item" href="#" style="font-weight: var(--bold);  color: var(--medium-violet);">Matérias</a>
+                                        <a class="dropdown-item" href="../course/list-course.page.php" style="font-weight: var(--bold);  color: var(--medium-violet);">Cursos</a>
+                                        <a class="dropdown-item current" href="../team/list-team.page.php" style="font-weight: var(--bold);  color: var(--medium-violet);">Turmas</a>
+                                        <a class="dropdown-item" href="../subject/list-subject.page.php" style="font-weight: var(--bold);  color: var(--medium-violet);">Matérias</a>
                                     </div>
                                 </li>
-                                <a class="nav-link active font-header-hero" href="./secretary/list-secretary.page.php">Estudantes</a>
-                                <a class="nav-link active font-header-hero" href="#">Sair</a>
+                                <a class="nav-link active font-header-hero" href="../student/list-student.page.php">Estudantes</a>
+                                <a class="nav-link active font-header-hero" href="../../painel-usuarios/painel-usuarios.php">Sair</a>
                             </div>
                         </div>
                     </div>

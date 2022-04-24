@@ -48,11 +48,11 @@ try {
                     <!-- Menus -->
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div class="navbar-nav animate-menu navbar-mine">
-                            <a class="nav-link active font-header-hero" href="#resources">Home</a>
+                            <a class="nav-link active font-header-hero" href="../institution-index.page.php">Home</a>
                             <a class="nav-link active font-header-hero" href="../school/list-school.page.php">ETEC's</a>
                             <a class="nav-link active font-header-hero" href="../secretary/list-secretary.page.php">Secretaria</a>
                             <a class="nav-link active font-header-hero current" href="list-professor.page.php">Professores</a>
-                            <a class="nav-link active font-header-hero" href="#">Sair</a>
+                            <a class="nav-link active font-header-hero" href="../../painel-usuarios/painel-usuarios.php">Sair</a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ try {
         <!-- início cadastro em lote -->
         <div class="container px-4 container-cards">
                 <div class="row gx-5 line">
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div class="col-12 col-sm-12 col-md-12">
                         <a href="./register-professor-unit.page.php" class="link">
                             <div class="card position-relative dad-card">
                                 <div class="card-body card-body-mine cb-unitario flex-column d-flex">Para fazer cadastro unitário<br/>clique aqui
@@ -75,23 +75,6 @@ try {
                             </div>
                         </a>
                     </div>
-        <!-- fim cadastro em lote -->
-
-                    <div class="col col 12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                        <a href="#">
-                            <div class="card position-relative dad-card">
-                                <div class="card-body card-body-mine cb-lote flex-column d-flex">Para fazer cadastro em lote</br>clique aqui
-                                    <br/>
-                                    <img src="../../../images/magenta-mini-logo.svg" alt="" class="mini-logo-card position-absolute img fluid">
-                                    <img src="../../../images/mini-arrow-card.svg" alt="" class="mini-arrow-card position-absolute img fluid">
-                                    </br>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-            <!-- fim cadastro em lote-->
 
 
             <!-- inicio lista professores -->

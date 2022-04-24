@@ -57,11 +57,11 @@ try {
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right customize-dropdown" style="border-radius: 15px;" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="../course/list-course.page.php" style="font-weight: var(--extra-bold);">Cursos</a>
-                                        <a class="dropdown-item" href="#" style="font-weight: var(--extra-bold);">Turmas</a>
-                                        <a class="dropdown-item current" href="#" style="font-weight: var(--extra-bold);">Matérias</a>
+                                        <a class="dropdown-item" href="../team/list-team.page.php" style="font-weight: var(--extra-bold);">Turmas</a>
+                                        <a class="dropdown-item current" href="../subject/list-subject.page.php" style="font-weight: var(--extra-bold);">Matérias</a>
                                     </div>
                                 </li>
-                <a class="nav-link active font-header-hero" href="../../secretary/list-secretary.page.php">Estudantes</a>
+                <a class="nav-link active font-header-hero" href="../student/list-student.page.php">Estudantes</a>
                 <a class="nav-link active font-header-hero" href="#">Sair</a>
             </div>
         </div>
